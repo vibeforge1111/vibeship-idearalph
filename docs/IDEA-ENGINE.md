@@ -364,26 +364,28 @@ IdeaRalph finds those ideas.
 ### Step 1: Install the Ralph Plugin
 
 ```bash
-# Option A: Install from Claude Code plugin registry
-claude plugins install ralph-wiggum
-
-# Option B: Clone and install from source
-git clone https://github.com/anthropics/claude-code.git
-cd claude-code/plugins/ralph-wiggum
-claude plugins install .
+# One-liner install command
+git clone https://github.com/anthropics/claude-code.git ~/cc-temp && cp -r ~/cc-temp/plugins/ralph-wiggum ~/.claude/plugins/ && rm -rf ~/cc-temp
 ```
 
-### Step 2: Run the Idea Generation Loop
+### Step 2: Restart Claude Code
 
 ```bash
-# Navigate to the IdeaRalph project
-cd /path/to/vibeship-idearalph
+# In Claude Code, type:
+/exit
 
-# Run the Ralph loop with our prompt
-/ralph-loop prompts/ralph-idea-loop.md --max-iterations 30 --completion-promise "SCORE_ACHIEVED"
+# Then start again:
+claude
 ```
 
-### Step 3: Watch the Magic
+### Step 3: Run the Idea Generation Loop
+
+```bash
+# Run the Ralph loop command
+/ralph-loop "Generate a startup idea. Score on 10 PMF dimensions. Iterate until >= 9.9. Output JSON. <promise>SCORE_ACHIEVED</promise>" --max-iterations 30 --completion-promise "SCORE_ACHIEVED"
+```
+
+### Step 4: Watch the Magic
 
 Ralph will:
 1. Generate an initial idea (usually scores 5-7/10)
@@ -393,7 +395,7 @@ Ralph will:
 5. Keep going until 9.9+/10 achieved
 6. Output final JSON with `<promise>SCORE_ACHIEVED</promise>`
 
-### Step 4: Copy to IdeaRalph Website
+### Step 5: Copy to IdeaRalph Website
 
 1. Copy the final JSON output from Claude Code
 2. Go to http://localhost:5178 (or deployed URL)
