@@ -192,58 +192,63 @@ dopeLevel is 1-5 (5 = genius). Make it weird, surprising, and secretly brilliant
   </section>
 
   <!-- Features Section -->
-  <section class="bg-paper py-12 md:py-16 px-4">
-    <div class="max-w-3xl mx-auto">
-      <h2 class="text-2xl md:text-3xl font-chalk text-center text-chalkboard mb-8">
-        How It Works
-      </h2>
+  <section class="bg-paper py-14 md:py-20 px-4">
+    <div class="max-w-4xl mx-auto">
+      <!-- Title in thought bubble style -->
+      <div class="flex justify-center mb-10">
+        <div class="thought-bubble bg-white px-8 py-4">
+          <h2 class="ralph-voice text-2xl md:text-3xl text-chalkboard text-center">
+            How It Works
+          </h2>
+        </div>
+      </div>
 
-      <div class="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6">
+      <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
         <!-- Step 1 -->
         <div class="flex flex-col items-center text-center group">
           <div
-            class="w-16 h-16 bg-ralph-yellow rounded-full flex items-center justify-center
-                   border-3 border-chalkboard shadow-crayon
-                   transition-transform group-hover:scale-110"
+            class="w-20 h-20 bg-ralph-yellow rounded-full flex items-center justify-center
+                   border-4 border-chalkboard shadow-crayon
+                   transition-transform group-hover:scale-110 group-hover:rotate-3"
           >
-            <span class="text-2xl">🔔</span>
+            <span class="text-3xl">🔔</span>
           </div>
-          <h3 class="font-chalk text-lg mt-2">1. Ring the Bell</h3>
-          <p class="text-chalkboard/70 text-sm max-w-[140px]">Start your idea journey</p>
+          <h3 class="font-chalk text-xl mt-3">1. Ring the Bell</h3>
+          <p class="ralph-voice text-chalkboard text-base whitespace-nowrap">"Wake up Ralph!"</p>
         </div>
 
         <!-- Arrow -->
-        <span class="text-2xl text-chalkboard/30 hidden md:block">→</span>
-        <span class="text-2xl text-chalkboard/30 md:hidden rotate-90">→</span>
+        <span class="text-3xl text-chalkboard/30 hidden md:block">→</span>
+        <span class="text-3xl text-chalkboard/30 md:hidden rotate-90">→</span>
 
         <!-- Step 2 -->
         <div class="flex flex-col items-center text-center group">
           <div
-            class="w-16 h-16 bg-playground-green rounded-full flex items-center justify-center
-                   border-3 border-chalkboard shadow-crayon
-                   transition-transform group-hover:scale-110"
+            class="w-20 h-20 bg-playground-green rounded-full flex items-center justify-center
+                   border-4 border-chalkboard shadow-crayon
+                   transition-transform group-hover:scale-110 group-hover:-rotate-3"
           >
-            <span class="text-2xl">💻</span>
+            <span class="text-3xl">💻</span>
           </div>
-          <h3 class="font-chalk text-lg mt-2">2. Run in Claude</h3>
-          <p class="text-chalkboard/70 text-sm max-w-[140px]">Copy prompt, paste result</p>
+          <h3 class="font-chalk text-xl mt-3">2. Run in Claude</h3>
+          <p class="ralph-voice text-chalkboard text-base whitespace-nowrap">"Copy the magic!"</p>
         </div>
 
         <!-- Arrow -->
-        <span class="text-2xl text-chalkboard/30 hidden md:block">→</span>
-        <span class="text-2xl text-chalkboard/30 md:hidden rotate-90">→</span>
+        <span class="text-3xl text-chalkboard/30 hidden md:block">→</span>
+        <span class="text-3xl text-chalkboard/30 md:hidden rotate-90">→</span>
 
         <!-- Step 3 -->
         <div class="flex flex-col items-center text-center group">
           <div
-            class="w-16 h-16 bg-sky-blue rounded-full flex items-center justify-center
-                   border-3 border-chalkboard shadow-crayon
-                   transition-transform group-hover:scale-110"
+            class="w-20 h-20 bg-sky-blue rounded-full flex items-center justify-center
+                   border-4 border-chalkboard shadow-crayon
+                   transition-transform group-hover:scale-110 group-hover:rotate-3"
           >
-            <span class="text-2xl">💡</span>
+            <span class="text-3xl">💡</span>
           </div>
-          <h3 class="font-chalk text-lg mt-2">3. Get Your Idea</h3>
-          <p class="text-chalkboard/70 text-sm max-w-[140px]">Stupid smart genius</p>
+          <h3 class="font-chalk text-xl mt-3">3. Get Your Idea</h3>
+          <p class="ralph-voice text-chalkboard text-base whitespace-nowrap">"Genius comes out!"</p>
         </div>
       </div>
     </div>
