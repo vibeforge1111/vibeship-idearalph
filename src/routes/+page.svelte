@@ -86,8 +86,8 @@ dopeLevel is 1-5 (5 = genius). Make it weird, surprising, and secretly brilliant
           <span class="text-3xl md:text-4xl">🔔</span>
           <span>Ring the Bell</span>
         </button>
-        <div class="mt-4 inline-block bg-white px-5 py-2 rounded-full border-2 border-chalkboard/30 shadow-sm">
-          <span class="text-chalkboard/70 text-sm">Powered by your Claude Code • No API costs</span>
+        <div class="mt-3 inline-block bg-white/60 px-3 py-1 rounded-xl border border-chalkboard/20">
+          <span class="text-chalkboard text-xs">Powered by your Claude Code • No API costs</span>
         </div>
 
       {:else if step === 'prompt'}
@@ -192,64 +192,58 @@ dopeLevel is 1-5 (5 = genius). Make it weird, surprising, and secretly brilliant
   </section>
 
   <!-- Features Section -->
-  <section class="bg-paper py-16 md:py-24 px-4">
-    <div class="max-w-4xl mx-auto">
-      <h2 class="text-3xl md:text-4xl font-chalk text-center text-chalkboard mb-4">
+  <section class="bg-paper py-12 md:py-16 px-4">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-2xl md:text-3xl font-chalk text-center text-chalkboard mb-8">
         How It Works
       </h2>
-      <p class="text-center text-chalkboard/60 mb-12 max-w-md mx-auto">
-        Three simple steps to genius (or at least entertaining) ideas
-      </p>
 
-      <div class="grid md:grid-cols-3 gap-8 md:gap-12">
+      <div class="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6">
         <!-- Step 1 -->
-        <div class="text-center group">
+        <div class="flex flex-col items-center text-center group">
           <div
-            class="w-24 h-24 bg-ralph-yellow rounded-full mx-auto mb-4 flex items-center justify-center
-                   border-4 border-chalkboard shadow-crayon
-                   transition-transform group-hover:scale-110 group-hover:rotate-3"
+            class="w-16 h-16 bg-ralph-yellow rounded-full flex items-center justify-center
+                   border-3 border-chalkboard shadow-crayon
+                   transition-transform group-hover:scale-110"
           >
-            <span class="text-4xl">🏖️</span>
+            <span class="text-2xl">🔔</span>
           </div>
-          <h3 class="font-chalk text-xl mb-2">1. Sandbox</h3>
-          <p class="ralph-voice text-chalkboard/80">
-            "Ralph digs around in his brain and finds weird connections"
-          </p>
+          <h3 class="font-chalk text-lg mt-2">1. Ring the Bell</h3>
+          <p class="text-chalkboard/70 text-sm max-w-[140px]">Start your idea journey</p>
         </div>
 
         <!-- Arrow -->
-        <div class="hidden md:flex items-center justify-center">
-          <span class="text-4xl text-chalkboard/30">→</span>
-        </div>
+        <span class="text-2xl text-chalkboard/30 hidden md:block">→</span>
+        <span class="text-2xl text-chalkboard/30 md:hidden rotate-90">→</span>
 
         <!-- Step 2 -->
-        <div class="text-center group md:col-start-2 md:row-start-1">
+        <div class="flex flex-col items-center text-center group">
           <div
-            class="w-24 h-24 bg-playground-green rounded-full mx-auto mb-4 flex items-center justify-center
-                   border-4 border-chalkboard shadow-crayon
-                   transition-transform group-hover:scale-110 group-hover:-rotate-3"
+            class="w-16 h-16 bg-playground-green rounded-full flex items-center justify-center
+                   border-3 border-chalkboard shadow-crayon
+                   transition-transform group-hover:scale-110"
           >
-            <span class="text-4xl">🎢</span>
+            <span class="text-2xl">💻</span>
           </div>
-          <h3 class="font-chalk text-xl mb-2">2. Swing Set</h3>
-          <p class="ralph-voice text-chalkboard/80">
-            "Ideas swing back and forth until they get momentum"
-          </p>
+          <h3 class="font-chalk text-lg mt-2">2. Run in Claude</h3>
+          <p class="text-chalkboard/70 text-sm max-w-[140px]">Copy prompt, paste result</p>
         </div>
 
+        <!-- Arrow -->
+        <span class="text-2xl text-chalkboard/30 hidden md:block">→</span>
+        <span class="text-2xl text-chalkboard/30 md:hidden rotate-90">→</span>
+
         <!-- Step 3 -->
-        <div class="text-center group md:col-start-3">
+        <div class="flex flex-col items-center text-center group">
           <div
-            class="w-24 h-24 bg-sky-blue rounded-full mx-auto mb-4 flex items-center justify-center
-                   border-4 border-chalkboard shadow-crayon
-                   transition-transform group-hover:scale-110 group-hover:rotate-3"
+            class="w-16 h-16 bg-sky-blue rounded-full flex items-center justify-center
+                   border-3 border-chalkboard shadow-crayon
+                   transition-transform group-hover:scale-110"
           >
-            <span class="text-4xl">⭐</span>
+            <span class="text-2xl">💡</span>
           </div>
-          <h3 class="font-chalk text-xl mb-2">3. Gold Star</h3>
-          <p class="ralph-voice text-chalkboard/80">
-            "You get a PRD that's actually genius (probably)"
-          </p>
+          <h3 class="font-chalk text-lg mt-2">3. Get Your Idea</h3>
+          <p class="text-chalkboard/70 text-sm max-w-[140px]">Stupid smart genius</p>
         </div>
       </div>
     </div>
@@ -356,8 +350,8 @@ dopeLevel is 1-5 (5 = genius). Make it weird, surprising, and secretly brilliant
   <footer class="bg-paper py-8 px-4">
     <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
       <div class="flex items-center gap-2">
-        <div class="w-8 h-8 bg-ralph-yellow rounded-full flex items-center justify-center border-2 border-chalkboard">
-          <span class="text-sm">🧒</span>
+        <div class="w-8 h-8 bg-ralph-yellow rounded-full border-2 border-chalkboard overflow-hidden">
+          <img src="/images/ralph-logo.png" alt="Ralph" class="w-full h-full object-cover" />
         </div>
         <span class="font-chalk text-chalkboard">IdeaRalph</span>
       </div>

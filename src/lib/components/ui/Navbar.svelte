@@ -8,9 +8,9 @@
       <a href="/" class="flex items-center gap-2 group">
         <div
           class="w-10 h-10 bg-ralph-yellow rounded-full border-2 border-chalkboard overflow-hidden
-                 flex items-center justify-center transition-transform group-hover:scale-110"
+                 transition-transform group-hover:scale-110"
         >
-          <span class="text-xl">🧒</span>
+          <img src="/images/ralph-logo.png" alt="Ralph" class="w-full h-full object-cover" />
         </div>
         <span class="font-chalk text-xl text-chalkboard hidden sm:block">IdeaRalph</span>
       </a>
