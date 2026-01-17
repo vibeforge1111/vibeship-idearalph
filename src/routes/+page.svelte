@@ -38,7 +38,22 @@
   }
 
   // UI State
-  let step = $state<'bell' | 'prompt' | 'paste' | 'result' | 'prd'>('bell');
+  let step = $state<'bell' | 'setup' | 'install' | 'run' | 'paste' | 'result' | 'prd'>('bell');
+  let hasInstalledPlugin = $state(false);
+
+  // Check if user has done setup before (persisted)
+  $effect(() => {
+    if (typeof window !== 'undefined') {
+      hasInstalledPlugin = localStorage.getItem('idearalph-plugin-installed') === 'true';
+    }
+  });
+
+  function markPluginInstalled() {
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('idearalph-plugin-installed', 'true');
+      hasInstalledPlugin = true;
+    }
+  }
   let userHint = $state('');
   let pastedResult = $state('');
   let currentIdea = $state<IdeaResult | null>(null);
@@ -310,7 +325,8 @@ Keep Ralph's voice: "I'm helping!" energy, finds weird connections, says dumb th
 Don't stop until 9.9+ achieved. This may take many iterations.`;
 
   function ringTheBell() {
-    step = 'prompt';
+    // If they've already installed the plugin, skip to the run step
+    step = hasInstalledPlugin ? 'run' : 'setup';
   }
 
   function copyPrompt() {
@@ -382,7 +398,7 @@ Don't stop until 9.9+ achieved. This may take many iterations.`;
   }
 
   function generateAnother() {
-    step = 'prompt';
+    step = 'run';
     pastedResult = '';
     currentIdea = null;
   }
@@ -416,45 +432,146 @@ Don't stop until 9.9+ achieved. This may take many iterations.`;
           </button>
         {/if}
 
-      {:else if step === 'prompt'}
-        <!-- Step 1: Show prompt to copy -->
-        <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 border-4 border-chalkboard shadow-crayon-lg">
-          <h2 class="font-chalk text-2xl text-chalkboard mb-4">
-            1. Copy this prompt to Claude Code
-          </h2>
+      {:else if step === 'setup'}
+        <!-- Setup: First time user - explain the process -->
+        <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 border-4 border-chalkboard shadow-crayon-lg max-w-lg">
+          <h2 class="font-chalk text-2xl text-chalkboard mb-2">Welcome to IdeaRalph!</h2>
+          <p class="text-chalkboard/70 text-sm mb-4">First time? Let's set you up in 2 minutes.</p>
+
+          <div class="space-y-3 text-left mb-6">
+            <div class="flex items-start gap-3 p-3 bg-ralph-yellow/10 rounded-lg">
+              <span class="text-xl">1️⃣</span>
+              <div>
+                <div class="font-bold text-chalkboard">Install Ralph Plugin</div>
+                <div class="text-sm text-chalkboard/70">One-time setup in Claude Code</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 p-3 bg-chalkboard/5 rounded-lg">
+              <span class="text-xl">2️⃣</span>
+              <div>
+                <div class="font-bold text-chalkboard/60">Run the Idea Loop</div>
+                <div class="text-sm text-chalkboard/50">Ralph iterates until 9.9/10</div>
+              </div>
+            </div>
+            <div class="flex items-start gap-3 p-3 bg-chalkboard/5 rounded-lg">
+              <span class="text-xl">3️⃣</span>
+              <div>
+                <div class="font-bold text-chalkboard/60">Paste & Generate PRD</div>
+                <div class="text-sm text-chalkboard/50">See your genius idea + export</div>
+              </div>
+            </div>
+          </div>
+
+          <button onclick={() => step = 'install'} class="btn-crayon w-full text-lg">
+            Let's Go! →
+          </button>
+
+          <button
+            onclick={() => { markPluginInstalled(); step = 'run'; }}
+            class="w-full text-chalkboard/50 hover:text-chalkboard text-sm py-2 mt-2"
+          >
+            I already have the plugin installed →
+          </button>
+        </div>
+
+      {:else if step === 'install'}
+        <!-- Step 1: Install the plugin -->
+        <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 border-4 border-chalkboard shadow-crayon-lg max-w-lg">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="bg-ralph-yellow text-chalkboard font-bold rounded-full w-8 h-8 flex items-center justify-center">1</span>
+            <h2 class="font-chalk text-xl text-chalkboard">Install Ralph Plugin</h2>
+          </div>
+
+          <p class="text-chalkboard/70 text-sm mb-4">Open a new terminal and run these commands:</p>
+
+          <div class="space-y-3 mb-4">
+            <div class="bg-chalkboard rounded-lg p-3">
+              <div class="text-xs text-white/50 mb-1"># Clone the plugin</div>
+              <code class="text-sm text-playground-green font-mono break-all">git clone https://github.com/anthropics/claude-code.git ~/claude-code-temp</code>
+            </div>
+
+            <div class="bg-chalkboard rounded-lg p-3">
+              <div class="text-xs text-white/50 mb-1"># Copy to plugins folder</div>
+              <code class="text-sm text-playground-green font-mono break-all">cp -r ~/claude-code-temp/plugins/ralph-wiggum ~/.claude/plugins/</code>
+            </div>
+
+            <div class="bg-chalkboard rounded-lg p-3">
+              <div class="text-xs text-white/50 mb-1"># Clean up</div>
+              <code class="text-sm text-playground-green font-mono break-all">rm -rf ~/claude-code-temp</code>
+            </div>
+          </div>
+
+          <div class="bg-ralph-yellow/20 rounded-lg p-3 mb-4">
+            <p class="text-sm text-chalkboard">
+              <span class="font-bold">Important:</span> After installing, restart Claude Code (close and reopen the terminal).
+            </p>
+          </div>
+
+          <div class="flex gap-2">
+            <button onclick={() => step = 'setup'} class="btn-crayon flex-1 bg-gray-100 text-sm">
+              ← Back
+            </button>
+            <button onclick={() => { markPluginInstalled(); step = 'run'; }} class="btn-crayon flex-1 text-sm">
+              Done, Next →
+            </button>
+          </div>
+        </div>
+
+      {:else if step === 'run'}
+        <!-- Step 2: Run the command -->
+        <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 border-4 border-chalkboard shadow-crayon-lg max-w-lg">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="bg-playground-green text-white font-bold rounded-full w-8 h-8 flex items-center justify-center">2</span>
+            <h2 class="font-chalk text-xl text-chalkboard">Run the Idea Loop</h2>
+          </div>
 
           <input
             bind:value={userHint}
-            placeholder="Optional: Give Ralph a hint (e.g., 'fitness apps', 'AI for pets')"
+            placeholder="What kind of idea? (e.g., 'fitness apps', 'AI for pets')"
             class="w-full px-4 py-3 rounded-lg border-2 border-chalkboard bg-white
                    focus:outline-none focus:ring-2 focus:ring-sky-blue mb-4"
           />
 
-          <div class="bg-chalkboard/5 rounded-lg p-4 mb-4 text-left max-h-32 overflow-y-auto">
-            <pre class="text-xs text-chalkboard/80 whitespace-pre-wrap font-mono">{getRalphPrompt(userHint).slice(0, 200)}...</pre>
+          <p class="text-chalkboard/70 text-sm mb-2">Copy and run this in Claude Code:</p>
+
+          <div class="bg-chalkboard rounded-lg p-3 mb-4">
+            <code class="text-xs text-playground-green font-mono break-all whitespace-pre-wrap">/ralph-loop "{userHint ? `Generate a startup idea about ${userHint}.` : 'Generate a startup idea.'} Score on 10 PMF dimensions. Iterate until score >= 9.9. Output JSON when done. &lt;promise&gt;SCORE_ACHIEVED&lt;/promise&gt;" --max-iterations 30 --completion-promise "SCORE_ACHIEVED"</code>
           </div>
 
           <button
-            onclick={copyPrompt}
+            onclick={() => {
+              const cmd = `/ralph-loop "${userHint ? `Generate a startup idea about ${userHint}.` : 'Generate a startup idea.'} Score on 10 PMF dimensions. Iterate until score >= 9.9. Output JSON when done. <promise>SCORE_ACHIEVED</promise>" --max-iterations 30 --completion-promise "SCORE_ACHIEVED"`;
+              navigator.clipboard.writeText(cmd);
+              copied = true;
+              setTimeout(() => copied = false, 2000);
+            }}
             class="btn-crayon w-full text-lg mb-3"
           >
-            {copied ? '✅ Copied!' : '📋 Copy Prompt'}
+            {copied ? '✅ Copied!' : '📋 Copy Command'}
           </button>
 
-          <button
-            onclick={() => step = 'paste'}
-            class="w-full text-chalkboard/70 hover:text-chalkboard py-2 transition-colors"
-          >
-            I've run it in Claude Code →
-          </button>
+          <div class="bg-sky-blue/10 rounded-lg p-3 mb-4 text-sm text-chalkboard/80">
+            <p class="font-bold mb-1">What happens next:</p>
+            <p>Ralph will iterate 10-30 times, improving the idea until it hits 9.9/10. This takes 2-5 minutes. When done, copy the JSON output.</p>
+          </div>
+
+          <div class="flex gap-2">
+            <button onclick={() => step = hasInstalledPlugin ? 'bell' : 'install'} class="btn-crayon flex-1 bg-gray-100 text-sm">
+              ← Back
+            </button>
+            <button onclick={() => step = 'paste'} class="btn-crayon flex-1 text-sm">
+              I have the JSON →
+            </button>
+          </div>
         </div>
 
       {:else if step === 'paste'}
-        <!-- Step 2: Paste the result -->
-        <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 border-4 border-chalkboard shadow-crayon-lg">
-          <h2 class="font-chalk text-2xl text-chalkboard mb-4">
-            2. Paste Claude's response
-          </h2>
+        <!-- Step 3: Paste the result -->
+        <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 border-4 border-chalkboard shadow-crayon-lg max-w-lg">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="bg-sky-blue text-white font-bold rounded-full w-8 h-8 flex items-center justify-center">3</span>
+            <h2 class="font-chalk text-xl text-chalkboard">Paste the Result</h2>
+          </div>
 
           <textarea
             bind:value={pastedResult}
@@ -468,11 +585,11 @@ Don't stop until 9.9+ achieved. This may take many iterations.`;
             <p class="text-playground-red text-sm mb-3">{error}</p>
           {/if}
 
-          <div class="flex gap-3">
-            <button onclick={() => step = 'prompt'} class="btn-crayon flex-1 bg-gray-100">
+          <div class="flex gap-2">
+            <button onclick={() => step = 'run'} class="btn-crayon flex-1 bg-gray-100 text-sm">
               ← Back
             </button>
-            <button onclick={parseResult} class="btn-crayon flex-1">
+            <button onclick={parseResult} class="btn-crayon flex-1 text-sm">
               🚀 Show My Idea
             </button>
           </div>
