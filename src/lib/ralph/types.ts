@@ -116,7 +116,8 @@ export const DOPE_LEVELS: Record<number, string> = {
 };
 
 // PRD Types
-export type PRDLevel = 'basic' | 'detailed' | 'enterprise';
+// Napkin = quick sketch, Science Fair = detailed project, Genius = complete with structured JSON
+export type PRDLevel = 'napkin' | 'science-fair' | 'genius';
 
 export interface PRDConfig {
   level: PRDLevel;

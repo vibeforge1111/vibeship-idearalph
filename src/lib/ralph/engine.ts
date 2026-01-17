@@ -310,7 +310,7 @@ export function getLoopStatusMessage(result: RalphLoopResult): {
  * Default PRD configuration
  */
 export const DEFAULT_PRD_CONFIG: PRDConfig = {
-  level: 'detailed',
+  level: 'science-fair',
   includeUserStories: true,
   includeTechArchitecture: true,
   includeCompetitiveAnalysis: true,
@@ -633,33 +633,33 @@ ${prd.futureRoadmap.map(f => `- ${f}`).join('\n')}
 }
 
 /**
- * Generate PRD based on level (basic, detailed, or enterprise)
+ * Generate PRD based on level (napkin, science-fair, or genius)
  */
 export async function generatePRDByLevel(
   idea: string,
   name: string,
   pmfScores: PMFScores,
-  level: PRDLevel = 'basic',
+  level: PRDLevel = 'napkin',
   iterations?: Array<{ content: string; dopeLevel: number; feedback: string }>
 ): Promise<{ markdown: string; json?: DetailedPRD }> {
   switch (level) {
-    case 'basic':
-      // Use existing basic PRD
-      const basicMarkdown = await generatePRD(idea, name, pmfScores);
-      return { markdown: basicMarkdown };
+    case 'napkin':
+      // Quick sketch PRD
+      const napkinMarkdown = await generatePRD(idea, name, pmfScores);
+      return { markdown: napkinMarkdown };
 
-    case 'detailed':
-      // Generate detailed markdown PRD
-      const detailedMarkdown = await generateDetailedPRD(idea, name, pmfScores, iterations);
-      return { markdown: detailedMarkdown };
+    case 'science-fair':
+      // Full detailed PRD project
+      const scienceFairMarkdown = await generateDetailedPRD(idea, name, pmfScores, iterations);
+      return { markdown: scienceFairMarkdown };
 
-    case 'enterprise':
-      // Generate both markdown and structured JSON
-      const enterprisePRD = await generateDetailedPRDJson(idea, name, pmfScores);
-      return { markdown: enterprisePRD.markdown, json: enterprisePRD };
+    case 'genius':
+      // Complete PRD with structured JSON
+      const geniusPRD = await generateDetailedPRDJson(idea, name, pmfScores);
+      return { markdown: geniusPRD.markdown, json: geniusPRD };
 
     default:
-      const basicDefault = await generatePRD(idea, name, pmfScores);
-      return { markdown: basicDefault };
+      const defaultMarkdown = await generatePRD(idea, name, pmfScores);
+      return { markdown: defaultMarkdown };
   }
 }

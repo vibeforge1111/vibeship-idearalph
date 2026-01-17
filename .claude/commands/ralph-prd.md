@@ -12,10 +12,10 @@ $ARGUMENTS
 
 Choose based on the `--level` flag:
 
-### `--level basic` (default)
-Quick validation PRD with ~10 sections. Good for initial assessment.
+### `--level napkin` (default)
+Quick sketch PRD with ~10 sections. Good for initial assessment.
 
-### `--level detailed`
+### `--level science-fair`
 Comprehensive 18-section PRD including:
 - Executive Summary
 - Problem Statement with market evidence
@@ -34,8 +34,8 @@ Comprehensive 18-section PRD including:
 - Budget Estimates
 - Future Roadmap
 
-### `--level enterprise`
-Everything in detailed PLUS structured JSON output for programmatic use.
+### `--level genius`
+Everything in science-fair PLUS structured JSON output for programmatic use.
 
 ## Output Format
 

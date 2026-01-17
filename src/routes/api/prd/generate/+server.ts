@@ -17,8 +17,8 @@ const PRDSchema = z.object({
     vibeCodeable: z.number().min(0).max(10),
     virality: z.number().min(0).max(10)
   }),
-  // New: PRD level selection
-  level: z.enum(['basic', 'detailed', 'enterprise']).optional().default('basic'),
+  // PRD level: napkin (quick), science-fair (detailed), genius (with JSON)
+  level: z.enum(['napkin', 'science-fair', 'genius']).optional().default('napkin'),
   // Optional: iteration history for context
   iterations: z.array(z.object({
     content: z.string(),

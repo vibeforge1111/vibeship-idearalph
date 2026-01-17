@@ -255,13 +255,13 @@ PUBLIC_APP_URL=http://localhost:5173
 
 IdeaRalph supports three PRD (Product Requirements Document) levels:
 
-### Level: `basic` (Default)
+### Level: `napkin` (Default)
 - ~10 sections
-- Quick validation PRD
+- Quick sketch PRD
 - Good for initial idea assessment
 - ~1-2 pages
 
-### Level: `detailed`
+### Level: `science-fair`
 - 18 comprehensive sections
 - 15-20 user stories
 - Full technical architecture
@@ -271,27 +271,27 @@ IdeaRalph supports three PRD (Product Requirements Document) levels:
 - Risk assessment
 - ~10-15 pages
 
-### Level: `enterprise`
-- Everything in `detailed`
+### Level: `genius`
+- Everything in `science-fair`
 - Returns both Markdown AND structured JSON
 - JSON is typed with full TypeScript interfaces
 - Ready for database storage or programmatic use
-- Ideal for serious builders
+- For builders who want the complete package
 
 ### API Usage
 
 ```typescript
-// Basic PRD
+// Napkin PRD (quick sketch)
 POST /api/prd/generate
-{ idea, name, pmfScores, level: "basic" }
+{ idea, name, pmfScores, level: "napkin" }
 
-// Detailed PRD
+// Science Fair PRD (full project)
 POST /api/prd/generate
-{ idea, name, pmfScores, level: "detailed" }
+{ idea, name, pmfScores, level: "science-fair" }
 
-// Enterprise PRD (returns markdown + JSON)
+// Genius PRD (returns markdown + JSON)
 POST /api/prd/generate
-{ idea, name, pmfScores, level: "enterprise" }
+{ idea, name, pmfScores, level: "genius" }
 ```
 
 ### PRD Types (TypeScript)

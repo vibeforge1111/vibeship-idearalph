@@ -48,9 +48,9 @@
         },
         {
           "name": "--level",
-          "description": "PRD detail level: basic, detailed, or enterprise",
+          "description": "PRD detail level: napkin, science-fair, or genius",
           "required": false,
-          "default": "basic"
+          "default": "napkin"
         }
       ]
     }
