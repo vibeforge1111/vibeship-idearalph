@@ -436,28 +436,21 @@ Don't stop until 9.9+ achieved. This may take many iterations.`;
         <!-- Setup: First time user - explain the process -->
         <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 border-4 border-chalkboard shadow-crayon-lg max-w-lg">
           <h2 class="font-chalk text-2xl text-chalkboard mb-2">Welcome to IdeaRalph!</h2>
-          <p class="text-chalkboard/70 text-sm mb-4">First time? Let's set you up in 2 minutes.</p>
+          <p class="text-chalkboard/70 text-sm mb-4">First time? Let's set you up in 1 minute.</p>
 
           <div class="space-y-3 text-left mb-6">
             <div class="flex items-start gap-3 p-3 bg-ralph-yellow/10 rounded-lg">
               <span class="text-xl">1️⃣</span>
               <div>
-                <div class="font-bold text-chalkboard">Install Ralph Plugin</div>
-                <div class="text-sm text-chalkboard/70">One-time setup in Claude Code</div>
+                <div class="font-bold text-chalkboard">Add the MCP</div>
+                <div class="text-sm text-chalkboard/70">One command, then restart Claude</div>
               </div>
             </div>
             <div class="flex items-start gap-3 p-3 bg-chalkboard/5 rounded-lg">
               <span class="text-xl">2️⃣</span>
               <div>
-                <div class="font-bold text-chalkboard/60">Run the Idea Loop</div>
-                <div class="text-sm text-chalkboard/50">Ralph iterates until 9.9/10</div>
-              </div>
-            </div>
-            <div class="flex items-start gap-3 p-3 bg-chalkboard/5 rounded-lg">
-              <span class="text-xl">3️⃣</span>
-              <div>
-                <div class="font-bold text-chalkboard/60">Paste & Generate PRD</div>
-                <div class="text-sm text-chalkboard/50">See your genius idea + export</div>
+                <div class="font-bold text-chalkboard/60">Just Talk!</div>
+                <div class="text-sm text-chalkboard/50">"Brainstorm ideas about X" — that's it</div>
               </div>
             </div>
           </div>
@@ -470,43 +463,63 @@ Don't stop until 9.9+ achieved. This may take many iterations.`;
             onclick={() => { markPluginInstalled(); step = 'run'; }}
             class="w-full text-chalkboard/50 hover:text-chalkboard text-sm py-2 mt-2"
           >
-            I already have the plugin installed →
+            I already have the MCP installed →
           </button>
         </div>
 
       {:else if step === 'install'}
-        <!-- Step 1: Install the plugin -->
+        <!-- Step 1: Install the MCP -->
         <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 border-4 border-chalkboard shadow-crayon-lg max-w-lg">
           <div class="flex items-center gap-2 mb-4">
             <span class="bg-ralph-yellow text-chalkboard font-bold rounded-full w-8 h-8 flex items-center justify-center">1</span>
-            <h2 class="font-chalk text-xl text-chalkboard">Install Ralph Plugin</h2>
+            <h2 class="font-chalk text-xl text-chalkboard">Add the IdeaRalph MCP</h2>
           </div>
 
-          <p class="text-chalkboard/70 text-sm mb-3">Open a terminal and paste this:</p>
+          <p class="text-chalkboard/70 text-sm mb-3">Clone & build the MCP:</p>
+
+          <div class="bg-chalkboard rounded-lg p-3 mb-3 space-y-2">
+            <code class="block text-xs text-playground-green font-mono break-all">git clone https://github.com/vibeforge1111/vibeship-idearalph.git ~/idearalph</code>
+            <code class="block text-xs text-playground-green font-mono break-all">cd ~/idearalph/mcp-server && npm i && npm run build</code>
+          </div>
+
+          <p class="text-chalkboard/70 text-sm mb-2">Then add to Claude Code:</p>
 
           <div class="bg-chalkboard rounded-lg p-3 mb-3">
-            <code class="text-xs text-playground-green font-mono break-all">git clone https://github.com/anthropics/claude-code.git ~/cc-temp && cp -r ~/cc-temp/plugins/ralph-wiggum ~/.claude/plugins/ && rm -rf ~/cc-temp</code>
+            <code class="text-xs text-playground-green font-mono break-all">claude mcp add idearalph -- node ~/idearalph/mcp-server/dist/index.js</code>
           </div>
 
           <button
             onclick={() => {
-              navigator.clipboard.writeText('git clone https://github.com/anthropics/claude-code.git ~/cc-temp && cp -r ~/cc-temp/plugins/ralph-wiggum ~/.claude/plugins/ && rm -rf ~/cc-temp');
+              navigator.clipboard.writeText('git clone https://github.com/vibeforge1111/vibeship-idearalph.git ~/idearalph && cd ~/idearalph/mcp-server && npm i && npm run build && claude mcp add idearalph -- node ~/idearalph/mcp-server/dist/index.js');
               copied = true;
               setTimeout(() => copied = false, 2000);
             }}
             class="btn-crayon w-full text-sm mb-3"
           >
-            {copied ? '✅ Copied!' : '📋 Copy Install Command'}
+            {copied ? '✅ Copied!' : '📋 Copy All Commands'}
           </button>
 
           <div class="bg-ralph-yellow/20 rounded-lg p-3 mb-4">
             <p class="text-sm text-chalkboard mb-2">
-              <span class="font-bold">Important:</span> After installing, restart Claude Code:
+              <span class="font-bold">After adding:</span> Restart Claude Code
             </p>
             <div class="text-sm text-chalkboard/80">
-              1. Type <code class="bg-chalkboard/10 px-1 rounded">/exit</code> to close Claude Code<br/>
-              2. Run <code class="bg-chalkboard/10 px-1 rounded">claude</code> to start it again
+              <code class="bg-chalkboard/10 px-1 rounded">/exit</code> then <code class="bg-chalkboard/10 px-1 rounded">claude</code>
             </div>
+          </div>
+
+          <div class="bg-sky-blue/10 rounded-lg p-3 mb-4">
+            <p class="text-sm text-chalkboard/80">
+              <span class="font-bold">What's an MCP?</span> It gives Claude superpowers. No API key needed — runs locally on your machine.
+            </p>
+            <a
+              href="https://github.com/vibeforge1111/vibeship-idearalph"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-1 text-sm text-sky-blue hover:underline mt-2"
+            >
+              📦 View on GitHub →
+            </a>
           </div>
 
           <div class="flex gap-2">
@@ -520,64 +533,45 @@ Don't stop until 9.9+ achieved. This may take many iterations.`;
         </div>
 
       {:else if step === 'run'}
-        <!-- Step 2: Run the command -->
+        <!-- Step 2: How to Use -->
         <div class="bg-white/95 backdrop-blur-sm rounded-2xl p-6 border-4 border-chalkboard shadow-crayon-lg max-w-lg">
           <div class="flex items-center gap-2 mb-4">
             <span class="bg-playground-green text-white font-bold rounded-full w-8 h-8 flex items-center justify-center">2</span>
-            <h2 class="font-chalk text-xl text-chalkboard">Run the Idea Loop</h2>
+            <h2 class="font-chalk text-xl text-chalkboard">Just Talk to Claude!</h2>
           </div>
 
-          <input
-            bind:value={userHint}
-            placeholder="What kind of idea? (e.g., 'fitness apps', 'AI for pets')"
-            class="w-full px-4 py-3 rounded-lg border-2 border-chalkboard bg-white
-                   focus:outline-none focus:ring-2 focus:ring-sky-blue mb-4"
-          />
+          <p class="text-chalkboard/70 text-sm mb-4">The MCP gives Claude these superpowers. Just ask naturally:</p>
 
-          <p class="text-chalkboard/70 text-sm mb-2">Copy and run this in Claude Code:</p>
-
-          <div class="bg-chalkboard rounded-lg p-3 mb-4">
-            <code class="text-xs text-playground-green font-mono break-all whitespace-pre-wrap">/ralph-loop "{userHint ? `Generate a startup idea about ${userHint}.` : 'Generate a startup idea.'} Score on 10 PMF dimensions. Iterate until score >= 9.9. Output JSON when done. &lt;promise&gt;SCORE_ACHIEVED&lt;/promise&gt;" --max-iterations 30 --completion-promise "SCORE_ACHIEVED"</code>
+          <div class="space-y-2 mb-4">
+            <div class="bg-chalkboard/5 rounded-lg p-3 border-l-4 border-ralph-yellow">
+              <p class="text-sm font-mono text-chalkboard">"Brainstorm startup ideas about AI for pets"</p>
+              <p class="text-xs text-chalkboard/60 mt-1">→ Generates & scores ideas on 10 PMF dimensions</p>
+            </div>
+            <div class="bg-chalkboard/5 rounded-lg p-3 border-l-4 border-playground-green">
+              <p class="text-sm font-mono text-chalkboard">"Refine this idea until it scores 9.5+"</p>
+              <p class="text-xs text-chalkboard/60 mt-1">→ Ralph Loop iterates until it's dope</p>
+            </div>
+            <div class="bg-chalkboard/5 rounded-lg p-3 border-l-4 border-sky-blue">
+              <p class="text-sm font-mono text-chalkboard">"Generate a PRD for this idea"</p>
+              <p class="text-xs text-chalkboard/60 mt-1">→ Full product requirements doc</p>
+            </div>
           </div>
 
-          <button
-            onclick={() => {
-              const cmd = `/ralph-loop "${userHint ? `Generate a startup idea about ${userHint}.` : 'Generate a startup idea.'} Score on 10 PMF dimensions. Iterate until score >= 9.9. Output JSON when done. <promise>SCORE_ACHIEVED</promise>" --max-iterations 30 --completion-promise "SCORE_ACHIEVED"`;
-              navigator.clipboard.writeText(cmd);
-              copied = true;
-              setTimeout(() => copied = false, 2000);
-            }}
-            class="btn-crayon w-full text-lg mb-3"
-          >
-            {copied ? '✅ Copied!' : '📋 Copy Command'}
+          <div class="bg-ralph-yellow/20 rounded-lg p-3 mb-4">
+            <p class="text-sm text-chalkboard">
+              <span class="font-bold">5 MCP Tools:</span> brainstorm • validate • refine • prd • architecture
+            </p>
+          </div>
+
+          <button onclick={() => { markPluginInstalled(); step = 'bell'; }} class="btn-crayon w-full text-lg mb-3">
+            Got it! 🚀
           </button>
-
-          <div class="bg-sky-blue/10 rounded-lg p-3 mb-4 text-sm text-chalkboard/80">
-            <p class="font-bold mb-1">What happens next:</p>
-            <p>Ralph will iterate 10-30 times, improving the idea until it hits 9.9/10. This takes 2-5 minutes. When done, copy the JSON output.</p>
-          </div>
 
           <div class="flex gap-2">
-            <button onclick={() => step = hasInstalledPlugin ? 'bell' : 'install'} class="btn-crayon flex-1 bg-gray-100 text-sm">
+            <button onclick={() => step = 'install'} class="btn-crayon flex-1 bg-gray-100 text-sm">
               ← Back
             </button>
-            <button onclick={() => step = 'paste'} class="btn-crayon flex-1 text-sm">
-              I have the JSON →
-            </button>
           </div>
-
-          <button
-            onclick={() => {
-              if (typeof window !== 'undefined') {
-                localStorage.removeItem('idearalph-plugin-installed');
-                hasInstalledPlugin = false;
-              }
-              step = 'setup';
-            }}
-            class="w-full text-chalkboard/40 hover:text-chalkboard/60 text-xs py-2 mt-2"
-          >
-            I don't have the Ralph plugin yet
-          </button>
         </div>
 
       {:else if step === 'paste'}
@@ -790,10 +784,10 @@ Don't stop until 9.9+ achieved. This may take many iterations.`;
                    border-4 border-chalkboard shadow-crayon
                    transition-transform group-hover:scale-110 group-hover:rotate-3"
           >
-            <span class="text-3xl">🔔</span>
+            <span class="text-3xl">⚡</span>
           </div>
-          <h3 class="font-chalk text-xl mt-3">1. Ring the Bell</h3>
-          <p class="ralph-voice text-chalkboard text-base whitespace-nowrap">"Wake up Ralph!"</p>
+          <h3 class="font-chalk text-xl mt-3">1. Add the MCP</h3>
+          <p class="ralph-voice text-chalkboard text-base whitespace-nowrap">"One command!"</p>
         </div>
 
         <!-- Arrow -->
@@ -807,10 +801,10 @@ Don't stop until 9.9+ achieved. This may take many iterations.`;
                    border-4 border-chalkboard shadow-crayon
                    transition-transform group-hover:scale-110 group-hover:-rotate-3"
           >
-            <span class="text-3xl">💻</span>
+            <span class="text-3xl">🔄</span>
           </div>
-          <h3 class="font-chalk text-xl mt-3">2. Run in Claude</h3>
-          <p class="ralph-voice text-chalkboard text-base whitespace-nowrap">"Copy the magic!"</p>
+          <h3 class="font-chalk text-xl mt-3">2. Restart Claude</h3>
+          <p class="ralph-voice text-chalkboard text-base whitespace-nowrap">"/exit then claude"</p>
         </div>
 
         <!-- Arrow -->
@@ -824,11 +818,74 @@ Don't stop until 9.9+ achieved. This may take many iterations.`;
                    border-4 border-chalkboard shadow-crayon
                    transition-transform group-hover:scale-110 group-hover:rotate-3"
           >
-            <span class="text-3xl">💡</span>
+            <span class="text-3xl">💬</span>
           </div>
-          <h3 class="font-chalk text-xl mt-3">3. Get Your Idea</h3>
-          <p class="ralph-voice text-chalkboard text-base whitespace-nowrap">"Genius comes out!"</p>
+          <h3 class="font-chalk text-xl mt-3">3. Just Talk!</h3>
+          <p class="ralph-voice text-chalkboard text-base whitespace-nowrap">"Brainstorm ideas..."</p>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MCP Tools Section -->
+  <section class="bg-white py-14 md:py-20 px-4">
+    <div class="max-w-4xl mx-auto">
+      <div class="flex justify-center mb-10">
+        <div class="thought-bubble bg-ralph-yellow/20 px-8 py-4">
+          <h2 class="ralph-voice text-2xl md:text-3xl text-chalkboard text-center">
+            What Ralph Can Do
+          </h2>
+        </div>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div class="bg-paper rounded-xl p-5 border-2 border-chalkboard/20 shadow-crayon">
+          <div class="text-2xl mb-2">💡</div>
+          <h3 class="font-chalk text-lg text-chalkboard mb-1">Brainstorm</h3>
+          <p class="text-sm text-chalkboard/70">"Generate startup ideas about fitness"</p>
+          <p class="text-xs text-chalkboard/50 mt-2">Scores on 10 PMF dimensions</p>
+        </div>
+
+        <div class="bg-paper rounded-xl p-5 border-2 border-chalkboard/20 shadow-crayon">
+          <div class="text-2xl mb-2">🎯</div>
+          <h3 class="font-chalk text-lg text-chalkboard mb-1">Validate</h3>
+          <p class="text-sm text-chalkboard/70">"Score this idea: AI for pets"</p>
+          <p class="text-xs text-chalkboard/50 mt-2">Deep dive on each dimension</p>
+        </div>
+
+        <div class="bg-paper rounded-xl p-5 border-2 border-chalkboard/20 shadow-crayon">
+          <div class="text-2xl mb-2">🔄</div>
+          <h3 class="font-chalk text-lg text-chalkboard mb-1">Refine</h3>
+          <p class="text-sm text-chalkboard/70">"Make this idea score 9.5+"</p>
+          <p class="text-xs text-chalkboard/50 mt-2">Ralph Loop until it's dope</p>
+        </div>
+
+        <div class="bg-paper rounded-xl p-5 border-2 border-chalkboard/20 shadow-crayon">
+          <div class="text-2xl mb-2">📋</div>
+          <h3 class="font-chalk text-lg text-chalkboard mb-1">PRD</h3>
+          <p class="text-sm text-chalkboard/70">"Generate a PRD for this"</p>
+          <p class="text-xs text-chalkboard/50 mt-2">Napkin → Science-Fair → Genius</p>
+        </div>
+
+        <div class="bg-paper rounded-xl p-5 border-2 border-chalkboard/20 shadow-crayon">
+          <div class="text-2xl mb-2">🏗️</div>
+          <h3 class="font-chalk text-lg text-chalkboard mb-1">Architecture</h3>
+          <p class="text-sm text-chalkboard/70">"Plan how to build this"</p>
+          <p class="text-xs text-chalkboard/50 mt-2">Tech stack + implementation</p>
+        </div>
+
+        <div class="bg-paper rounded-xl p-5 border-2 border-chalkboard/20 shadow-crayon bg-ralph-yellow/10">
+          <div class="text-2xl mb-2">✨</div>
+          <h3 class="font-chalk text-lg text-chalkboard mb-1">The Flow</h3>
+          <p class="text-sm text-chalkboard/70">Brainstorm → Validate → Refine → PRD → Build!</p>
+          <p class="text-xs text-chalkboard/50 mt-2">All in one conversation</p>
+        </div>
+      </div>
+
+      <div class="mt-8 text-center">
+        <p class="text-chalkboard/60 text-sm">
+          No API key needed • Runs locally • Works with Claude Code
+        </p>
       </div>
     </div>
   </section>
@@ -889,7 +946,7 @@ Don't stop until 9.9+ achieved. This may take many iterations.`;
           class="thought-bubble bg-paper text-left hover:scale-[1.02] transition-transform cursor-default"
         >
           <p class="ralph-voice text-lg">
-            "This idea tastes like purple and also like money!"
+            "I asked the AI to make me rich so it put my face on a coin! Wait, I am the AI!"
           </p>
           <div class="flex items-center justify-between mt-4">
             <p class="text-sm text-chalkboard/60">— Classic Ralph</p>
@@ -917,7 +974,7 @@ Don't stop until 9.9+ achieved. This may take many iterations.`;
       <!-- Layer 1: Ralph Quote -->
       <div class="text-center pb-6 mb-6 border-b border-chalkboard/10">
         <p class="text-chalkboard/60 text-sm ralph-voice">
-          "I made this. It was very simple." — Ralph
+          "I made this." — Ralph
         </p>
       </div>
 

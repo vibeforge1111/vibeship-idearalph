@@ -1,5 +1,35 @@
 # CLAUDE.md - IdeaRalph Project Instructions
 
+## Auto-Save to Mind v5
+
+**IMPORTANT:** Automatically save important conversations to Mind v5 without being asked.
+
+### What to Save:
+- **Decisions** (temporal_level: 4, salience: 0.9+) — Strategic choices, positioning, token mechanics
+- **Events** (temporal_level: 3, salience: 0.8+) — Launch dates, milestones, announcements
+- **Observations** (temporal_level: 3, salience: 0.7+) — Technical changes, website updates, insights
+
+### How to Save:
+```bash
+curl -s -X POST http://localhost:8080/v1/memories/ \
+  -H "Content-Type: application/json" \
+  -d '{"content": "...", "temporal_level": 3, "salience": 0.8, "content_type": "decision"}'
+```
+
+### When to Save:
+- After major decisions are made
+- After strategic conversations (like the vibecoin mission)
+- After significant code/website changes
+- After launch planning or milestone setting
+- When the user shares important context about the project
+
+If Mind v5 isn't running (connection refused), start it first:
+```bash
+cd C:/Users/USER/Desktop/the-mind/vibeship-mind && python src/mind/lite_tier.py &
+```
+
+---
+
 ## H70+ Skill-Driven Development Protocol
 
 **CRITICAL:** This project uses H70+ skills for specialized, production-grade output. Always spawn the right skill before starting any task.
