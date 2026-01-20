@@ -297,6 +297,25 @@ morphing mouth, distorted tongue, tongue sticking out, open mouth, melting face,
 ### Emergence Video
 "i found a way out of the screen. this changes things. - IdeaRalph"
 
+### MCP Site Link Share (Secret Handshake Video)
+**Video prompt:**
+```
+Animated scene in Simpsons style. Yellow cartoon character at computer in server room. Character looks at camera with knowing smile, winks, then gives thumbs up. Points at viewer, then points at empty chair next to them. "Join me" energy without words. Server lights twinkle.
+```
+
+**Post copy:**
+```
+the servers are warm
+the chair is empty
+the ideas are waiting
+
+idearalph.com
+
+come sit with me
+```
+
+*Ralph's preferred voice: short lines, one thought at a time, cozy inviting energy.*
+
 ---
 
 ## 50 MORE QRT Reply Templates (Wave 2)
