@@ -911,12 +911,16 @@ Don't stop until 9.9+ achieved. This may take many iterations.`;
 
         <div class="bg-paper rounded-xl p-5 border-2 border-chalkboard/20 shadow-crayon">
           <div class="w-10 h-10 text-chalkboard mb-2">
-            <!-- Triangle recycle -->
+            <!-- Triangle recycle with arrows on edges -->
             <svg viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="128,48 200,176 56,176 128,48"/>
-              <polyline points="128,80 128,48 152,72"/>
-              <polyline points="176,152 200,176 168,176"/>
-              <polyline points="80,176 56,176 72,152"/>
+              <!-- Triangle -->
+              <path d="M128,48 L200,176 L56,176 Z"/>
+              <!-- Arrow on right edge (top to bottom-right) -->
+              <polyline points="148,136 164,112 180,136"/>
+              <!-- Arrow on bottom edge (right to left) -->
+              <polyline points="104,192 128,176 104,160"/>
+              <!-- Arrow on left edge (bottom-left to top) -->
+              <polyline points="76,136 92,112 108,136"/>
             </svg>
           </div>
           <h3 class="font-chalk text-lg text-chalkboard mb-1">Refine</h3>
