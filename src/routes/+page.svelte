@@ -878,8 +878,8 @@ Don't stop until 9.9+ achieved. This may take many iterations.`;
         </div>
       </div>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-        <div class="bg-paper rounded-xl p-5 border-2 border-chalkboard/20 shadow-crayon">
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="bg-paper rounded-xl p-5 border-2 border-chalkboard/20 shadow-crayon transition-transform hover:rotate-1 hover:-translate-y-1 cursor-default">
           <div class="w-10 h-10 text-chalkboard mb-2">
             <!-- Lightbulb icon - brainstorm -->
             <svg viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
@@ -894,7 +894,7 @@ Don't stop until 9.9+ achieved. This may take many iterations.`;
           <p class="text-xs text-chalkboard/50 mt-2">Scores on 10 PMF dimensions</p>
         </div>
 
-        <div class="bg-paper rounded-xl p-5 border-2 border-chalkboard/20 shadow-crayon">
+        <div class="bg-paper rounded-xl p-5 border-2 border-chalkboard/20 shadow-crayon transition-transform hover:-rotate-1 hover:-translate-y-1 cursor-default">
           <div class="w-10 h-10 text-chalkboard mb-2">
             <!-- Target icon - validate -->
             <svg viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
@@ -909,15 +909,13 @@ Don't stop until 9.9+ achieved. This may take many iterations.`;
           <p class="text-xs text-chalkboard/50 mt-2">Deep dive on each dimension</p>
         </div>
 
-        <div class="bg-paper rounded-xl p-5 border-2 border-chalkboard/20 shadow-crayon">
+        <div class="bg-paper rounded-xl p-5 border-2 border-chalkboard/20 shadow-crayon transition-transform hover:rotate-1 hover:-translate-y-1 cursor-default">
           <div class="w-10 h-10 text-chalkboard mb-2">
             <!-- Boost/level up icon - ascending bars with arrow -->
             <svg viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
-              <!-- Ascending bars -->
               <line x1="56" y1="208" x2="56" y2="160"/>
               <line x1="104" y1="208" x2="104" y2="120"/>
               <line x1="152" y1="208" x2="152" y2="80"/>
-              <!-- Rocket arrow shooting up -->
               <line x1="200" y1="208" x2="200" y2="48"/>
               <polyline points="176,72 200,48 224,72"/>
             </svg>
@@ -927,7 +925,7 @@ Don't stop until 9.9+ achieved. This may take many iterations.`;
           <p class="text-xs text-chalkboard/50 mt-2">Ralph Loop until it's dope</p>
         </div>
 
-        <div class="bg-paper rounded-xl p-5 border-2 border-chalkboard/20 shadow-crayon">
+        <div class="bg-paper rounded-xl p-5 border-2 border-chalkboard/20 shadow-crayon transition-transform hover:-rotate-1 hover:-translate-y-1 cursor-default">
           <div class="w-10 h-10 text-chalkboard mb-2">
             <!-- Document/clipboard icon - PRD -->
             <svg viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
@@ -942,7 +940,23 @@ Don't stop until 9.9+ achieved. This may take many iterations.`;
           <p class="text-xs text-chalkboard/50 mt-2">Napkin → Science-Fair → Genius</p>
         </div>
 
-        <div class="bg-paper rounded-xl p-5 border-2 border-chalkboard/20 shadow-crayon">
+        <div class="bg-paper rounded-xl p-5 border-2 border-chalkboard/20 shadow-crayon transition-transform hover:rotate-1 hover:-translate-y-1 cursor-default">
+          <div class="w-10 h-10 text-chalkboard mb-2">
+            <!-- Palette/design icon -->
+            <svg viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="128" cy="128" r="96"/>
+              <path d="M128,32a96,96,0,0,1,0,192c-53,0-40-48-24-64s40-16,24-64A96,96,0,0,1,128,32Z"/>
+              <circle cx="88" cy="112" r="12" fill="currentColor"/>
+              <circle cx="128" cy="88" r="12" fill="currentColor"/>
+              <circle cx="168" cy="112" r="12" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3 class="font-chalk text-lg text-chalkboard mb-1">Design</h3>
+          <p class="text-sm text-chalkboard/70">"Design the UI for this"</p>
+          <p class="text-xs text-chalkboard/50 mt-2">Colors, typography, layout</p>
+        </div>
+
+        <div class="bg-paper rounded-xl p-5 border-2 border-chalkboard/20 shadow-crayon transition-transform hover:-rotate-1 hover:-translate-y-1 cursor-default">
           <div class="w-10 h-10 text-chalkboard mb-2">
             <!-- Database/stack icon - architecture -->
             <svg viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
@@ -956,7 +970,23 @@ Don't stop until 9.9+ achieved. This may take many iterations.`;
           <p class="text-xs text-chalkboard/50 mt-2">Tech stack + implementation</p>
         </div>
 
-        <div class="bg-paper rounded-xl p-5 border-2 border-chalkboard/20 shadow-crayon bg-ralph-yellow/10">
+        <div class="bg-paper rounded-xl p-5 border-2 border-chalkboard/20 shadow-crayon transition-transform hover:rotate-1 hover:-translate-y-1 cursor-default">
+          <div class="w-10 h-10 text-chalkboard mb-2">
+            <!-- Checklist icon -->
+            <svg viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="48" y="40" width="160" height="176" rx="8"/>
+              <polyline points="88,104 104,120 136,88"/>
+              <line x1="152" y1="104" x2="176" y2="104"/>
+              <polyline points="88,152 104,168 136,136"/>
+              <line x1="152" y1="152" x2="176" y2="152"/>
+            </svg>
+          </div>
+          <h3 class="font-chalk text-lg text-chalkboard mb-1">Checklist</h3>
+          <p class="text-sm text-chalkboard/70">"Create launch checklist"</p>
+          <p class="text-xs text-chalkboard/50 mt-2">YC-level pre-launch prep</p>
+        </div>
+
+        <div class="bg-paper rounded-xl p-5 border-2 border-chalkboard/20 shadow-crayon bg-ralph-yellow/10 transition-transform hover:-rotate-1 hover:-translate-y-1 cursor-default">
           <div class="w-10 h-10 text-chalkboard mb-2">
             <!-- Connected nodes flow icon -->
             <svg viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
@@ -971,7 +1001,7 @@ Don't stop until 9.9+ achieved. This may take many iterations.`;
             </svg>
           </div>
           <h3 class="font-chalk text-lg text-chalkboard mb-1">The Flow</h3>
-          <p class="text-sm text-chalkboard/70">Brainstorm → Validate → Refine → PRD → Build!</p>
+          <p class="text-sm text-chalkboard/70">Idea → Design → Build → Launch!</p>
           <p class="text-xs text-chalkboard/50 mt-2">All in one conversation</p>
         </div>
       </div>
