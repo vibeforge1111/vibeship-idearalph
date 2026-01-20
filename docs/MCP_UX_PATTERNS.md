@@ -12,24 +12,89 @@
 
 ---
 
-## The IdeaRalph Flow
+## The IdeaRalph Flow (v2.2)
 
 ```
-┌─────────────┐     ┌─────────────┐     ┌─────────────┐     ┌─────────────┐     ┌─────────────┐
-│  Brainstorm │ ──► │  Validate   │ ──► │   Refine    │ ──► │     PRD     │ ──► │Architecture │
-│             │     │             │     │ (Ralph Loop)│     │             │     │             │
-└─────────────┘     └─────────────┘     └─────────────┘     └─────────────┘     └─────────────┘
-      │                   │                   │                   │                   │
-      ▼                   ▼                   ▼                   ▼                   ▼
-   ASK user            ASK user           ASK user            ASK user        Check Spawner
-   what next           what next          what next           what next       → ASK what next
+┌─────────────┐     ┌─────────────┐     ┌─────────────┐     ┌─────────────┐     ┌─────────────┐     ┌─────────────┐     ┌─────────────┐
+│  Brainstorm │ ──► │  Validate   │ ──► │   Refine    │ ──► │     PRD     │ ──► │   Design    │ ──► │Architecture │ ──► │  Checklist  │
+│             │     │             │     │ (Ralph Loop)│     │             │     │             │     │             │     │  (NEW!)     │
+└─────────────┘     └─────────────┘     └─────────────┘     └─────────────┘     └─────────────┘     └─────────────┘     └─────────────┘
+      │                   │                   │                   │                   │                   │                   │
+      ▼                   ▼                   ▼                   ▼                   ▼                   ▼                   ▼
+   ASK user            ASK user           ASK user            ASK user          ONE question:      Check Spawner      Generate YC-level
+   what next           what next          what next           what next         "What vibe?"       → ASK what next    Tasks + Checklist
 ```
 
 Each step ends with a question, not a command.
 
+### The Design Phase (NEW in v2.1)
+
+The design phase asks ONE question, then AI does the rest:
+
+1. **Ask**: "What vibe?" (clean/bold/dark/playful) or accept a reference URL
+2. **Infer**: Analyze PRD to determine target audience automatically
+3. **Discover**: Find reference sites that audience loves (project-specific, not generic)
+4. **Generate**: Color palette, typography, landing page spec, component list
+5. **Build**: Hand off to Spawner (SvelteKit + Tailwind) to build ONE page first
+6. **Iterate**: Get feedback, refine, add more pages
+
 ---
 
 ## Tool-Specific UX Guidelines
+
+### 0. idearalph_design (NEW in v2.1)
+
+**The ONE Question Flow:**
+
+```
+✅ DO (when no vibe provided):
+"Quick vibe check before we design:
+
+What feeling should your product give off?
+
+1. Clean & Minimal — Less is more. Think Linear, Notion, Vercel
+2. Bold & Colorful — Make a statement. Think Stripe, Figma, Framer
+3. Dark & Techy — Developer-focused. Think GitHub, Supabase, Warp
+4. Playful & Fun — Approachable energy. Think Duolingo, Slack, Headspace
+
+Or just drop a link to any site you love!"
+
+❌ DON'T:
+"What's your target audience? What colors do you like?
+What typography? What's the hero section? What components?"
+(Too many questions - analysis paralysis)
+```
+
+**After generating design:**
+
+```
+✅ DO:
+"Your landing page design is ready!
+
+**Vibe**: Clean & Minimal
+**Inspired by**: Linear, Vercel (based on your developer audience)
+**Colors**: Monochrome with blue accent (#0066FF)
+
+I've got the full spec with:
+- Color palette & typography
+- Landing page wireframe
+- Component list
+- Tailwind config
+
+What would you like to do?
+1. Build it now — I'll set up SvelteKit + Tailwind
+2. Tweak the colors — Let's adjust the palette first
+3. Save and continue — Save design spec, move to architecture
+4. Pause — Come back to this later"
+
+❌ DON'T:
+"Here's your 47-section design system document.
+Run idearalph_architecture next."
+```
+
+**Key Principle**: ONE page first. Build it, see it, iterate. Don't design the whole app upfront.
+
+---
 
 ### 1. idearalph_brainstorm
 
@@ -130,6 +195,54 @@ This is where users transition from ideation to building. Handle with care.
 
 [Then follow the Spawner detection flow below]
 ```
+
+### 6. idearalph_checklist (NEW in v2.2)
+
+**The Checklist Tool:**
+
+Creates TWO files with YC-level launch standards:
+1. **Tasks.md** — Actionable tasks organized by P0/P1/P2 priority
+2. **Checklist.md** — Comprehensive pre-launch and post-launch checklist
+
+**Categories covered:**
+- 🔴 Security (OWASP, auth, rate limiting, RLS)
+- 📜 Legal (ToS, Privacy Policy, GDPR)
+- 📊 Analytics (product analytics, error tracking)
+- 📝 Content & SEO (meta tags, OG images, sitemap)
+- 🚀 Growth (viral loops, referral, onboarding)
+- 🏗️ Infrastructure (monitoring, backups, CI/CD)
+- 📢 Launch tactics (Product Hunt, HN, social)
+
+**Spawner skills auto-loaded:**
+- YC Playbook
+- Growth Strategy
+- Product Strategy
+
+```
+✅ DO:
+"Your YC-level launch preparation is ready!
+
+**Two files generated:**
+- `docs/DevPal_Tasks.md` — 47 tasks across P0/P1/P2 priorities
+- `docs/DevPal_Checklist.md` — Comprehensive pre/post-launch checklist
+
+**Key focus areas:**
+- 🔴 **Security**: 7 critical items
+- 📜 **Legal**: 5 compliance items
+- 📊 **Analytics**: 5 tracking items
+- 🚀 **Launch**: 8 marketing items
+
+What would you like to do?
+1. Save both files — I'll write them to docs/
+2. Review and customize — Let's go through section by section
+3. Start tackling P0 tasks — Focus on security and legal first
+4. Pause — Save for later"
+
+❌ DON'T:
+"Here's your 200-item checklist. Good luck!"
+```
+
+**Key Principle**: The checklist is comprehensive but PRIORITIZED. P0 items (security, legal) are non-negotiable before launch. Everything else can be iterated post-launch.
 
 ---
 
@@ -338,14 +451,18 @@ To verify the UX is working correctly:
 2. **Validate test**: Does it show strengths AND weaknesses with options?
 3. **Refine test**: Does it celebrate improvement and offer next steps?
 4. **PRD test**: Does it offer to save and suggest architecture?
-5. **Architecture test**: Does it detect Spawner and handle both cases?
-6. **Install test**: Does it offer to add Spawner automatically?
-7. **Resume test**: Is the prompt ready to paste with no editing?
+5. **Design test**: Does it ask ONE question (vibe) and auto-load Spawner skills?
+6. **Architecture test**: Does it detect Spawner and handle both cases?
+7. **Checklist test**: Does it generate Tasks.md and Checklist.md with P0/P1/P2 priorities?
+8. **Install test**: Does it offer to add Spawner automatically?
+9. **Resume test**: Is the prompt ready to paste with no editing?
 
 ---
 
 ## Version History
 
+- **v2.2** (2025-01-20): Added checklist tool (`idearalph_checklist`) with YC-level Tasks.md and Checklist.md generation
+- **v2.1** (2025-01-19): Added design phase with ONE question flow, Copywriting + Landing Page Design skills
 - **v2.0** (2025-01-17): Added Spawner handoff UX, session continuity, automatic MCP installation
 - **v1.0** (2025-01-16): Initial MCP release with 5 tools
 

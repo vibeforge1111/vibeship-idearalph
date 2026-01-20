@@ -373,7 +373,7 @@ cp -r plugins/idearalph ~/.claude/commands/
 
 ---
 
-## MCP Server v2.0
+## MCP Server v2.2
 
 IdeaRalph works as an MCP (Model Context Protocol) server, enabling Claude to automatically invoke Ralph tools during brainstorming sessions.
 
@@ -396,7 +396,9 @@ New way:  User → Claude Code → MCP → Returns prompt → Claude processes d
 | `idearalph_validate` | Validate an idea on 10 PMF dimensions |
 | `idearalph_refine` | Iteratively improve idea with modes: single, target, max |
 | `idearalph_prd` | Generate PRD at napkin/science-fair/genius level |
-| `idearalph_architecture` | Get implementation plan with Spawner skills |
+| `idearalph_design` | Design UI with ONE question - infers audience, finds references |
+| `idearalph_architecture` | Get implementation plan (defaults to SvelteKit) |
+| `idearalph_checklist` | **NEW!** Generate YC-level checklist (Tasks.md + Checklist.md) |
 
 ### MCP Installation
 
@@ -423,13 +425,46 @@ New way:  User → Claude Code → MCP → Returns prompt → Claude processes d
 
 3. **Use naturally**: Just ask Claude to brainstorm ideas - it will invoke the tools automatically!
 
-### The Flow
+### The Flow (v2.2)
 
 ```
-Brainstorm → Validate → Refine → PRD → Architecture → Build with Spawner!
+Brainstorm → Validate → Refine → PRD → Design → Architecture → Checklist → Build!
+                                         ↑                        ↑
+                                   ONE question:            YC-level checklist:
+                                   "What vibe?"             Tasks.md + Checklist.md
+                                         ↓                        ↓
+                                   AI infers audience        Security, Legal,
+                                   from PRD, finds refs      Analytics, Growth
 ```
 
-Each tool suggests the next step and recommends Spawner skills for building.
+Each tool suggests the next step. The **Design** phase:
+1. Asks ONE question: "What vibe?" (clean/bold/dark/playful)
+2. **Loads Spawner skills**: UX Design, UI Design, Tailwind CSS UI
+3. Analyzes PRD to infer target audience automatically
+4. Finds reference sites that audience loves (project-specific)
+5. Generates design using skill patterns:
+   - Color palette (UI Design's contrast rules)
+   - Typography (UI Design's type scale)
+   - Spacing (UI Design's 8pt grid)
+   - Landing page wireframe (UX Design's patterns)
+   - Component specs with ALL states (UI Design's component mapping)
+   - Tailwind config (Tailwind CSS UI's token system)
+6. Builds ONE page first with SvelteKit, iterates from there (KISS principle)
+
+The **Checklist** phase (NEW in v2.2):
+1. **Loads Spawner skills**: YC Playbook, Growth Strategy, Product Strategy
+2. Generates TWO files with YC-level launch standards:
+   - **Tasks.md**: Actionable tasks by P0/P1/P2 priority with owners and status
+   - **Checklist.md**: Comprehensive pre-launch and post-launch checklist
+3. Covers all critical areas:
+   - 🔴 Security (OWASP, auth, RLS, rate limiting)
+   - 📜 Legal (ToS, Privacy Policy, GDPR)
+   - 📊 Analytics (product analytics, error tracking, session replay)
+   - 📝 Content & SEO (meta tags, OG images, sitemap)
+   - 🚀 Growth (viral loops, referral, onboarding)
+   - 🏗️ Infrastructure (monitoring, backups, CI/CD)
+   - 📢 Launch tactics (Product Hunt, HN, social)
+4. Prioritizes ruthlessly: P0 items (security, legal) are non-negotiable; rest can iterate post-launch
 
 ### Refinement Modes
 
@@ -443,9 +478,15 @@ See `mcp-server/README.md` for full documentation.
 
 After architecture generation, IdeaRalph checks for Spawner and handles the handoff:
 
+**Default Stack** (SvelteKit-first, not Next.js):
+- **Frontend**: SvelteKit (simpler, faster, less boilerplate)
+- **Styling**: Tailwind CSS
+- **Backend**: Supabase (Postgres + Auth + Storage)
+- **Deploy**: Vercel
+
 **If Spawner is available:**
 - Offers to start building immediately
-- Loads appropriate skills (supabase-backend, sveltekit, etc.)
+- Loads appropriate skills (SvelteKit, supabase-backend, tailwind-ui, etc.)
 
 **If Spawner is NOT available:**
 - Explains benefits: FREE, 450+ skills, better output

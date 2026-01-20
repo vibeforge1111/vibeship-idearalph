@@ -172,6 +172,21 @@ export const architectureSchema = z.object({
   techPreferences: z.string().optional().describe("Tech stack preferences"),
 });
 
+export const designSchema = z.object({
+  idea: z.string().describe("The startup idea to design for"),
+  prd: z.string().optional().describe("The PRD content (provides target audience context)"),
+  vibe: z.enum(["clean", "bold", "dark", "playful"]).optional().describe("Design vibe: clean (minimal), bold (colorful), dark (techy), playful (fun)"),
+  referenceUrl: z.string().optional().describe("Optional: URL of a site the user loves the design of"),
+});
+
+export const checklistSchema = z.object({
+  idea: z.string().describe("The startup idea to create checklist for"),
+  projectName: z.string().describe("The project name for file naming"),
+  prd: z.string().optional().describe("The PRD content"),
+  designSpec: z.string().optional().describe("The design specification"),
+  currentStatus: z.string().optional().describe("Current build status or what's been completed"),
+});
+
 // =============================================================================
 // TOOL DEFINITIONS (for MCP ListTools)
 // =============================================================================
@@ -288,7 +303,7 @@ Use this when someone wants to:
 This tool bridges Ralph's idea validation with Spawner's specialized skills for building.
 
 SPAWNER SKILLS THAT GET RECOMMENDED:
-- SvelteKit / Next.js for frontend
+- SvelteKit (preferred) for frontend
 - Supabase Backend for database/auth
 - Tailwind CSS UI for styling
 - TypeScript Strict Mode for type safety
@@ -297,15 +312,85 @@ SPAWNER SKILLS THAT GET RECOMMENDED:
 - Test Architect for testing
 - Security Hardening for production
 
-Use this AFTER validating/refining an idea to get a concrete build plan!`,
+Use this AFTER design phase to get a concrete build plan!`,
     inputSchema: {
       type: "object" as const,
       properties: {
         idea: { type: "string", description: "The validated startup idea" },
         prd: { type: "string", description: "The PRD content (if already generated)" },
-        techPreferences: { type: "string", description: "Tech stack preferences (e.g., 'SvelteKit, Supabase')" },
+        designSpec: { type: "string", description: "The design specification (if already generated)" },
+        techPreferences: { type: "string", description: "Tech stack preferences (default: SvelteKit, Supabase)" },
       },
       required: ["idea"],
+    },
+  },
+  {
+    name: "idearalph_design",
+    description: `Design the UI/UX for a startup idea - ONE question, AI does the rest.
+
+SIMPLE FLOW:
+1. Ask ONE question: "What vibe?" (clean/bold/dark/playful)
+2. Ralph analyzes PRD to infer target audience
+3. Ralph finds design references that audience loves
+4. Generates design tokens + first page spec
+5. Hands off to Spawner (SvelteKit + Tailwind) to build
+
+WHAT IT OUTPUTS:
+- Color palette (based on vibe + audience)
+- Typography scale
+- Key component specs
+- Landing page wireframe description
+- Reference sites for inspiration
+
+Use this AFTER PRD generation, BEFORE architecture!`,
+    inputSchema: {
+      type: "object" as const,
+      properties: {
+        idea: { type: "string", description: "The startup idea to design for" },
+        prd: { type: "string", description: "The PRD content (provides target audience context)" },
+        vibe: {
+          type: "string",
+          enum: ["clean", "bold", "dark", "playful"],
+          description: "Design vibe: clean (minimal), bold (colorful), dark (techy), playful (fun)"
+        },
+        referenceUrl: { type: "string", description: "Optional: URL of a site the user loves" },
+      },
+      required: ["idea"],
+    },
+  },
+  {
+    name: "idearalph_checklist",
+    description: `Generate a YC-level startup checklist - creates Tasks.md and Checklist.md.
+
+Creates TWO files:
+1. **Tasks.md** — Actionable tasks organized by category with owner, status, priority
+2. **Checklist.md** — Comprehensive pre-launch and post-launch checklist
+
+CHECKLIST COVERS (YC-level unicorn standards):
+- Security hardening (OWASP, secrets, auth, rate limiting)
+- Legal compliance (ToS, Privacy Policy, GDPR, cookie consent)
+- Analytics setup (product analytics, error tracking, session replay)
+- Content strategy (SEO, social proof, case studies)
+- Growth mechanics (viral loops, referral, onboarding)
+- Infrastructure (monitoring, backups, CDN, CI/CD)
+- Launch tactics (Product Hunt, HN, social, press)
+
+SPAWNER SKILLS AUTO-LOADED:
+- YC Playbook — startup launch patterns
+- Growth Strategy — user acquisition, retention
+- Product Strategy — roadmap, metrics, prioritization
+
+Use this AFTER architecture is complete, when preparing for production!`,
+    inputSchema: {
+      type: "object" as const,
+      properties: {
+        idea: { type: "string", description: "The startup idea to create checklist for" },
+        projectName: { type: "string", description: "The project name for file naming" },
+        prd: { type: "string", description: "The PRD content (optional)" },
+        designSpec: { type: "string", description: "The design specification (optional)" },
+        currentStatus: { type: "string", description: "Current build status or what's been completed" },
+      },
+      required: ["idea", "projectName"],
     },
   },
 ];
@@ -771,6 +856,7 @@ ${NEXT_STEP_PROTOCOL}
 export function handleArchitecture(args: z.infer<typeof architectureSchema>): string {
   const techPrefs = args.techPreferences || "SvelteKit, Supabase, TailwindCSS";
   const prdContext = args.prd ? `\n## PRD Context\n${args.prd.slice(0, 2000)}...\n` : "";
+  const designContext = (args as any).designSpec ? `\n## Design Spec\n${(args as any).designSpec.slice(0, 2000)}...\n` : "";
 
   return `# Architecture & Implementation Plan
 
@@ -782,21 +868,39 @@ Create a detailed architecture and implementation plan for this startup idea.
 
 ${args.idea}
 ${prdContext}
+${designContext}
 
 ## Tech Preferences
 
 ${techPrefs}
+
+## IMPORTANT: Framework Selection
+
+**DEFAULT TO SVELTEKIT** unless the user explicitly requests React/Next.js.
+
+Why SvelteKit over Next.js:
+- Simpler mental model (no useEffect/useState complexity)
+- Better performance out of the box
+- Less boilerplate
+- Svelte 5 runes are incredibly intuitive
+- Form actions and load functions are elegant
+- Smaller bundle sizes
+
+**Only recommend Next.js if:**
+- User explicitly requests React
+- Project requires React-specific libraries with no Svelte alternatives
+- Team has existing React expertise they want to leverage
 
 ## Required Output
 
 ### 1. Recommended Tech Stack
 
 Based on the idea and preferences, recommend:
-- **Frontend**: [Framework + reasoning]
-- **Styling**: [CSS approach]
-- **Backend/Database**: [Service + reasoning]
-- **Authentication**: [Approach]
-- **Deployment**: [Platform]
+- **Frontend**: SvelteKit (default) - [reasoning if different]
+- **Styling**: Tailwind CSS
+- **Backend/Database**: Supabase (Postgres + Auth + Storage)
+- **Authentication**: Supabase Auth
+- **Deployment**: Vercel
 - **Other**: [Any additional services needed]
 
 ### 2. System Architecture
@@ -955,4 +1059,747 @@ ALWAYS end by asking the user what they want to do, don't just dump instructions
 ---
 
 **IMPORTANT**: Never just say "run this command". Always ASK what the user wants to do next.`;
+}
+
+export function handleDesign(args: z.infer<typeof designSchema>): string {
+  const vibe = args.vibe || null;
+  const prdContext = args.prd ? `\n## PRD Context (for audience inference)\n${args.prd.slice(0, 3000)}...\n` : "";
+  const referenceContext = args.referenceUrl ? `\n## User-Provided Reference\nThe user loves the design of: ${args.referenceUrl}\n` : "";
+
+  // If no vibe provided, ask for it
+  if (!vibe) {
+    return `# Design Phase: Quick Vibe Check
+
+${RALPH_PERSONA}
+
+## Your Task
+
+Before designing the UI, ask the user ONE simple question about their design preference.
+
+## The Idea
+${args.idea}
+${prdContext}
+
+## ASK THIS QUESTION
+
+Present this to the user in a friendly, casual way:
+
+---
+
+**Quick vibe check before we design:**
+
+What feeling should your product give off?
+
+1. **Clean & Minimal** — Less is more. Think Linear, Notion, Vercel
+2. **Bold & Colorful** — Make a statement. Think Stripe, Figma, Framer
+3. **Dark & Techy** — Developer-focused. Think GitHub, Supabase, Warp
+4. **Playful & Fun** — Approachable energy. Think Duolingo, Slack, Headspace
+
+Or just drop a link to any site you love the look of!
+
+---
+
+**IMPORTANT**: Wait for the user's answer. Once they respond, call idearalph_design again with the vibe parameter set.
+
+Do NOT proceed with design until you have their vibe preference.`;
+  }
+
+  // Vibe is provided - now generate the design
+  return `# Design Generation: ${vibe.charAt(0).toUpperCase() + vibe.slice(1)} Vibe
+
+${RALPH_PERSONA}
+
+## 🎯 FIRST: Load Spawner Skills
+
+**BEFORE generating the design, you MUST load these Spawner skills for world-class output:**
+
+\`\`\`
+// Load in this order:
+1. spawner_skills({ action: "get", name: "UX Design" })         // User flows, IA, wireframes
+2. spawner_skills({ action: "get", name: "UI Design" })         // Visual hierarchy, components, tokens
+3. spawner_skills({ action: "get", name: "Tailwind CSS UI" })   // Implementation patterns
+4. spawner_skills({ action: "get", name: "Copywriting" })       // Headlines, CTAs, microcopy
+5. spawner_skills({ action: "get", name: "Landing Page Design" }) // Conversion patterns, CRO
+\`\`\`
+
+**Why these skills matter:**
+- **UX Design**: Ensures user flows make sense, information architecture is solid
+- **UI Design**: Provides 8pt grid, type scales, color contrast rules, component states
+- **Tailwind CSS UI**: Ensures the design tokens translate perfectly to code
+- **Copywriting**: Headlines that convert, CTAs that compel, microcopy that guides
+- **Landing Page Design**: Conversion-focused layout, trust signals, CRO patterns
+
+Load them ALL now, then proceed with design generation.
+
+---
+
+## Your Task
+
+Generate a complete design specification for the landing page based on:
+- **Vibe**: ${vibe}
+- **Idea context**: Analyze to determine target audience
+- **Auto-discover references**: Find sites that resonate with this audience
+- **Spawner skills loaded**: Apply patterns from UX Design, UI Design, Tailwind CSS UI
+
+## The Idea
+${args.idea}
+${prdContext}
+${referenceContext}
+
+## STEP 1: Infer Target Audience from PRD/Idea
+
+Analyze the idea and any PRD context to determine:
+- Who is the primary user? (developers, businesses, consumers, creators, specific profession)
+- What industry/domain is this in?
+- What's their likely tech-savviness?
+- What do they value? (efficiency, trust, delight, simplicity)
+
+State your inference clearly:
+> "Based on the idea targeting [audience type] in [industry], who value [qualities]..."
+
+## STEP 2: Find Reference Sites This Audience Loves
+
+Based on the inferred audience + selected vibe (${vibe}), identify 3-5 specific websites that:
+1. This target audience already knows and trusts
+2. Match the ${vibe} aesthetic
+3. Are relevant to the product domain
+
+Format:
+### Design Inspiration
+| Site | Why This Audience Loves It | What to Borrow |
+|------|---------------------------|----------------|
+| [site.com] | [reason] | [specific element] |
+
+**Be specific to THIS project** - don't just list generic "good design" sites.
+
+## STEP 3: Generate Design Tokens (Using UI Design Skill Patterns)
+
+**Apply the UI Design skill's 8-Point Grid System and Type Scale Hierarchy patterns.**
+
+Based on vibe (${vibe}) and references, create:
+
+### Color Palette
+\`\`\`
+// Follow UI Design skill's Accessible Color Contrast pattern (4.5:1 minimum)
+Primary: #XXXXXX (main brand color - ensure AA contrast)
+Secondary: #XXXXXX (accent)
+Background: #XXXXXX (page bg)
+Surface: #XXXXXX (card bg)
+Text Primary: #XXXXXX (headings - must pass 4.5:1 on background)
+Text Secondary: #XXXXXX (body - must pass 4.5:1 on background)
+Border: #XXXXXX (subtle dividers - 3:1 minimum)
+Success: #XXXXXX
+Error: #XXXXXX
+\`\`\`
+
+### Typography (UI Design Skill Type Scale)
+\`\`\`
+Font Family: [Recommended Google Font or system font]
+Scale (1.25 ratio per UI Design skill):
+- Hero: 48px / 52px line-height (700 weight)
+- H1: 40px / 44px (600 weight)
+- H2: 32px / 36px (600 weight)
+- H3: 24px / 28px (600 weight)
+- Body Large: 18px / 28px (400 weight)
+- Body: 16px / 24px (400 weight)
+- Small: 14px / 20px (400 weight)
+- Label: 12px / 16px (500 weight)
+\`\`\`
+
+### Spacing (8pt Grid - UI Design Skill Pattern)
+\`\`\`
+// All spacing must be multiples of 8px for visual rhythm
+xs: 4px   (0.5 unit - tight internal padding)
+sm: 8px   (1 unit - default internal spacing)
+md: 16px  (2 units - between related elements)
+lg: 24px  (3 units - between component groups)
+xl: 32px  (4 units - section padding)
+2xl: 48px (6 units - large section spacing)
+3xl: 64px (8 units - major layout divisions)
+\`\`\`
+
+## STEP 4: Landing Page Wireframe (Using UX + Copywriting + Landing Page Design Skills)
+
+**Apply patterns from:**
+- UX Design: Zero-State Design, Progressive Disclosure, Cognitive Load Reduction
+- Copywriting: Clear value props, action-oriented CTAs, benefit-focused headlines
+- Landing Page Design: Conversion patterns, trust signals, CRO best practices
+
+### Hero Section (Above the fold - most critical)
+- **Headline**: [Apply Copywriting skill - clear value prop, benefit-focused, 6-12 words]
+  - Formula: "[Achieve X] without [Pain Y]" or "The [category] that [key differentiator]"
+- **Subheadline**: [Supporting text - expand on headline, reduce cognitive load]
+- **Primary CTA**: [Action-oriented verb + benefit - e.g., "Start Free Trial" not "Submit"]
+- **Visual**: [Screenshot, demo, illustration, or video - shows product in action]
+- **Trust signal**: [Logos, user count, testimonial snippet, or key stat]
+
+### Section 2: Problem/Solution (Landing Page Design pattern: Problem-Agitate-Solve)
+- **Hook**: [Acknowledge the pain point your audience feels]
+- **Agitate**: [Why existing solutions fail them]
+- **Solve**: [How your product uniquely solves it]
+- **Visual**: [Before/after, comparison, or feature highlight]
+
+### Section 3: Features/Benefits (Show, don't tell)
+- **Format**: [3-4 key benefits with icons or visuals]
+- **Copy pattern**: [Benefit headline → Supporting detail → Visual proof]
+- **UX Pattern**: Progressive Disclosure - most important first
+
+### Section 4: Social Proof (Landing Page Design pattern: Trust Stack)
+- **Testimonials**: [1-3 quotes with names, photos, titles]
+- **Logos**: [Companies or publications if applicable]
+- **Stats**: [User count, satisfaction rate, time saved]
+
+### Section 5: CTA Repeat (Catch scrollers)
+- **Headline**: [Reframe value prop differently]
+- **CTA**: [Same as hero - consistency]
+- **Risk reducer**: ["Free trial", "No credit card", "Cancel anytime"]
+
+### Footer
+- Links: [Essential only - Pricing, About, Privacy, Terms]
+- **Social proof micro**: [© 2024, "Trusted by X users"]
+
+## STEP 5: Key Components (Using UI Design Skill Component State Mapping)
+
+**Apply the UI Design skill's Component State Mapping pattern - every component needs ALL states designed.**
+
+| Component | States (ALL required) | Specs |
+|-----------|----------------------|-------|
+| Button (primary) | default, hover, focus (2px outline), active, disabled (40% opacity), loading | Height: 40px or 48px, border-radius, padding |
+| Button (secondary) | default, hover, focus, active, disabled | Same height as primary |
+| Navigation | default, mobile hamburger, sticky on scroll | Height: 64px, z-index |
+| Card | default, hover (subtle shadow lift) | Padding: 24px, border-radius |
+| Input | empty, filled, focus, error (red border + message), success, disabled | Height: 40px or 48px |
+| [Other components as needed] | [ALL states] | |
+
+**Remember**: No component is complete without all states designed (per UI Design skill).
+
+## STEP 6: Tailwind Config (Using Tailwind CSS UI Skill Patterns)
+
+**Apply the Tailwind CSS UI skill's Design Token System pattern.**
+
+Provide a Tailwind config extension for the design tokens:
+
+\`\`\`javascript
+// tailwind.config.js extend
+// Following Tailwind CSS UI skill patterns for consistent theming
+{
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          DEFAULT: '#XXXXXX',
+          hover: '#XXXXXX',    // Slightly darker for hover
+          active: '#XXXXXX',   // Even darker for active
+        },
+        secondary: '#XXXXXX',
+        background: '#XXXXXX',
+        surface: '#XXXXXX',
+        border: '#XXXXXX',
+      },
+      fontFamily: {
+        sans: ['Font Name', 'system-ui', 'sans-serif'],
+      },
+      spacing: {
+        // 8pt grid (already default in Tailwind, but explicit)
+        '18': '4.5rem',  // 72px
+        '22': '5.5rem',  // 88px
+      },
+      borderRadius: {
+        'button': '8px',   // Consistent button radius
+        'card': '12px',    // Card radius
+        'input': '8px',    // Input radius
+      },
+    },
+  },
+}
+\`\`\`
+
+---
+
+## OUTPUT FORMAT
+
+After generating all the above, summarize:
+
+### Design Summary for [Project Name]
+
+**Target Audience**: [inferred from PRD/idea]
+**Vibe**: ${vibe}
+**Inspiration**: [top 2-3 reference sites specific to this audience]
+**Skills Applied**: UX Design, UI Design, Tailwind CSS UI
+
+**Ready to build?** This design uses SvelteKit + Tailwind CSS.
+
+---
+
+## 🚀 HANDOFF TO BUILD PHASE
+
+After presenting the design, offer to proceed with building:
+
+**If Spawner is available**, say:
+"Design spec is ready! Now let's build it.
+
+**What would you like to do?**
+1. **Build the landing page** — I'll load the SvelteKit skill and start coding
+2. **Tweak the design** — Adjust colors, typography, or layout first
+3. **Save design spec** — Save to docs/[PROJECT]_DESIGN.md, then continue
+4. **Pause** — Save everything and come back later"
+
+**If user chooses to build**, load these skills in order:
+1. \`spawner_load({ skill_id: "sveltekit" })\` — For page structure
+2. \`spawner_load({ skill_id: "tailwind-ui" })\` — For styling
+3. Start with the Hero section, get feedback, iterate
+
+---
+
+${NEXT_STEP_PROTOCOL}
+
+**Remember**:
+- The design phase produces ONE page spec
+- Build it, show it, get feedback, iterate
+- Additional pages come through iteration after the first build
+- Always use the loaded Spawner skills' patterns for world-class output`;
+}
+
+export function handleChecklist(args: z.infer<typeof checklistSchema>): string {
+  const projectName = args.projectName;
+  const prdContext = args.prd ? `\n## PRD Summary\n${args.prd.slice(0, 1500)}...\n` : "";
+  const designContext = args.designSpec ? `\n## Design Summary\n${args.designSpec.slice(0, 1000)}...\n` : "";
+  const statusContext = args.currentStatus ? `\n## Current Build Status\n${args.currentStatus}\n` : "";
+
+  return `# Checklist Generation: ${projectName}
+
+${RALPH_PERSONA}
+
+## 🎯 SKILL-DRIVEN CHECKLIST SYSTEM
+
+**This checklist is NOT generic.** Each category maps to a specific Spawner skill that MUST be loaded when working on that section.
+
+### Skill Mapping Table
+
+| Category | Spawner Skill | Load Command |
+|----------|---------------|--------------|
+| 🔒 Security | \`security-hardening\` | \`spawner_load({ skill_id: "security-hardening" })\` |
+| 📜 Legal/GDPR | \`gdpr-privacy\` | \`spawner_load({ skill_id: "gdpr-privacy" })\` |
+| 🏗️ Infrastructure | \`disaster-recovery\` | \`spawner_load({ skill_id: "disaster-recovery" })\` |
+| 🚀 Deployment | \`vercel-deployment\` | \`spawner_skills({ action: "search", query: "Vercel" })\` |
+| 🧪 Testing | \`integration-testing\` | \`spawner_load({ skill_id: "integration-testing" })\` |
+| ♿ Accessibility | \`accessibility-audit\` | \`spawner_load({ skill_id: "accessibility-audit" })\` |
+| 📊 Analytics | \`performance-profiling\` | \`spawner_load({ skill_id: "performance-profiling" })\` |
+| 🔍 SEO | \`seo-optimization\` | \`spawner_skills({ action: "search", query: "SEO" })\` |
+| 📈 Growth | \`growth-strategy\` | \`spawner_skills({ action: "search", query: "Growth" })\` |
+| 🎯 Product | \`product-strategy\` | \`spawner_skills({ action: "search", query: "Product Strategy" })\` |
+| ✍️ Copywriting | \`copywriting\` | \`spawner_skills({ action: "search", query: "Copywriting" })\` |
+| 🔐 Auth | \`authentication-oauth\` | \`spawner_load({ skill_id: "authentication-oauth" })\` |
+| 💾 Database | \`supabase-backend\` | \`spawner_load({ skill_id: "supabase-backend" })\` |
+| ⚡ Caching | \`caching-strategies\` | \`spawner_load({ skill_id: "caching-strategies" })\` |
+| 🔄 CI/CD | \`monorepo-management\` | \`spawner_load({ skill_id: "monorepo-management" })\` |
+
+---
+
+## 🚨 CRITICAL: How to Execute This Checklist
+
+**When the user wants to work on ANY checklist category:**
+
+1. **LOAD THE SKILL FIRST** — Before doing ANY work on a category, load its mapped skill
+2. **FOLLOW SKILL PATTERNS** — Use the skill's patterns, not generic advice
+3. **CHECK SKILL'S SHARP EDGES** — Every skill has gotchas to avoid
+4. **HANDOFF IF NEEDED** — Skills know when to delegate to other skills
+
+**Example workflow:**
+\`\`\`
+User: "Let's work on the security checklist"
+
+Claude:
+1. spawner_load({ skill_id: "security-hardening" })  // LOAD FIRST
+2. Read the skill's patterns and anti-patterns
+3. Apply skill-specific checks to the codebase
+4. Use skill's detection commands to find issues
+5. Fix issues using skill's recommended patterns
+\`\`\`
+
+**NEVER give generic security advice when the security-hardening skill exists.**
+
+---
+
+## Your Task
+
+Generate TWO files for **${projectName}** with skill mappings embedded:
+1. **Tasks.md** — Tasks with skill references for each category
+2. **Checklist.md** — Checklist with skill invocation instructions
+
+## The Idea
+${args.idea}
+${prdContext}
+${designContext}
+${statusContext}
+
+---
+
+# FILE 1: Tasks.md Template
+
+\`\`\`markdown
+# ${projectName} - Tasks
+
+> Generated by IdeaRalph • Skill-Driven Execution
+> Last Updated: [DATE]
+
+## How to Use This File
+
+Each category has a **Spawner Skill** assigned. When working on tasks:
+1. Load the skill FIRST
+2. Follow the skill's patterns
+3. Mark tasks complete only after skill-validated implementation
+
+---
+
+## 🔴 P0 - Critical (Must Complete)
+
+### 🔒 Security
+> **SKILL**: \`spawner_load({ skill_id: "security-hardening" })\`
+
+| Task | Status | Skill-Validated |
+|------|--------|-----------------|
+| Enable HTTPS everywhere | ⬜ | ⬜ |
+| Add rate limiting to auth endpoints (100 req/15min) | ⬜ | ⬜ |
+| Enable Supabase RLS on ALL tables | ⬜ | ⬜ |
+| Audit environment variables (no secrets in repo) | ⬜ | ⬜ |
+| Set up CSP headers | ⬜ | ⬜ |
+| Remove console.logs with sensitive data | ⬜ | ⬜ |
+| Run \`npm audit\` and fix vulnerabilities | ⬜ | ⬜ |
+
+### 📜 Legal & Compliance
+> **SKILL**: \`spawner_load({ skill_id: "gdpr-privacy" })\`
+
+| Task | Status | Skill-Validated |
+|------|--------|-----------------|
+| Write Terms of Service | ⬜ | ⬜ |
+| Write Privacy Policy (GDPR-compliant) | ⬜ | ⬜ |
+| Add cookie consent banner | ⬜ | ⬜ |
+| Implement data export capability (GDPR Art. 20) | ⬜ | ⬜ |
+| Implement account deletion flow (GDPR Art. 17) | ⬜ | ⬜ |
+
+### 🏗️ Infrastructure
+> **SKILLS**: \`disaster-recovery\`, \`vercel-deployment\`
+
+| Task | Status | Skill-Validated |
+|------|--------|-----------------|
+| Set up production database (Supabase Pro) | ⬜ | ⬜ |
+| Configure automated backups | ⬜ | ⬜ |
+| Set up error monitoring (Sentry) | ⬜ | ⬜ |
+| Set up uptime monitoring | ⬜ | ⬜ |
+| Configure CI/CD pipeline | ⬜ | ⬜ |
+| Document rollback procedure | ⬜ | ⬜ |
+
+---
+
+## 🟡 P1 - Important (Should Complete)
+
+### 🧪 Testing
+> **SKILL**: \`spawner_load({ skill_id: "integration-testing" })\`
+
+| Task | Status | Skill-Validated |
+|------|--------|-----------------|
+| E2E tests for critical user flows | ⬜ | ⬜ |
+| Unit tests for business logic | ⬜ | ⬜ |
+| API integration tests | ⬜ | ⬜ |
+| Test error states and edge cases | ⬜ | ⬜ |
+
+### ♿ Accessibility
+> **SKILL**: \`spawner_load({ skill_id: "accessibility-audit" })\`
+
+| Task | Status | Skill-Validated |
+|------|--------|-----------------|
+| Keyboard navigation works | ⬜ | ⬜ |
+| Screen reader tested | ⬜ | ⬜ |
+| Color contrast passes (4.5:1) | ⬜ | ⬜ |
+| Alt text on all images | ⬜ | ⬜ |
+| ARIA labels where needed | ⬜ | ⬜ |
+
+### 📊 Performance & Analytics
+> **SKILL**: \`spawner_load({ skill_id: "performance-profiling" })\`
+
+| Task | Status | Skill-Validated |
+|------|--------|-----------------|
+| Lighthouse score > 90 | ⬜ | ⬜ |
+| Set up product analytics (PostHog) | ⬜ | ⬜ |
+| Configure conversion funnel tracking | ⬜ | ⬜ |
+| Add session replay | ⬜ | ⬜ |
+| Define metrics dashboard | ⬜ | ⬜ |
+
+### 🔍 SEO & Content
+> **SKILL**: Search for \`SEO\` skill
+
+| Task | Status | Skill-Validated |
+|------|--------|-----------------|
+| Meta titles/descriptions on all pages | ⬜ | ⬜ |
+| Open Graph images (1200x630) | ⬜ | ⬜ |
+| sitemap.xml generated | ⬜ | ⬜ |
+| robots.txt configured | ⬜ | ⬜ |
+| Structured data (JSON-LD) | ⬜ | ⬜ |
+
+---
+
+## 🟢 P2 - Nice to Have
+
+### 📈 Growth Mechanics
+> **SKILL**: Search for \`Growth Strategy\` skill
+
+| Task | Status | Skill-Validated |
+|------|--------|-----------------|
+| Referral program | ⬜ | ⬜ |
+| Social sharing buttons | ⬜ | ⬜ |
+| Email onboarding sequence | ⬜ | ⬜ |
+| Viral loop mechanism | ⬜ | ⬜ |
+
+### 📢 Launch Marketing
+> **SKILL**: Search for \`Copywriting\` skill
+
+| Task | Status | Skill-Validated |
+|------|--------|-----------------|
+| Product Hunt listing copy | ⬜ | ⬜ |
+| Hacker News Show HN post | ⬜ | ⬜ |
+| Twitter launch thread | ⬜ | ⬜ |
+| Demo video (60-90 sec) | ⬜ | ⬜ |
+| Press kit (logos, screenshots) | ⬜ | ⬜ |
+
+---
+
+## Execution Log
+
+| Date | Category | Skill Loaded | Tasks Completed | Notes |
+|------|----------|--------------|-----------------|-------|
+| | | | | |
+\`\`\`
+
+---
+
+## Blocked / Waiting
+| Task | Blocker | Waiting On |
+|------|---------|------------|
+| | | |
+
+---
+
+## Completed ✅
+| Task | Completed Date | Notes |
+|------|----------------|-------|
+| | | |
+\`\`\`
+
+---
+
+# FILE 2: Checklist.md Template
+
+\`\`\`markdown
+# ${projectName} - Checklist
+
+> Skill-Driven Execution • YC-Level Standards
+> Generated by IdeaRalph
+
+## How This Checklist Works
+
+**Each section has a Spawner skill.** Before working on any section:
+1. Load the skill
+2. Follow its patterns
+3. Use its detection commands
+4. Check its sharp edges
+
+---
+
+## 🔴 P0 - Must Complete Before Launch
+
+### 🔒 Security
+> **LOAD FIRST**: \`spawner_load({ skill_id: "security-hardening" })\`
+
+- [ ] HTTPS everywhere, no mixed content
+- [ ] Rate limiting on auth (100 req/15min)
+- [ ] RLS enabled on ALL Supabase tables
+- [ ] Secure cookie flags (HttpOnly, Secure, SameSite)
+- [ ] CSP headers configured
+- [ ] Environment variables secured (not in repo)
+- [ ] \`npm audit\` passed, no critical vulnerabilities
+- [ ] No secrets in git history (\`gitleaks\`)
+- [ ] Admin endpoints protected
+
+### 📜 Legal & GDPR
+> **LOAD FIRST**: \`spawner_load({ skill_id: "gdpr-privacy" })\`
+
+- [ ] Terms of Service published
+- [ ] Privacy Policy published (GDPR-compliant)
+- [ ] Cookie consent banner (with preferences)
+- [ ] Data export capability (GDPR Art. 20)
+- [ ] Account deletion flow (GDPR Art. 17)
+- [ ] DPA with data processors
+
+### 🏗️ Infrastructure
+> **LOAD FIRST**: \`spawner_load({ skill_id: "disaster-recovery" })\`
+
+- [ ] Production database provisioned
+- [ ] Automated backups configured + tested
+- [ ] Rollback procedure documented
+- [ ] Error monitoring (Sentry) configured
+- [ ] Uptime monitoring active
+- [ ] CI/CD pipeline working
+
+---
+
+## 🟡 P1 - Should Complete
+
+### 🧪 Testing
+> **LOAD FIRST**: \`spawner_load({ skill_id: "integration-testing" })\`
+
+- [ ] E2E tests for: Signup → Onboarding → First Value
+- [ ] E2E tests for: Login → Core Action → Logout
+- [ ] API integration tests
+- [ ] Error state coverage
+
+### ♿ Accessibility
+> **LOAD FIRST**: \`spawner_load({ skill_id: "accessibility-audit" })\`
+
+- [ ] Keyboard navigation works
+- [ ] Screen reader tested (VoiceOver/NVDA)
+- [ ] Color contrast passes 4.5:1
+- [ ] Alt text on all images
+- [ ] ARIA labels where needed
+- [ ] axe-core audit passes
+
+### 📊 Performance
+> **LOAD FIRST**: \`spawner_load({ skill_id: "performance-profiling" })\`
+
+- [ ] Lighthouse Performance > 90
+- [ ] LCP < 2.5s
+- [ ] CLS < 0.1
+- [ ] Images optimized (WebP, lazy loading)
+- [ ] Code splitting enabled
+
+### 🔍 SEO
+> **LOAD FIRST**: Search for \`SEO\` skill
+
+- [ ] Meta titles/descriptions on all pages
+- [ ] Open Graph images (1200x630)
+- [ ] sitemap.xml generated
+- [ ] robots.txt configured
+- [ ] Structured data (JSON-LD)
+- [ ] Canonical URLs set
+
+---
+
+## 🟢 P2 - Nice to Have
+
+### 📈 Growth
+> **LOAD FIRST**: Search for \`Growth Strategy\` skill
+
+- [ ] Referral program
+- [ ] Social sharing buttons
+- [ ] Email onboarding sequence
+- [ ] Viral loop mechanism
+
+### 📢 Launch Marketing
+> **LOAD FIRST**: Search for \`Copywriting\` skill
+
+- [ ] Product Hunt listing ready
+- [ ] Hacker News Show HN draft
+- [ ] Twitter launch thread
+- [ ] Demo video (60-90 sec)
+
+---
+
+## 🚀 Launch Day
+
+### Pre-Launch (Morning)
+- [ ] Final production deploy
+- [ ] Smoke test critical flows
+- [ ] Monitoring dashboards open
+- [ ] Team comms channel ready
+
+### Launch Sequence
+- [ ] Product Hunt ship
+- [ ] Hacker News post
+- [ ] Twitter thread
+- [ ] Email to waitlist
+
+### Post-Launch (24h)
+- [ ] Monitor error rates
+- [ ] Respond to ALL feedback
+- [ ] Fix critical bugs immediately
+- [ ] Thank early users publicly
+
+---
+
+## 📊 Metrics
+
+### North Star
+> [Your ONE key PMF metric]
+
+### Track These
+| Metric | Target | Actual |
+|--------|--------|--------|
+| DAU | | |
+| Signup → Activation | | |
+| Day 1 Retention | | |
+| Day 7 Retention | | |
+\`\`\`
+
+---
+
+## 🎯 SKILL-DRIVEN EXECUTION PROTOCOL
+
+**CRITICAL: When the user wants to work on a checklist category:**
+
+### The Protocol
+
+\`\`\`
+User: "Let's tackle the security checklist"
+
+Claude MUST:
+1. spawner_load({ skill_id: "security-hardening" })  ← LOAD SKILL FIRST
+2. Say: "Loading Security Hardening skill..."
+3. Read and apply the skill's:
+   - Patterns (what to do)
+   - Anti-patterns (what NOT to do)
+   - Sharp edges (gotchas)
+   - Detection commands (find issues)
+4. Work through each checklist item using skill guidance
+5. Mark items complete only when skill-validated
+\`\`\`
+
+### Skill Routing
+
+| User says... | Load this skill |
+|--------------|-----------------|
+| "security" | \`security-hardening\` |
+| "legal", "GDPR", "privacy" | \`gdpr-privacy\` |
+| "infrastructure", "deploy" | \`disaster-recovery\` or \`vercel-deployment\` |
+| "testing", "tests" | \`integration-testing\` |
+| "accessibility", "a11y" | \`accessibility-audit\` |
+| "performance", "speed" | \`performance-profiling\` |
+| "SEO" | search for SEO skill |
+| "growth", "viral" | search for Growth skill |
+| "copy", "marketing" | search for Copywriting skill |
+| "auth", "login" | \`authentication-oauth\` |
+| "database", "RLS" | \`supabase-backend\` |
+
+### After Generating Checklist
+
+Present to user:
+
+"Your skill-driven checklist is ready!
+
+**Two files:**
+- \`docs/${projectName}_Tasks.md\` — Tasks with skill assignments
+- \`docs/${projectName}_Checklist.md\` — Checklist with skill protocols
+
+**Each category maps to a Spawner skill.** When you want to work on any section, I'll load the right skill first so you get specialized patterns, not generic advice.
+
+**What would you like to do?**
+1. **Save both files** — Write to docs/
+2. **Start with Security (P0)** — I'll load security-hardening skill
+3. **Start with Legal (P0)** — I'll load gdpr-privacy skill
+4. **Pause** — Save for later"
+
+---
+
+${NEXT_STEP_PROTOCOL}
+
+**Key principle**: NEVER work on a checklist category without loading its skill first. Generic LLM advice is NOT acceptable when specialized skills exist.`;
 }

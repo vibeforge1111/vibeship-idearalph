@@ -13,18 +13,22 @@ import {
   refineSchema,
   prdSchema,
   architectureSchema,
+  designSchema,
+  checklistSchema,
   handleBrainstorm,
   handleValidate,
   handleRefine,
   handlePRD,
   handleArchitecture,
+  handleDesign,
+  handleChecklist,
 } from "./tools.js";
 
 // Create the MCP server
 const server = new Server(
   {
     name: "idearalph-mcp",
-    version: "2.0.0", // Bumped version - now API-free!
+    version: "2.2.0", // Added design phase + launch checklist + SvelteKit default
   },
   {
     capabilities: {
@@ -71,6 +75,16 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
         result = handleArchitecture(parsed);
         break;
       }
+      case "idearalph_design": {
+        const parsed = designSchema.parse(args);
+        result = handleDesign(parsed);
+        break;
+      }
+      case "idearalph_checklist": {
+        const parsed = checklistSchema.parse(args);
+        result = handleChecklist(parsed);
+        break;
+      }
       default:
         throw new Error(`Unknown tool: ${name}`);
     }
@@ -101,7 +115,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
 async function main() {
   const transport = new StdioServerTransport();
   await server.connect(transport);
-  console.error("IdeaRalph MCP Server v2.0 running on stdio (no API key required!)");
+  console.error("IdeaRalph MCP Server v2.2 running on stdio (no API key required!)");
 }
 
 main().catch((error) => {
