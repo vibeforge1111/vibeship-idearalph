@@ -68,85 +68,45 @@ All community campaigns distributed via X (Twitter) activities, engagement, and 
 
 ---
 
-## The Invite System (Hybrid Approach)
+## Entry System (Open Access)
 
 ### How It Works
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                    INVITE FLOW                              │
+│                    ENTRY FLOW                               │
 ├─────────────────────────────────────────────────────────────┤
 │                                                             │
 │  1. User visits idearalph.com/hackathon                    │
 │                     ↓                                       │
-│  2. Enters invite code (or joins waitlist)                 │
+│  2. Installs MCP (one command)                             │
 │                     ↓                                       │
-│  3. Connects wallet + enters email                         │
+│  3. Builds project with Ralph                              │
 │                     ↓                                       │
-│  4. Receives 5 personal invite codes                       │
+│  4. Submits project (name, URL, wallet, PRD)               │
 │                     ↓                                       │
-│  5. Shares codes → earns referral points                   │
-│                     ↓                                       │
-│  6. Installs MCP (open, no tracking)                       │
-│                     ↓                                       │
-│  7. Builds project with Ralph                              │
-│                     ↓                                       │
-│  8. Submits project for hackathon                          │
+│  5. Gets judged, wins tokens                               │
 │                                                             │
 └─────────────────────────────────────────────────────────────┘
 ```
 
-### Invite Code Mechanics
-
-**Genesis Codes:**
-- Team distributes 100 "Genesis" codes
-- Each Genesis code holder gets 10 invite codes
-- Creates initial viral spread
-
-**Standard Codes:**
-- Each registered user gets 5 invite codes
-- When someone uses your code, you get:
-  - 1 referral point (for airdrop leaderboard)
-  - 5% bonus on their hackathon winnings (if they win)
-
-**Leaderboard:**
-- Public leaderboard showing top referrers
-- Updated in real-time
-- Top 50 referrers share 25% of airdrop pool
+**No invite codes. No waitlist. No referrals. Just build.**
 
 ### Database Schema
 
 ```sql
--- Users table
-CREATE TABLE users (
-  id UUID PRIMARY KEY,
-  wallet_address TEXT UNIQUE NOT NULL,
-  email TEXT,
-  invited_by UUID REFERENCES users(id),
-  invite_code_used TEXT,
+-- Projects table
+CREATE TABLE projects (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  name TEXT NOT NULL,
+  tagline TEXT,
+  url TEXT NOT NULL,
+  wallet_address TEXT NOT NULL,
+  prd_url TEXT,
+  category TEXT,
+  pmf_score DECIMAL,
   created_at TIMESTAMP DEFAULT NOW()
 );
-
--- Invite codes table
-CREATE TABLE invite_codes (
-  code TEXT PRIMARY KEY,
-  owner_id UUID REFERENCES users(id),
-  used_by_id UUID REFERENCES users(id),
-  is_genesis BOOLEAN DEFAULT FALSE,
-  created_at TIMESTAMP DEFAULT NOW(),
-  used_at TIMESTAMP
-);
-
--- Referral stats (materialized view)
-CREATE VIEW referral_leaderboard AS
-SELECT
-  u.id,
-  u.wallet_address,
-  COUNT(ic.used_by_id) as referral_count,
-  RANK() OVER (ORDER BY COUNT(ic.used_by_id) DESC) as rank
-FROM users u
-LEFT JOIN invite_codes ic ON ic.owner_id = u.id AND ic.used_by_id IS NOT NULL
-GROUP BY u.id;
 ```
 
 ---
