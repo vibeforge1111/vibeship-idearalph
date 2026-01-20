@@ -880,42 +880,95 @@ Don't stop until 9.9+ achieved. This may take many iterations.`;
 
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
         <div class="bg-paper rounded-xl p-5 border-2 border-chalkboard/20 shadow-crayon">
-          <div class="text-2xl mb-2">💡</div>
+          <div class="w-10 h-10 text-chalkboard mb-2">
+            <!-- Lightbulb icon - brainstorm -->
+            <svg viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M128,16A80,80,0,0,0,72,184v24a16,16,0,0,0,16,16h80a16,16,0,0,0,16-16V184A80,80,0,0,0,128,16Z"/>
+              <line x1="96" y1="240" x2="160" y2="240"/>
+              <line x1="128" y1="136" x2="128" y2="88"/>
+              <line x1="104" y1="112" x2="152" y2="112"/>
+            </svg>
+          </div>
           <h3 class="font-chalk text-lg text-chalkboard mb-1">Brainstorm</h3>
           <p class="text-sm text-chalkboard/70">"Generate startup ideas about fitness"</p>
           <p class="text-xs text-chalkboard/50 mt-2">Scores on 10 PMF dimensions</p>
         </div>
 
         <div class="bg-paper rounded-xl p-5 border-2 border-chalkboard/20 shadow-crayon">
-          <div class="text-2xl mb-2">🎯</div>
+          <div class="w-10 h-10 text-chalkboard mb-2">
+            <!-- Target icon - validate -->
+            <svg viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="128" cy="128" r="96"/>
+              <circle cx="128" cy="128" r="64"/>
+              <circle cx="128" cy="128" r="32"/>
+              <circle cx="128" cy="128" r="8" fill="currentColor"/>
+            </svg>
+          </div>
           <h3 class="font-chalk text-lg text-chalkboard mb-1">Validate</h3>
           <p class="text-sm text-chalkboard/70">"Score this idea: AI for pets"</p>
           <p class="text-xs text-chalkboard/50 mt-2">Deep dive on each dimension</p>
         </div>
 
         <div class="bg-paper rounded-xl p-5 border-2 border-chalkboard/20 shadow-crayon">
-          <div class="text-2xl mb-2">🌀</div>
+          <div class="w-10 h-10 text-chalkboard mb-2">
+            <!-- Loop/cycle icon - refine -->
+            <svg viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M128,40a88,88,0,0,1,88,88"/>
+              <polyline points="168,80 216,80 216,128"/>
+              <path d="M128,216a88,88,0,0,1-88-88"/>
+              <polyline points="88,176 40,176 40,128"/>
+            </svg>
+          </div>
           <h3 class="font-chalk text-lg text-chalkboard mb-1">Refine</h3>
           <p class="text-sm text-chalkboard/70">"Make this idea score 9.5+"</p>
           <p class="text-xs text-chalkboard/50 mt-2">Ralph Loop until it's dope</p>
         </div>
 
         <div class="bg-paper rounded-xl p-5 border-2 border-chalkboard/20 shadow-crayon">
-          <div class="text-2xl mb-2">📋</div>
+          <div class="w-10 h-10 text-chalkboard mb-2">
+            <!-- Document/clipboard icon - PRD -->
+            <svg viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="40" y="40" width="176" height="176" rx="8"/>
+              <line x1="80" y1="96" x2="176" y2="96"/>
+              <line x1="80" y1="128" x2="176" y2="128"/>
+              <line x1="80" y1="160" x2="144" y2="160"/>
+            </svg>
+          </div>
           <h3 class="font-chalk text-lg text-chalkboard mb-1">PRD</h3>
           <p class="text-sm text-chalkboard/70">"Generate a PRD for this"</p>
           <p class="text-xs text-chalkboard/50 mt-2">Napkin → Science-Fair → Genius</p>
         </div>
 
         <div class="bg-paper rounded-xl p-5 border-2 border-chalkboard/20 shadow-crayon">
-          <div class="text-2xl mb-2">🏗️</div>
+          <div class="w-10 h-10 text-chalkboard mb-2">
+            <!-- Building blocks icon - architecture -->
+            <svg viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="32" y="144" width="80" height="80" rx="4"/>
+              <rect x="144" y="144" width="80" height="80" rx="4"/>
+              <rect x="88" y="32" width="80" height="80" rx="4"/>
+              <line x1="128" y1="112" x2="128" y2="144"/>
+              <line x1="72" y1="144" x2="72" y2="128" />
+              <line x1="72" y1="128" x2="128" y2="128"/>
+              <line x1="184" y1="144" x2="184" y2="128"/>
+              <line x1="184" y1="128" x2="128" y2="128"/>
+            </svg>
+          </div>
           <h3 class="font-chalk text-lg text-chalkboard mb-1">Architecture</h3>
           <p class="text-sm text-chalkboard/70">"Plan how to build this"</p>
           <p class="text-xs text-chalkboard/50 mt-2">Tech stack + implementation</p>
         </div>
 
         <div class="bg-paper rounded-xl p-5 border-2 border-chalkboard/20 shadow-crayon bg-ralph-yellow/10">
-          <div class="text-2xl mb-2">✨</div>
+          <div class="w-10 h-10 text-chalkboard mb-2">
+            <!-- Flow/arrow icon - the flow -->
+            <svg viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="32" y1="128" x2="224" y2="128"/>
+              <polyline points="176,80 224,128 176,176"/>
+              <circle cx="64" cy="128" r="8" fill="currentColor"/>
+              <circle cx="112" cy="128" r="8" fill="currentColor"/>
+              <circle cx="160" cy="128" r="8" fill="currentColor"/>
+            </svg>
+          </div>
           <h3 class="font-chalk text-lg text-chalkboard mb-1">The Flow</h3>
           <p class="text-sm text-chalkboard/70">Brainstorm → Validate → Refine → PRD → Build!</p>
           <p class="text-xs text-chalkboard/50 mt-2">All in one conversation</p>
