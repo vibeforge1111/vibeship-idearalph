@@ -911,14 +911,12 @@ Don't stop until 9.9+ achieved. This may take many iterations.`;
 
         <div class="bg-paper rounded-xl p-5 border-2 border-chalkboard/20 shadow-crayon">
           <div class="w-10 h-10 text-chalkboard mb-2">
-            <!-- Recycle/refresh icon - refine -->
+            <!-- Circular arrows refresh icon - refine -->
             <svg viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M176,56 A96,96,0,0,1,224,128"/>
-              <polyline points="224,56 224,104 176,104"/>
-              <path d="M80,200 A96,96,0,0,1,32,128"/>
-              <polyline points="32,200 32,152 80,152"/>
-              <path d="M168,200 A96,96,0,0,1,80,200"/>
-              <path d="M88,56 A96,96,0,0,1,176,56"/>
+              <path d="M64,128a96,96,0,0,1,163-68"/>
+              <polyline points="216,40 216,88 168,88"/>
+              <path d="M192,128a96,96,0,0,1-163,68"/>
+              <polyline points="40,216 40,168 88,168"/>
             </svg>
           </div>
           <h3 class="font-chalk text-lg text-chalkboard mb-1">Refine</h3>
