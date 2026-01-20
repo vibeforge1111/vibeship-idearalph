@@ -524,9 +524,9 @@ Don't stop until 9.9+ achieved. This may take many iterations.`;
           <div class="bg-ralph-yellow border-2 border-chalkboard rounded-lg p-4 mb-4">
             <p class="text-base text-chalkboard font-bold mb-2">After running, restart Claude Code:</p>
             <div class="flex items-center justify-center gap-3 text-base text-chalkboard">
-              <code class="bg-white/50 px-3 py-1.5 rounded font-bold border-2 border-chalkboard/30 shadow-md transition-all duration-150 hover:translate-y-0.5 hover:shadow-none cursor-pointer">/exit</code>
+              <code class="bg-white px-3 py-1.5 rounded-lg font-bold border-3 border-chalkboard shadow-crayon transition-all duration-150 hover:translate-x-1 hover:translate-y-1 hover:shadow-none hover:rotate-1 cursor-pointer">/exit</code>
               <span>→</span>
-              <code class="bg-white/50 px-3 py-1.5 rounded font-bold border-2 border-chalkboard/30 shadow-md transition-all duration-150 hover:translate-y-0.5 hover:shadow-none cursor-pointer">claude</code>
+              <code class="bg-white px-3 py-1.5 rounded-lg font-bold border-3 border-chalkboard shadow-crayon transition-all duration-150 hover:translate-x-1 hover:translate-y-1 hover:shadow-none hover:-rotate-1 cursor-pointer">claude</code>
             </div>
           </div>
 
