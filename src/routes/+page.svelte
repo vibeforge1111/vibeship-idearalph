@@ -415,12 +415,30 @@ Don't stop until 9.9+ achieved. This may take many iterations.`;
           onclick={ringTheBell}
           class="btn-crayon text-xl md:text-2xl px-10 py-5 flex items-center gap-4 mx-auto"
         >
-          <!-- Crayon icon -->
-          <svg class="w-10 h-10 md:w-12 md:h-12" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="16" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M184,120,69.66,234.34a8,8,0,0,1-11.32,0L21.66,197.66a8,8,0,0,1,0-11.32L136,72Z"/>
-            <path d="M136,72l23-23a24,24,0,0,1,33.94,0l14.1,14.1a24,24,0,0,1,0,33.94L184,120"/>
-            <line x1="96" y1="112" x2="144" y2="160"/>
-            <path d="M221.66,90.34,192,120"/>
+          <!-- Ralph sun icon - his head with idea rays! -->
+          <svg class="w-10 h-10 md:w-12 md:h-12" viewBox="0 0 256 256" fill="none" stroke="currentColor" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+            <!-- Idea rays (shorter, behind head) -->
+            <line x1="128" y1="48" x2="128" y2="16"/>
+            <line x1="128" y1="208" x2="128" y2="240"/>
+            <line x1="48" y1="128" x2="16" y2="128"/>
+            <line x1="208" y1="128" x2="240" y2="128"/>
+            <line x1="68" y1="68" x2="44" y2="44"/>
+            <line x1="188" y1="68" x2="212" y2="44"/>
+            <line x1="68" y1="188" x2="44" y2="212"/>
+            <line x1="188" y1="188" x2="212" y2="212"/>
+            <!-- Big Ralph head -->
+            <circle cx="128" cy="128" r="72"/>
+            <!-- Spiky hair bumps -->
+            <path d="M80,72 Q90,56 100,72" fill="none"/>
+            <path d="M116,64 Q128,48 140,64" fill="none"/>
+            <path d="M156,72 Q166,56 176,72" fill="none"/>
+            <!-- Ralph eyes - big and derpy -->
+            <circle cx="104" cy="118" r="12" fill="currentColor"/>
+            <circle cx="152" cy="122" r="12" fill="currentColor"/>
+            <!-- Cute nose -->
+            <circle cx="128" cy="140" r="4" fill="currentColor"/>
+            <!-- Happy derpy smile -->
+            <path d="M100,160 Q128,184 156,160" fill="none"/>
           </svg>
           <span>Unleash Ralph</span>
         </button>
