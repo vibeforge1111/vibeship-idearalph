@@ -250,9 +250,7 @@
         <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
           vibe/vibe vibecoin launchpad
         </h2>
-        <p class="text-lg text-white/50 max-w-2xl mx-auto">
-          Launchpad built for vibe coders, vibecoins, and those who wanna bet on vibecoins.
-        </p>
+        <p class="text-lg text-white/50">For vibe coders, vibecoins, and degens.</p>
       </div>
 
       <!-- Three Paths -->
@@ -402,8 +400,18 @@
   <!-- Get Started Section (Original Style) -->
   <section id="get-started" class="bg-gradient-to-b from-playground-green/20 to-white py-16 px-4">
     <div class="max-w-2xl mx-auto text-center">
+      <div class="flex justify-center mb-4">
+        <div class="w-16 h-16 bg-playground-green rounded-full flex items-center justify-center border-3 border-chalkboard shadow-crayon">
+          <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/>
+            <path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/>
+            <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/>
+            <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>
+          </svg>
+        </div>
+      </div>
       <h2 class="font-chalk text-3xl md:text-4xl text-chalkboard mb-4">
-        🚀 Start Building Now
+        Start Building Now
       </h2>
       <p class="text-chalkboard/60 mb-8">
         Install the IdeaRalph MCP and start vibe coding
@@ -434,8 +442,17 @@
   <!-- FAQ Section (Original Style) -->
   <section class="bg-white py-16 px-4">
     <div class="max-w-2xl mx-auto">
-      <h2 class="font-chalk text-3xl text-chalkboard text-center mb-12">
-        ❓ FAQ
+      <div class="flex justify-center mb-4">
+        <div class="w-16 h-16 bg-ralph-yellow rounded-full flex items-center justify-center border-3 border-chalkboard shadow-crayon">
+          <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/>
+            <path d="M12 17h.01"/>
+          </svg>
+        </div>
+      </div>
+      <h2 class="font-chalk text-3xl text-chalkboard text-center mb-8">
+        FAQ
       </h2>
 
       <div class="space-y-4">
