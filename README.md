@@ -7,9 +7,12 @@
 1. **Scores your ideas** on 10 Product-Market Fit dimensions
 2. **Refines them** using the "Ralph Loop" until they hit 9.5+
 3. **Generates PRDs** (napkin sketch → full spec → investor-ready)
-4. **Suggests how to build** with specific tech stacks
+4. **Designs UI/UX** with one question: "What vibe?"
+5. **Plans architecture** with specific tech stacks and skills
 
-## Install (One Command)
+## Install
+
+### Claude Code (CLI) — One Command
 
 **With Spawner skills (recommended):**
 ```bash
@@ -23,21 +26,106 @@ npx github:vibeforge1111/vibeship-idearalph install
 
 Then restart Claude Code:
 ```
-/exit
-```
-```
-claude
+/exit → claude
 ```
 
-That's it! Now just talk to Ralph like you're talking to a friend:
+### Claude Desktop
 
-- "Hey Ralph, I have this idea for a fitness app..."
-- "What do you think about a marketplace for vintage sneakers?"
-- "Help me brainstorm something in the AI space"
+**Step 1:** Clone and build
+```bash
+git clone https://github.com/vibeforge1111/vibeship-idearalph.git
+cd vibeship-idearalph/mcp-server
+npm install && npm run build
+```
 
-No special prompts needed. No commands to memorize. Just describe your idea and Ralph takes it from there.
+**Step 2:** Add to your Claude Desktop config file:
 
-## The Ralph Loop
+| Platform | Config Location |
+|----------|-----------------|
+| Mac | `~/Library/Application Support/Claude/claude_desktop_config.json` |
+| Windows | `%APPDATA%\Claude\claude_desktop_config.json` |
+
+```json
+{
+  "mcpServers": {
+    "idearalph": {
+      "command": "node",
+      "args": ["/path/to/vibeship-idearalph/mcp-server/dist/index.js"]
+    }
+  }
+}
+```
+
+**Step 3:** Restart Claude Desktop
+
+---
+
+## Just Talk to Ralph
+
+No special prompts needed. No commands to memorize. Just describe your idea:
+
+```
+"Hey Ralph, I have this idea for a fitness app..."
+"What do you think about a marketplace for vintage sneakers?"
+"Help me brainstorm something in the AI space"
+```
+
+## Usage Examples
+
+### Starting from scratch
+```
+"Brainstorm startup ideas in the productivity space"
+"Give me 5 ideas that combine AI with fitness"
+"What's a weird startup idea that might actually work?"
+```
+
+### Validating your idea
+```
+"Score this idea: An app that matches people with similar sleep schedules for dating"
+"Validate my concept for a subscription box for houseplants"
+"What are the weaknesses in my idea for a freelancer insurance platform?"
+```
+
+### Pushing for higher scores
+```
+"Iterate on this until it scores 9.5+"
+"Make this idea more defensible"
+"How can I improve the virality of this concept?"
+```
+
+### Going deeper
+```
+"Generate a PRD for this"
+"Design the UI — I want a clean, minimal vibe"
+"Plan the architecture using SvelteKit and Supabase"
+"Create a launch checklist"
+```
+
+### The full journey
+```
+"Let's go through the whole flow — brainstorm, validate, refine, PRD, design, architecture"
+```
+
+---
+
+## The Flow
+
+```
+Brainstorm → Validate → Refine → PRD → Design → Architecture → Checklist → Build!
+```
+
+| Stage | What Happens | Example Prompt |
+|-------|--------------|----------------|
+| **Brainstorm** | Generate ideas with initial scores | "Ideas for busy parents" |
+| **Validate** | Deep-dive scoring on 10 dimensions | "Score this idea..." |
+| **Refine** | Ralph Loop until 9.5+ | "Iterate until it's great" |
+| **PRD** | Product requirements doc | "Generate a PRD" |
+| **Design** | UI/UX with one vibe question | "Design it — bold vibe" |
+| **Architecture** | Tech stack + implementation | "Plan how to build this" |
+| **Checklist** | YC-level launch prep | "Create launch checklist" |
+| **Build!** | Start shipping | Use Spawner skills or DIY |
+
+### The Ralph Loop
 
 ```
 Your Idea → Score → Feedback → Improve → Score → ... → 9.5+ Idea!
@@ -48,42 +136,50 @@ Ralph keeps iterating until your idea is ready. Each round:
 - Gives specific, actionable feedback
 - Generates an improved version
 
-## PMF Scoring
+---
+
+## PMF Scoring (10 Dimensions)
 
 | Dimension | What It Measures |
 |-----------|------------------|
-| Problem Clarity | How clear is the problem? |
-| Market Size | How big is the opportunity? |
-| Uniqueness | How different from competitors? |
-| Feasibility | Can you actually build this? |
-| Monetization | How will you make money? |
-| Timing | Is the market ready now? |
-| Virality | Will people share it? |
-| Defensibility | Can you build a moat? |
-| Team Fit | Good for an indie founder? |
-| Ralph Factor | Does this make Ralph excited? |
+| Problem Clarity | How clear and painful is the problem? |
+| Market Size | TAM/SAM — how big is the opportunity? |
+| Uniqueness | What's the 10x better angle? |
+| Feasibility | Can you build MVP in 3 months? |
+| Monetization | Clear path to revenue? |
+| Timing | Why now? What changed? |
+| Virality | Built-in sharing? Network effects? |
+| Defensibility | Data moat? Switching costs? |
+| Team Fit | Good for 2-3 person team? |
+| Ralph Factor | Sounds dumb but actually genius? |
+
+---
 
 ## MCP Tools
 
-Once installed, Claude can use these automatically:
+Once installed, Claude uses these automatically:
 
 | Tool | What It Does |
 |------|--------------|
 | `idearalph_brainstorm` | Generate ideas for a topic |
 | `idearalph_validate` | Score an idea on 10 dimensions |
-| `idearalph_refine` | Run the Ralph Loop |
-| `idearalph_prd` | Generate a PRD |
-| `idearalph_design` | Design the UI/UX |
+| `idearalph_refine` | Run the Ralph Loop (single/target/max) |
+| `idearalph_prd` | Generate PRD (napkin/science-fair/genius) |
+| `idearalph_design` | Design UI/UX with vibe selection |
 | `idearalph_architecture` | Get implementation plan |
 | `idearalph_checklist` | YC-level launch checklist |
+
+---
 
 ## PRD Levels
 
 | Level | What You Get |
 |-------|--------------|
-| `napkin` | Quick 1-page sketch |
-| `science-fair` | Full PRD with user stories |
-| `genius` | Investor-ready + JSON export |
+| `napkin` | Quick 1-page sketch (~5 min read) |
+| `science-fair` | Full PRD with user stories, competitive analysis (~15 min) |
+| `genius` | Investor-ready + structured JSON export (~30 min) |
+
+---
 
 ## Example
 
@@ -98,19 +194,7 @@ Each catch triggers a micro-meditation. Monetizes through
 premium biomes ($2.99) and meditation coach subs ($4.99/mo)."
 ```
 
-## The Flow
-
-```
-Brainstorm → Validate → Refine → PRD → Design → Architecture → Build!
-```
-
-1. **Brainstorm** — Give Ralph a topic, get startup ideas with initial scores
-2. **Validate** — Score your idea on 10 PMF dimensions (problem clarity, market size, etc.)
-3. **Refine** — Ralph Loop iterates until your idea hits 9.5+ (or run single/max mode)
-4. **PRD** — Generate a Product Requirements Doc (napkin, science-fair, or genius level)
-5. **Design** — One question: "What vibe?" Ralph infers audience and creates design specs
-6. **Architecture** — Get implementation plan with recommended tech stack
-7. **Build!** — Start shipping with Spawner skills or your own setup
+---
 
 ## /spwn VIBECOINS
 
@@ -120,6 +204,8 @@ Check out [idearalph.com/hackathon](https://idearalph.com/hackathon) for:
 - Three launch paths (Community Voted, Curated, Degen)
 - Creator fees from trading volume
 - Token allocation for vibe coders
+
+---
 
 ## Tech Stack
 
