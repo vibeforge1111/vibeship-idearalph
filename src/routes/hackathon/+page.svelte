@@ -88,7 +88,7 @@
   }
 
   function copyCommand() {
-    navigator.clipboard.writeText('git clone https://github.com/vibeforge1111/vibeship-idearalph.git ~/idearalph && cd ~/idearalph/mcp-server && npm i && npm run build && claude mcp add idearalph -- node ~/idearalph/mcp-server/dist/index.js');
+    navigator.clipboard.writeText('curl -fsSL https://raw.githubusercontent.com/vibeforge1111/vibeship-idearalph/main/install.sh | bash -s -- --with-spawner');
     copied = true;
     setTimeout(() => copied = false, 2000);
   }
@@ -374,7 +374,7 @@
             Liq 10%
           </div>
         </div>
-        <p class="text-white/30 text-sm text-center">No team allocation. Fair launch. Builders who ship get the most.</p>
+        <p class="text-white/40 text-sm text-center mt-4">SFUND stakers must be staking for at least 3 months to qualify. More details coming soon.</p>
       </div>
     </div>
   </section>
@@ -391,10 +391,10 @@
 
       <!-- Install Command -->
       <div class="bg-white rounded-xl border-3 border-chalkboard shadow-crayon p-6 mb-8 text-left">
-        <p class="text-sm text-chalkboard/70 mb-3">One command to install:</p>
+        <p class="text-sm text-chalkboard/70 mb-3">One command to install (Mac/Linux):</p>
         <div class="bg-chalkboard rounded-lg p-4 mb-4">
-          <code class="text-xs text-playground-green font-mono break-all leading-relaxed block">
-            git clone https://github.com/vibeforge1111/vibeship-idearalph.git ~/idearalph && cd ~/idearalph/mcp-server && npm i && npm run build && claude mcp add idearalph -- node ~/idearalph/mcp-server/dist/index.js
+          <code class="text-sm text-playground-green font-mono break-all leading-relaxed block">
+            curl -fsSL https://raw.githubusercontent.com/vibeforge1111/vibeship-idearalph/main/install.sh | bash -s -- --with-spawner
           </code>
         </div>
         <button
@@ -403,6 +403,7 @@
         >
           {copied ? '✓ Copied!' : 'Copy Command'}
         </button>
+        <p class="text-xs text-chalkboard/50 mt-3">Windows? Use PowerShell: <code class="bg-chalkboard/10 px-1 rounded">irm ...install.ps1 | iex</code></p>
       </div>
 
       <p class="text-chalkboard/60 text-sm">
