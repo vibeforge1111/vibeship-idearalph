@@ -315,7 +315,7 @@
             </svg>
           </div>
           <h3 class="text-white font-semibold mb-2">Use MCP</h3>
-          <p class="text-white/40 text-sm">Use IdeaRalph as an MCP to earn a portion of tokens</p>
+          <p class="text-white/40 text-sm">Start shipping with IdeaRalph MCP. Even if you don't launch a token, you'll still earn a portion.</p>
         </div>
 
         <div class="bg-white/5 rounded-xl p-6 border border-white/10 hover:border-purple-500/30 transition-all">
@@ -326,7 +326,7 @@
             </svg>
           </div>
           <h3 class="text-white font-semibold mb-2">Build & Ship</h3>
-          <p class="text-white/40 text-sm">Vibe coders who ship apps get the biggest allocation</p>
+          <p class="text-white/40 text-sm">Vibe coders who actually ship apps get the biggest allocation. Builders who ship get rewarded.</p>
         </div>
 
         <div class="bg-white/5 rounded-xl p-6 border border-white/10 hover:border-purple-500/30 transition-all">
@@ -339,8 +339,8 @@
               <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/>
             </svg>
           </div>
-          <h3 class="text-white font-semibold mb-2">Launch</h3>
-          <p class="text-white/40 text-sm">Launch on vibe/vibe for bonus allocation</p>
+          <h3 class="text-white font-semibold mb-2">Launch Token</h3>
+          <p class="text-white/40 text-sm">Launch on vibe/vibe and make it successful? You get the lion's share from the Vibe Coders allocation.</p>
         </div>
 
         <div class="bg-[#8B7BF7]/10 rounded-xl p-6 border border-[#8B7BF7]/30">
@@ -352,7 +352,7 @@
             </svg>
           </div>
           <h3 class="text-[#8B7BF7] font-semibold mb-2">Creator Fees</h3>
-          <p class="text-white/40 text-sm">Earn from trading volume on your vibecoin</p>
+          <p class="text-white/40 text-sm">Earn ongoing fees from trading volume on your vibecoin. More details coming soon.</p>
         </div>
       </div>
 
