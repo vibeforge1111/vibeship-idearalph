@@ -359,18 +359,30 @@
       <!-- Token Distribution -->
       <div class="mt-12 bg-white/5 rounded-2xl p-8 border border-white/10">
         <h3 class="text-white font-semibold mb-6 text-center">Token Distribution</h3>
-        <div class="flex h-8 rounded-lg overflow-hidden mb-4">
-          <div class="bg-[#8B7BF7] flex items-center justify-center text-white text-xs font-medium" style="width: 35%">
-            SFUND Stakers 35%
+        <!-- Bar only -->
+        <div class="flex h-4 rounded-lg overflow-hidden mb-4">
+          <div class="bg-[#8B7BF7]" style="width: 35%"></div>
+          <div class="bg-[#8B7BF7]/60" style="width: 30%"></div>
+          <div class="bg-[#8B7BF7]/40" style="width: 25%"></div>
+          <div class="bg-[#8B7BF7]/20" style="width: 10%"></div>
+        </div>
+        <!-- Labels underneath -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-center">
+          <div class="flex items-center gap-2 justify-center">
+            <div class="w-3 h-3 rounded bg-[#8B7BF7]"></div>
+            <span class="text-white/80 text-xs">SFUND Stakers 35%</span>
           </div>
-          <div class="bg-[#8B7BF7]/60 flex items-center justify-center text-white text-xs font-medium" style="width: 30%">
-            X Community 30%
+          <div class="flex items-center gap-2 justify-center">
+            <div class="w-3 h-3 rounded bg-[#8B7BF7]/60"></div>
+            <span class="text-white/80 text-xs">X Community 30%</span>
           </div>
-          <div class="bg-[#8B7BF7]/40 flex items-center justify-center text-white text-xs font-medium" style="width: 25%">
-            Vibe Coders 25%
+          <div class="flex items-center gap-2 justify-center">
+            <div class="w-3 h-3 rounded bg-[#8B7BF7]/40"></div>
+            <span class="text-white/80 text-xs">Vibe Coders 25%</span>
           </div>
-          <div class="bg-[#8B7BF7]/20 flex items-center justify-center text-white text-xs font-medium" style="width: 10%">
-            Liq 10%
+          <div class="flex items-center gap-2 justify-center">
+            <div class="w-3 h-3 rounded bg-[#8B7BF7]/20"></div>
+            <span class="text-white/80 text-xs">Liq 10%</span>
           </div>
         </div>
         <p class="text-white/40 text-sm text-center mt-4">SFUND stakers must be staking for at least 3 months to qualify. More details coming soon.</p>
