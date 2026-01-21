@@ -28,15 +28,13 @@
         <span class="font-chalk text-xl text-chalkboard hidden sm:block">IdeaRalph</span>
       </a>
 
-      <!-- Hackathon Button -->
+      <!-- /spwn VIBECOINS Button -->
       <a
         href="/hackathon"
-        class="bg-[#8B7BF7] hover:bg-[#7B6BE7] text-white font-semibold px-4 py-2 rounded-lg transition-colors flex items-center gap-2"
+        class="bg-ralph-yellow hover:bg-ralph-yellow/80 text-chalkboard font-chalk px-4 py-2 rounded-xl border-2 border-chalkboard shadow-crayon transition-all hover:scale-105 flex items-center gap-2"
       >
-        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
-        </svg>
-        <span class="hidden sm:inline">Hackathon</span>
+        <span class="text-sm sm:text-base">/spwn</span>
+        <span class="hidden sm:inline font-bold">VIBECOINS</span>
       </a>
     </div>
   </div>
