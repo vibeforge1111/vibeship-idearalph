@@ -1,6 +1,6 @@
 # IdeaRalph
 
-**Your AI co-founder for startup ideas.** Ralph takes your rough concepts and refines them until they're investor-ready.
+**Your AI co-founder for startup ideas.** Ralph takes your rough concepts and refines them until they're PMF-ready, growth-ready, and revenue-ready.
 
 ## What Does Ralph Do?
 
