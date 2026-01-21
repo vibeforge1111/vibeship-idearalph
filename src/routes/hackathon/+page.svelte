@@ -3,6 +3,9 @@
   let openFaq = $state<number | null>(null);
   let copied = $state(false);
 
+  // Install mode: 'cli' for Claude Code, 'desktop' for Claude Desktop
+  let installMode = $state<'cli' | 'desktop'>('cli');
+
   // Terminal animation state
   let showLine1 = $state(false);
   let showLine2 = $state(false);
@@ -414,28 +417,73 @@
         Install the IdeaRalph MCP and start vibe coding
       </p>
 
-      <!-- Install Command -->
-      <div class="bg-white rounded-xl border-3 border-chalkboard shadow-crayon p-6 mb-8 text-left">
-        <p class="text-sm text-chalkboard/70 mb-3">One command to install:</p>
-        <div class="bg-chalkboard rounded-lg p-4 mb-4">
-          <code class="text-sm text-playground-green font-mono block">
-            npx github:vibeforge1111/vibeship-idearalph install --with-spawner
-          </code>
-        </div>
+      <!-- Install Mode Toggle -->
+      <div class="flex justify-center gap-2 mb-6">
         <button
-          onclick={copyCommand}
-          class="btn-crayon w-full text-sm {copied ? 'bg-playground-green' : ''}"
+          onclick={() => installMode = 'cli'}
+          class="px-4 py-2 rounded-lg font-chalk text-sm border-2 transition-all duration-150 {installMode === 'cli' ? 'bg-chalkboard text-white border-chalkboard' : 'bg-white text-chalkboard border-chalkboard/30 hover:border-chalkboard'}"
         >
-          {copied ? '✓ Copied!' : 'Copy Command'}
+          Claude Code (CLI)
+        </button>
+        <button
+          onclick={() => installMode = 'desktop'}
+          class="px-4 py-2 rounded-lg font-chalk text-sm border-2 transition-all duration-150 {installMode === 'desktop' ? 'bg-chalkboard text-white border-chalkboard' : 'bg-white text-chalkboard border-chalkboard/30 hover:border-chalkboard'}"
+        >
+          Claude Desktop
         </button>
       </div>
 
-      <p class="text-chalkboard/60 text-sm mb-3">Then restart Claude:</p>
-      <div class="flex items-center justify-center gap-3">
-        <code class="bg-white px-3 py-1.5 rounded-lg font-bold border-3 border-chalkboard shadow-crayon transition-all duration-150 hover:translate-x-1 hover:translate-y-1 hover:shadow-none hover:rotate-1 cursor-pointer">exit</code>
-        <span class="bg-white px-2 py-1 rounded-lg font-bold border-3 border-chalkboard shadow-crayon transition-all duration-150 hover:translate-x-1 hover:translate-y-1 hover:shadow-none hover:rotate-2 cursor-pointer">→</span>
-        <code class="bg-white px-3 py-1.5 rounded-lg font-bold border-3 border-chalkboard shadow-crayon transition-all duration-150 hover:translate-x-1 hover:translate-y-1 hover:shadow-none hover:-rotate-1 cursor-pointer">claude</code>
+      <!-- Install Command -->
+      <div class="bg-white rounded-xl border-3 border-chalkboard shadow-crayon p-6 mb-8 text-left">
+        {#if installMode === 'cli'}
+          <p class="text-sm text-chalkboard/70 mb-3">One command to install:</p>
+          <div class="bg-chalkboard rounded-lg p-4 mb-4">
+            <code class="text-sm text-playground-green font-mono block">
+              npx github:vibeforge1111/vibeship-idearalph install --with-spawner
+            </code>
+          </div>
+          <button
+            onclick={copyCommand}
+            class="btn-crayon w-full text-sm {copied ? 'bg-playground-green' : ''}"
+          >
+            {copied ? '✓ Copied!' : 'Copy Command'}
+          </button>
+        {:else}
+          <p class="text-sm text-chalkboard/70 mb-3">Step 1: Clone and build</p>
+          <div class="bg-chalkboard rounded-lg p-3 mb-4">
+            <code class="text-xs text-playground-green font-mono block">git clone https://github.com/vibeforge1111/vibeship-idearalph.git</code>
+            <code class="text-xs text-playground-green font-mono block mt-1">cd vibeship-idearalph/mcp-server && npm install && npm run build</code>
+          </div>
+
+          <p class="text-sm text-chalkboard/70 mb-3">Step 2: Add to Claude Desktop config</p>
+          <p class="text-xs text-chalkboard/50 mb-2">
+            Open: <code class="bg-chalkboard/10 px-1 rounded">~/Library/Application Support/Claude/claude_desktop_config.json</code> (Mac)<br/>
+            Or: <code class="bg-chalkboard/10 px-1 rounded">%APPDATA%\Claude\claude_desktop_config.json</code> (Windows)
+          </p>
+          <div class="bg-chalkboard rounded-lg p-3 mb-4">
+            <pre class="text-xs text-playground-green font-mono overflow-x-auto">{`{
+  "mcpServers": {
+    "idearalph": {
+      "command": "node",
+      "args": ["/path/to/vibeship-idearalph/mcp-server/dist/index.js"]
+    }
+  }
+}`}</pre>
+          </div>
+          <p class="text-xs text-chalkboard/50">Replace <code class="bg-chalkboard/10 px-1 rounded">/path/to/</code> with your actual path</p>
+        {/if}
       </div>
+
+      {#if installMode === 'cli'}
+        <p class="text-chalkboard/60 text-sm mb-3">Then restart Claude Code:</p>
+        <div class="flex items-center justify-center gap-3">
+          <code class="bg-white px-3 py-1.5 rounded-lg font-bold border-3 border-chalkboard shadow-crayon transition-all duration-150 hover:translate-x-1 hover:translate-y-1 hover:shadow-none hover:rotate-1 cursor-pointer">exit</code>
+          <span class="bg-white px-2 py-1 rounded-lg font-bold border-3 border-chalkboard shadow-crayon transition-all duration-150 hover:translate-x-1 hover:translate-y-1 hover:shadow-none hover:rotate-2 cursor-pointer">→</span>
+          <code class="bg-white px-3 py-1.5 rounded-lg font-bold border-3 border-chalkboard shadow-crayon transition-all duration-150 hover:translate-x-1 hover:translate-y-1 hover:shadow-none hover:-rotate-1 cursor-pointer">claude</code>
+        </div>
+      {:else}
+        <p class="text-chalkboard/60 text-sm">Then restart Claude Desktop to load the MCP</p>
+      {/if}
     </div>
   </section>
 
