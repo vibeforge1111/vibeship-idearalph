@@ -223,9 +223,9 @@
       </div>
 
       <div class="relative z-10 text-center mb-16">
-        <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
-          <span class="block">vibe/vibe</span>
-          <span class="block">Vibecoin Launchpad</span>
+        <h2 class="font-bold text-white mb-4">
+          <span class="block text-5xl md:text-7xl mb-3">vibe/vibe</span>
+          <span class="block text-3xl md:text-4xl">Vibecoin Launchpad</span>
         </h2>
         <p class="text-lg text-white/50">For vibe coders, vibecoins, and degens.</p>
       </div>
@@ -278,10 +278,12 @@
       <!-- Creator fees note -->
       <div class="relative z-10 flex justify-center">
         <div class="inline-flex items-center gap-3 bg-white/10 px-6 py-3 rounded-xl border border-white/20">
+          <!-- Money bag icon -->
           <svg class="w-6 h-6 text-[#8B7BF7]" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"/>
-            <path d="M12 6v12"/>
-            <path d="M15 9.5c0-1.5-1.5-2.5-3-2.5s-3 1-3 2.5 1.5 2.5 3 2.5 3 1 3 2.5-1.5 2.5-3 2.5"/>
+            <path d="M12 22c5 0 8-3.5 8-9 0-4-2-6-4-7l-1-3H9L8 6c-2 1-4 3-4 7 0 5.5 3 9 8 9z"/>
+            <path d="M9 3c0 0 1.5 1 3 1s3-1 3-1"/>
+            <path d="M12 10v6"/>
+            <path d="M14 11.5c0-.8-.9-1.5-2-1.5s-2 .7-2 1.5.9 1.5 2 1.5 2 .7 2 1.5-.9 1.5-2 1.5"/>
           </svg>
           <span class="text-white font-medium">All vibe coders earn creator fees from trading volume</span>
         </div>
