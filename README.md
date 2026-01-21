@@ -228,3 +228,5 @@ Check out [idearalph.com/hackathon](https://idearalph.com/hackathon) for:
 Built with love by [@meta_alchemist](https://x.com/meta_alchemist)
 
 IdeaRalph is an ecosystem tool by [Vibeship](https://vibeship.co) — Powered by Claude and MCP.
+
+**Vibe coded for vibe coders.**
