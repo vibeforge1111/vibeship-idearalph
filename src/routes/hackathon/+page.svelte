@@ -366,24 +366,12 @@
           <div class="bg-[#8B7BF7]/40" style="width: 25%"></div>
           <div class="bg-[#8B7BF7]/20" style="width: 10%"></div>
         </div>
-        <!-- Labels underneath -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-center">
-          <div class="flex items-center gap-2 justify-center">
-            <div class="w-3 h-3 rounded bg-[#8B7BF7]"></div>
-            <span class="text-white/80 text-xs">SFUND Stakers 35%</span>
-          </div>
-          <div class="flex items-center gap-2 justify-center">
-            <div class="w-3 h-3 rounded bg-[#8B7BF7]/60"></div>
-            <span class="text-white/80 text-xs">X Community 30%</span>
-          </div>
-          <div class="flex items-center gap-2 justify-center">
-            <div class="w-3 h-3 rounded bg-[#8B7BF7]/40"></div>
-            <span class="text-white/80 text-xs">Vibe Coders 25%</span>
-          </div>
-          <div class="flex items-center gap-2 justify-center">
-            <div class="w-3 h-3 rounded bg-[#8B7BF7]/20"></div>
-            <span class="text-white/80 text-xs">Liq 10%</span>
-          </div>
+        <!-- Labels underneath - centered -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+          <span class="text-white/80 text-xs text-center">SFUND Stakers 35%</span>
+          <span class="text-white/80 text-xs text-center">X Community 30%</span>
+          <span class="text-white/80 text-xs text-center">Vibe Coders 25%</span>
+          <span class="text-white/80 text-xs text-center">Liquidity 10%</span>
         </div>
         <p class="text-white/40 text-sm text-center mt-4">SFUND stakers must be staking for at least 3 months to qualify. More details coming soon.</p>
       </div>
