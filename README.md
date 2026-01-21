@@ -220,10 +220,11 @@ Check out [idearalph.com/hackathon](https://idearalph.com/hackathon) for:
 
 - [Website](https://idearalph.com)
 - [Hackathon](https://idearalph.com/hackathon)
+- [X / Twitter](https://x.com/meta_alchemist)
 - [Vibeship](https://vibeship.co)
 
 ---
 
-Built with love by [Vibeship](https://github.com/vibeforge1111)
+Built with love by [@meta_alchemist](https://x.com/meta_alchemist) and [Vibeship](https://vibeship.co)
 
-Powered by Claude and MCP.
+IdeaRalph is an ecosystem tool by [Vibeship](https://vibeship.co) — Powered by Claude and MCP.
