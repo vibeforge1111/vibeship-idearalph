@@ -99,8 +99,8 @@
             {/if}
           </button>
 
-          <!-- Wallet -->
-          <div class="wallet-display">
+          <!-- Wallet (display only, not clickable) -->
+          <div style="display: flex; align-items: center; gap: 8px; padding: 8px 14px; background: #2d2d3a; border-radius: 8px;">
             <span style="font-size: 14px;">💰</span>
             <span class="font-mono font-bold" style="font-size: 15px; color: #fff;">{formatMoney(portfolioVal)}</span>
           </div>
@@ -220,17 +220,6 @@
   .header-btn.disabled {
     opacity: 0.4;
     cursor: not-allowed;
-  }
-
-  /* Wallet display - horizontal with icon */
-  .wallet-display {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 14px;
-    background: #3a3a4a;
-    border-radius: 10px;
-    box-shadow: 3px 3px 6px #1e1e28, -2px -2px 5px #4a4a5a;
   }
 
   /* Stats panel */
