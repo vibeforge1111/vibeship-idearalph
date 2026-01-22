@@ -74,25 +74,24 @@
 
       <!-- Second Row: Ralph + Actions (left) | Stats (right) -->
       <div style="display: flex; gap: 16px;">
-        <!-- Ralph Panel with Audit/Insurance -->
-        <div class="ralph-panel" style="flex: 1;">
-          <!-- Ralph Message -->
+        <!-- Ralph Panel with Audit/Insurance on right -->
+        <div class="ralph-panel" style="flex: 1; display: flex; align-items: center; justify-content: space-between;">
+          <!-- Ralph Message (left) -->
           {#if notification}
             {@const colors = notificationColors[notification.type]}
-            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.1);">
+            <div style="display: flex; align-items: center; gap: 10px; flex: 1; min-width: 0;">
               <span class="font-bold" style="font-size: 12px; color: {colors.text};">{notification.title}</span>
-              <p style="font-size: 12px; color: {colors.text}; opacity: 0.9; flex: 1;">{notification.message}</p>
+              <p style="font-size: 12px; color: {colors.text}; opacity: 0.9; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">{notification.message}</p>
             </div>
           {:else}
-            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.1);">
+            <div style="display: flex; align-items: center; gap: 10px; flex: 1; min-width: 0;">
               <span class="text-purple-300 font-semibold" style="font-size: 11px;">Ralph:</span>
-              <p class="text-white/70 italic" style="font-size: 12px; flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">"{quote}"</p>
+              <p class="text-white/70 italic" style="font-size: 12px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">"{quote}"</p>
             </div>
           {/if}
 
-          <!-- Action Buttons -->
-          <div style="display: flex; gap: 10px;">
-            <!-- Audit Button -->
+          <!-- Action Buttons (right) -->
+          <div style="display: flex; gap: 8px; margin-left: 16px;">
             <button
               onclick={() => buyAudit()}
               disabled={!canAffordAudit}
@@ -108,7 +107,6 @@
               {/if}
             </button>
 
-            <!-- Insurance Button -->
             <button
               onclick={() => buyInsurance()}
               disabled={!canAffordInsurance}
@@ -193,11 +191,11 @@
 </div>
 
 <style>
-  /* Ralph panel - bulkier container */
+  /* Ralph panel */
   .ralph-panel {
-    padding: 16px 20px;
+    padding: 12px 16px;
     background: #2d2d3a;
-    border-radius: 12px;
+    border-radius: 10px;
     border: 1px solid rgba(255,255,255,0.08);
   }
 
@@ -230,14 +228,14 @@
     cursor: not-allowed;
   }
 
-  /* Stats panel - bulkier */
+  /* Stats panel */
   .stats-panel {
     display: flex;
     align-items: center;
-    gap: 20px;
-    padding: 16px 24px;
+    gap: 16px;
+    padding: 12px 20px;
     background: #2d2d3a;
-    border-radius: 12px;
+    border-radius: 10px;
     border: 1px solid rgba(255,255,255,0.08);
   }
 
