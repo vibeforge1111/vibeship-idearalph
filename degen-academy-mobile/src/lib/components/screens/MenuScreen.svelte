@@ -52,8 +52,8 @@
           <path d="M16 12a1 1 0 1 0 2 0 1 1 0 0 0-2 0"/>
           <path d="M3 7l4-3h10l4 3"/>
         </svg>
-        <h3 class="text-white font-chalk text-sm" style="margin-top: 16px;">Yield Farming</h3>
-        <p class="text-white/60 text-xs mt-2">Learn how APY works and why "too good to be true" usually is</p>
+        <h3 class="text-white font-chalk text-base" style="margin-top: 16px;">Yield Farming</h3>
+        <p class="text-white/60 text-xs" style="margin-top: 8px;">Learn how APY works and why "too good to be true" usually is</p>
       </div>
 
       <!-- Box 2: Risk Management -->
@@ -62,8 +62,8 @@
           <path d="M12 3l8 4v5c0 5.5-3.8 10.2-8 12-4.2-1.8-8-6.5-8-12V7l8-4z"/>
           <path d="M9 12l2 2 4-4"/>
         </svg>
-        <h3 class="text-white font-chalk text-sm" style="margin-top: 16px;">Risk Management</h3>
-        <p class="text-white/60 text-xs mt-2">Understand rug pulls, exploits, and how to protect yourself</p>
+        <h3 class="text-white font-chalk text-base" style="margin-top: 16px;">Risk Management</h3>
+        <p class="text-white/60 text-xs" style="margin-top: 8px;">Understand rug pulls, exploits, and how to protect yourself</p>
       </div>
 
       <!-- Box 3: DeFi Basics -->
@@ -72,8 +72,8 @@
           <circle cx="12" cy="12" r="9"/>
           <path d="M12 8v8M8 12h8"/>
         </svg>
-        <h3 class="text-white font-chalk text-sm" style="margin-top: 16px;">DeFi Mechanics</h3>
-        <p class="text-white/60 text-xs mt-2">Halvings, gas fees, whale dumps — experience it all risk-free</p>
+        <h3 class="text-white font-chalk text-base" style="margin-top: 16px;">DeFi Mechanics</h3>
+        <p class="text-white/60 text-xs" style="margin-top: 8px;">Halvings, gas fees, whale dumps — experience it all risk-free</p>
       </div>
     </div>
 
