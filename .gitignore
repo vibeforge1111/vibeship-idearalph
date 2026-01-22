@@ -31,8 +31,7 @@ coverage/
 # Vercel
 .vercel/
 
-# Docs
-docs/
+# Docs - tracked for methodology and implementation docs
 
 # Degen Academy (migrated to dedicated repo)
 degen-academy/
