@@ -139,6 +139,48 @@ Ralph keeps iterating until your idea is ready. Each round:
 
 ---
 
+## Execution Workflow (NEW!)
+
+After generating a PRD, you can now BUILD it:
+
+```
+PRD → Plan → PRPs → Execute → Validate → Working Code!
+```
+
+### The PRP Pipeline
+
+| Step | Tool | What Happens |
+|------|------|--------------|
+| **Plan** | `idearalph_plan` | PRD phases become PRPs |
+| **Execute** | `idearalph_execute` | Tasks run with fresh context |
+| **Validate** | Automatic | Lint → Types → Tests → Build |
+| **Status** | `idearalph_status` | Track progress, handle errors |
+
+### Fresh Context Execution
+
+Each task runs in isolation with ONLY what it needs:
+- No context bloat (prevents confusion)
+- No hallucination (grounded in real code)
+- No cascading errors (failures are contained)
+
+### Example
+
+```
+1. "Generate a genius PRD for my fitness app idea"
+   → Creates detailed PRD with phases
+
+2. "Plan this PRD"
+   → Generates PRPs for each phase
+
+3. "Execute the first PRP"
+   → Builds foundation with fresh context per task
+
+4. "Check status"
+   → Shows progress: 5/10 tasks complete
+```
+
+---
+
 ## PMF Scoring (10 Dimensions)
 
 | Dimension | What It Measures |
@@ -169,6 +211,9 @@ Once installed, Claude uses these automatically:
 | `idearalph_design` | Design UI/UX with vibe selection |
 | `idearalph_architecture` | Get implementation plan |
 | `idearalph_checklist` | YC-level launch checklist |
+| `idearalph_plan` | Convert PRD to executable PRPs |
+| `idearalph_execute` | Run PRPs with fresh context |
+| `idearalph_status` | Check execution progress |
 
 ---
 

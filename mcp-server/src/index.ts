@@ -15,6 +15,9 @@ import {
   architectureSchema,
   designSchema,
   checklistSchema,
+  planSchema,
+  executeSchema,
+  statusSchema,
   handleBrainstorm,
   handleValidate,
   handleRefine,
@@ -22,13 +25,16 @@ import {
   handleArchitecture,
   handleDesign,
   handleChecklist,
+  handlePlan,
+  handleExecute,
+  handleStatus,
 } from "./tools.js";
 
 // Create the MCP server
 const server = new Server(
   {
     name: "idearalph-mcp",
-    version: "2.3.0", // Phase-based checklist + skill-driven execution
+    version: "2.4.0", // PRP execution pipeline
   },
   {
     capabilities: {
@@ -85,6 +91,21 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
         result = handleChecklist(parsed);
         break;
       }
+      case "idearalph_plan": {
+        const parsed = planSchema.parse(args);
+        result = handlePlan(parsed);
+        break;
+      }
+      case "idearalph_execute": {
+        const parsed = executeSchema.parse(args);
+        result = handleExecute(parsed);
+        break;
+      }
+      case "idearalph_status": {
+        const parsed = statusSchema.parse(args);
+        result = handleStatus(parsed);
+        break;
+      }
       default:
         throw new Error(`Unknown tool: ${name}`);
     }
@@ -115,7 +136,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
 async function main() {
   const transport = new StdioServerTransport();
   await server.connect(transport);
-  console.error("IdeaRalph MCP Server v2.3 running on stdio (no API key required!)");
+  console.error("IdeaRalph MCP Server v2.4 running on stdio (no API key required!)");
 }
 
 main().catch((error) => {

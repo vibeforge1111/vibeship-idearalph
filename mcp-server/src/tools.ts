@@ -187,6 +187,22 @@ export const checklistSchema = z.object({
   currentStatus: z.string().optional().describe("Current build status or what's been completed"),
 });
 
+export const planSchema = z.object({
+  prd: z.string().describe("The PRD content or path to PRD file to convert into PRPs"),
+  codebaseFiles: z.array(z.string()).optional().describe("List of files in the project for context"),
+});
+
+export const executeSchema = z.object({
+  prpId: z.string().optional().describe("Specific PRP ID to execute (omit to show all PRPs)"),
+  action: z.enum(["start", "resume", "pause", "status"]).default("start").describe("Execution action"),
+  stateId: z.string().optional().describe("Execution state ID for resume/status"),
+});
+
+export const statusSchema = z.object({
+  stateId: z.string().optional().describe("Execution state ID (omit to list all executions)"),
+  showTasks: z.boolean().default(false).describe("Include task-level details"),
+});
+
 // =============================================================================
 // TOOL DEFINITIONS (for MCP ListTools)
 // =============================================================================
@@ -391,6 +407,77 @@ Use this AFTER architecture is complete, when preparing for production!`,
         currentStatus: { type: "string", description: "Current build status or what's been completed" },
       },
       required: ["idea", "projectName"],
+    },
+  },
+  {
+    name: "idearalph_plan",
+    description: `Convert a PRD into executable PRPs (Product Requirement Prompts).
+
+PRPs are execution-focused documents with:
+- Atomic tasks (completable in one iteration)
+- Codebase context (file paths, patterns to follow)
+- Validation commands (how to verify success)
+
+Use this AFTER generating a PRD with idearalph_prd.
+This creates the bridge from "what to build" to "how to build it".`,
+    inputSchema: {
+      type: "object" as const,
+      properties: {
+        prd: { type: "string", description: "The PRD content or path to PRD file" },
+        codebaseFiles: {
+          type: "array",
+          items: { type: "string" },
+          description: "List of project files for context"
+        },
+      },
+      required: ["prd"],
+    },
+  },
+  {
+    name: "idearalph_execute",
+    description: `Execute PRPs with fresh context per task.
+
+ACTIONS:
+- "start": Begin executing a PRP from the beginning
+- "resume": Continue a paused execution
+- "pause": Pause current execution
+- "status": Show execution progress
+
+Fresh context per task prevents hallucination and context bloat.
+Each task is validated before moving to the next.`,
+    inputSchema: {
+      type: "object" as const,
+      properties: {
+        prpId: { type: "string", description: "Specific PRP ID to execute" },
+        action: {
+          type: "string",
+          enum: ["start", "resume", "pause", "status"],
+          description: "Execution action",
+          default: "start"
+        },
+        stateId: { type: "string", description: "Execution state ID for resume" },
+      },
+      required: [],
+    },
+  },
+  {
+    name: "idearalph_status",
+    description: `Check execution progress for PRPs.
+
+Shows:
+- Overall execution status (pending/executing/completed/failed)
+- Current PRP and task
+- Completed vs remaining tasks
+- Any errors encountered
+
+Use this to track progress or debug execution issues.`,
+    inputSchema: {
+      type: "object" as const,
+      properties: {
+        stateId: { type: "string", description: "Execution state ID (omit to list all)" },
+        showTasks: { type: "boolean", description: "Include task-level details", default: false },
+      },
+      required: [],
     },
   },
 ];
@@ -1973,4 +2060,263 @@ Present to user:
 ${NEXT_STEP_PROTOCOL}
 
 **Key principle**: NEVER work on a checklist category without loading its skill first. Generic LLM advice is NOT acceptable when specialized skills exist.`;
+}
+
+export function handlePlan(args: z.infer<typeof planSchema>): string {
+  const filesContext = args.codebaseFiles
+    ? `\n## Codebase Files\n${args.codebaseFiles.slice(0, 30).map(f => `- ${f}`).join('\n')}`
+    : '';
+
+  return `# PRD to PRP Conversion
+
+## Your Task
+
+Convert this PRD into executable PRPs (Product Requirement Prompts).
+
+## The PRD
+
+${args.prd}
+${filesContext}
+
+## PRP Requirements
+
+Each PRP must contain:
+
+### 1. Context Section
+- Relevant files to read/modify
+- Patterns to follow (with code examples)
+- Dependencies needed
+- Tech stack being used
+
+### 2. Atomic Tasks
+Each task should:
+- Be completable in ONE coding session
+- Have a specific target file
+- Include clear implementation details
+- Have validation criteria
+
+### 3. Validation Commands
+- Level 1: Lint check
+- Level 2: Type check
+- Level 3: Unit tests (if applicable)
+- Level 4: Build verification
+
+## Output Format
+
+For each phase in the PRD, generate a PRP:
+
+\`\`\`markdown
+# PRP {N}: {Phase Name}
+
+## Context
+- **Tech Stack**: [from PRD]
+- **Relevant Files**: [list files to modify]
+- **Patterns**: [code patterns to follow]
+
+## Tasks
+
+### Task 1: {Description}
+- **Action**: create/modify/delete/configure
+- **Target**: path/to/file
+- **Details**: Specific implementation instructions
+- **Validation**: How to verify completion
+
+### Task 2: ...
+
+## Validation Commands
+| Command | Level | Required |
+|---------|-------|----------|
+| npm run lint | 1 | No |
+| npm run check | 2 | Yes |
+| npm run build | 4 | Yes |
+
+## Acceptance Criteria
+- [ ] Criterion 1
+- [ ] Criterion 2
+\`\`\`
+
+Generate PRPs for ALL phases in the PRD. Be specific with file paths and implementation details.
+
+${NEXT_STEP_PROTOCOL}
+
+**After generating PRPs:**
+- Offer to save PRPs to .agents/prps/
+- Suggest using idearalph_execute to run them
+- Give option to review/edit before execution`;
+}
+
+export function handleExecute(args: z.infer<typeof executeSchema>): string {
+  const action = args.action || "start";
+  const prpContext = args.prpId ? `\n**Target PRP**: ${args.prpId}` : '\n**Target**: All pending PRPs';
+  const stateContext = args.stateId ? `\n**Execution State**: ${args.stateId}` : '';
+
+  const actionInstructions: Record<string, string> = {
+    start: `## Starting Execution
+
+1. Load the specified PRP (or list available PRPs if none specified)
+2. For each task in order:
+   a. Create a FRESH context with only task-relevant information
+   b. Execute the task (create/modify/delete/configure)
+   c. Run validation commands
+   d. If validation fails: stop and report
+   e. If validation passes: mark complete, continue
+
+**Fresh Context Rule**: Each task gets ONLY:
+- The task description and details
+- Relevant file contents (not entire codebase)
+- Patterns to follow
+- Validation commands
+
+This prevents context bloat and hallucination.`,
+
+    resume: `## Resuming Execution
+
+1. Load execution state: ${args.stateId || '(provide stateId)'}
+2. Find the last incomplete task
+3. Continue from that task
+4. Use same fresh context approach`,
+
+    pause: `## Pausing Execution
+
+1. Save current execution state
+2. Mark current task as paused
+3. Report what's been completed
+4. Provide stateId for resume`,
+
+    status: `## Execution Status
+
+Show current progress:
+- Execution state ID
+- PRD/PRP being executed
+- Current task
+- Completed tasks vs total
+- Any errors`,
+  };
+
+  return `# PRP Execution: ${action.toUpperCase()}
+${prpContext}${stateContext}
+
+${actionInstructions[action]}
+
+## Task Execution Protocol
+
+For EACH task:
+
+\`\`\`
+1. ANNOUNCE: "Starting Task X: {description}"
+
+2. FRESH CONTEXT: Load ONLY what's needed
+   - Read target file (if exists)
+   - Read pattern reference files
+   - Do NOT load unrelated files
+
+3. EXECUTE: Perform the action
+   - create: Write new file
+   - modify: Edit existing file
+   - delete: Remove file
+   - configure: Update config
+
+4. VALIDATE: Run validation commands
+   - Must pass required validations
+   - Report any failures
+
+5. REPORT: "Task X complete. Moving to Task Y..."
+\`\`\`
+
+## Error Handling
+
+If a task fails:
+1. Report the specific error
+2. Show which validation failed
+3. DO NOT continue to next task
+4. Offer to retry or pause
+
+${NEXT_STEP_PROTOCOL}
+
+**After execution:**
+- Report total tasks completed
+- Show any failures
+- Suggest next steps (continue, review, etc.)`;
+}
+
+export function handleStatus(args: z.infer<typeof statusSchema>): string {
+  const stateFilter = args.stateId
+    ? `\n**Showing**: Execution ${args.stateId}`
+    : '\n**Showing**: All executions';
+  const detailLevel = args.showTasks
+    ? '\n**Detail Level**: Full (including tasks)'
+    : '\n**Detail Level**: Summary';
+
+  return `# Execution Status
+${stateFilter}${detailLevel}
+
+## Your Task
+
+Display the current execution status.
+
+${args.stateId ? `
+### For State ID: ${args.stateId}
+
+Show:
+1. **Execution Info**
+   - State ID
+   - Source PRD name
+   - Started/Updated timestamps
+   - Overall status
+
+2. **Progress**
+   - Total PRPs: X
+   - Current PRP: Y (name)
+   - Tasks: completed/total
+   - Percentage complete
+
+3. **Current Task** (if executing)
+   - Task ID
+   - Description
+   - Target file
+   - Status
+
+${args.showTasks ? `
+4. **All Tasks**
+   | PRP | Task | Status | Notes |
+   |-----|------|--------|-------|
+   | ... | ... | ... | ... |
+` : ''}
+
+5. **Errors** (if any)
+   - Last error message
+   - Which task failed
+   - Suggested fix
+` : `
+### List All Executions
+
+Show a table of all execution states:
+
+| ID | PRD Name | Status | Progress | Updated |
+|----|----------|--------|----------|---------|
+| exec-xxx | Project A | executing | 3/10 tasks | 2 min ago |
+| exec-yyy | Project B | completed | 15/15 tasks | 1 hour ago |
+
+For each, show:
+- Execution ID (for resume)
+- PRD name
+- Status (pending/executing/paused/completed/failed)
+- Progress (tasks completed / total)
+- Last updated
+`}
+
+## Output Format
+
+Use clear formatting:
+- Progress bars where helpful: \`[████████░░] 80%\`
+- Status badges: ✅ Complete, 🔄 In Progress, ❌ Failed, ⏸️ Paused
+- Timestamps in relative format: "2 minutes ago"
+
+${NEXT_STEP_PROTOCOL}
+
+**Based on status:**
+- If executing: Offer to pause or check specific task
+- If paused: Offer to resume
+- If failed: Show error and suggest fix
+- If completed: Celebrate! Suggest next steps`;
 }
