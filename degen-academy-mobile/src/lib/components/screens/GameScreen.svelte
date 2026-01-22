@@ -21,39 +21,37 @@
   <!-- Main Content -->
   <div class="relative z-10 flex-1 flex flex-col h-screen h-dvh overflow-hidden">
 
-    <!-- Fixed Header -->
-    <header class="flex-shrink-0 py-8">
-      <div class="max-w-3xl mx-auto px-8">
-        <div class="flex flex-col items-center text-center">
-          <div class="flex items-center gap-4 mb-3">
-            <div class="w-11 h-11 bg-gray-900 flex items-center justify-center rounded-lg">
-              <span class="text-xl">🐕</span>
-            </div>
-            <div class="text-left">
-              <h1 class="text-xl font-bold text-white">Ralph's Degen Academy</h1>
-              <p class="text-purple-300/80 text-sm">Learn to survive DeFi</p>
-            </div>
+    <!-- Fixed Header - Left aligned -->
+    <header class="flex-shrink-0 py-8 px-8">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-4">
+          <div class="w-11 h-11 bg-gray-900 flex items-center justify-center rounded-lg">
+            <span class="text-xl">🐕</span>
           </div>
+          <div>
+            <h1 class="text-xl font-bold text-white">Ralph's Degen Academy</h1>
+            <p class="text-purple-300/80 text-sm">Learn to survive DeFi</p>
+          </div>
+        </div>
 
-          <!-- Connected Badge -->
-          <div class="flex items-center gap-2 px-3 py-1.5 bg-emerald-500/20 border border-emerald-500/40 rounded-md">
-            <div class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></div>
-            <span class="text-emerald-400 text-xs font-medium">Connected</span>
-          </div>
+        <!-- Connected Badge -->
+        <div class="flex items-center gap-2 px-3 py-1.5 bg-emerald-500/20 border border-emerald-500/40 rounded-md">
+          <div class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></div>
+          <span class="text-emerald-400 text-xs font-medium">Connected</span>
         </div>
       </div>
     </header>
 
-    <!-- Top Stats Bar -->
-    <div class="flex-shrink-0 pb-8">
-      <div class="max-w-3xl mx-auto px-8">
+    <!-- Top Stats Bar - Centered -->
+    <div class="flex-shrink-0 pb-8 flex justify-center px-8">
+      <div class="w-full max-w-3xl">
         <TopBar />
       </div>
     </div>
 
-    <!-- Scrollable Pool Grid -->
+    <!-- Scrollable Pool Grid - Centered -->
     <div class="flex-1 overflow-y-auto pb-8">
-      <div class="max-w-3xl mx-auto px-8">
+      <div class="flex flex-col items-center px-8">
         <!-- Section Header -->
         <div class="flex items-center justify-center mb-6">
           <div class="flex items-center gap-3">
@@ -63,7 +61,7 @@
         </div>
 
         <!-- Pool Grid - 2 cards per row, centered -->
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 justify-items-center">
+        <div class="w-full max-w-3xl grid grid-cols-1 lg:grid-cols-2 gap-6">
           {#each poolList as pool (pool.id)}
             <PoolCard {pool} />
           {/each}
@@ -71,12 +69,14 @@
       </div>
     </div>
 
-    <!-- Fixed Bottom Section -->
+    <!-- Fixed Bottom Section - Centered -->
     <div class="flex-shrink-0 bg-slate-900/95 backdrop-blur border-t border-white/10">
-      <div class="max-w-3xl mx-auto px-8 py-6">
-        <RalphChat />
-        <div class="mt-5">
-          <BottomBar />
+      <div class="flex justify-center px-8 py-6">
+        <div class="w-full max-w-3xl">
+          <RalphChat />
+          <div class="mt-5">
+            <BottomBar />
+          </div>
         </div>
       </div>
     </div>
