@@ -51,7 +51,7 @@
 
     <!-- Header Section -->
     <header class="flex-shrink-0" style="padding: 20px 32px;">
-      <!-- Top Row: Logo, Power-ups, Wallet -->
+      <!-- Top Row: Logo, Controls, Wallet -->
       <div class="flex items-center justify-between" style="margin-bottom: 16px;">
         <!-- Logo & Title -->
         <div class="flex items-center gap-3">
@@ -59,97 +59,95 @@
           <h1 class="text-lg font-bold text-white">Ralph's Degen Academy</h1>
         </div>
 
-        <!-- Power-ups & Wallet -->
-        <div class="flex items-center" style="gap: 12px;">
-          <!-- Audit Button -->
+        <!-- Light Neumorphic Controls Panel -->
+        <div class="flex items-center" style="gap: 10px;">
+          <!-- Halving Timer - Light Neumorphic Badge -->
+          <div class="neu-light-badge" class:urgent={halvingUrgent}>
+            <span style="font-size: 11px; color: #666;">Halving</span>
+            <span class="font-mono font-bold" style="font-size: 14px; color: {halvingUrgent ? '#dc2626' : '#d97706'};">
+              {formatTime(halvingTime)}
+            </span>
+          </div>
+
+          <!-- Audit Button - Light Neumorphic -->
           <button
             onclick={() => buyAudit()}
             disabled={!canAffordAudit}
-            class="header-btn"
+            class="neu-light-btn"
             class:disabled={!canAffordAudit}
           >
             <span>🛡️</span>
-            <span class="font-medium">Audit</span>
+            <span class="font-medium" style="color: #444;">Audit</span>
             {#if itemsVal.audits > 0}
-              <span class="text-purple-300 font-bold">x{itemsVal.audits}</span>
+              <span style="color: #7c3aed; font-weight: 700;">x{itemsVal.audits}</span>
             {:else}
-              <span class="text-white/40">${auditCost.toFixed(0)}</span>
+              <span style="color: #888;">${auditCost.toFixed(0)}</span>
             {/if}
           </button>
 
-          <!-- Insurance Button -->
+          <!-- Insurance Button - Light Neumorphic -->
           <button
             onclick={() => buyInsurance()}
             disabled={!canAffordInsurance}
-            class="header-btn"
+            class="neu-light-btn"
             class:disabled={!canAffordInsurance}
           >
             <span>🏥</span>
-            <span class="font-medium">Insurance</span>
+            <span class="font-medium" style="color: #444;">Insurance</span>
             {#if itemsVal.insurance > 0}
-              <span class="text-emerald-300 font-bold">x{itemsVal.insurance}</span>
+              <span style="color: #059669; font-weight: 700;">x{itemsVal.insurance}</span>
             {:else}
-              <span class="text-white/40">${insuranceCost.toFixed(0)}</span>
+              <span style="color: #888;">${insuranceCost.toFixed(0)}</span>
             {/if}
           </button>
 
-          <!-- Wallet -->
-          <div class="flex items-center gap-2" style="margin-left: 8px;">
-            <span class="text-white/50" style="font-size: 12px;">Wallet</span>
-            <span class="font-mono font-bold text-white" style="font-size: 18px;">{formatMoney(portfolioVal)}</span>
+          <!-- Wallet - Light Neumorphic -->
+          <div class="neu-light-badge" style="gap: 8px;">
+            <span style="font-size: 11px; color: #666;">Wallet</span>
+            <span class="font-mono font-bold" style="font-size: 16px; color: #1e293b;">{formatMoney(portfolioVal)}</span>
           </div>
         </div>
       </div>
 
       <!-- Second Row: Ralph (left) | Stats (right) -->
       <div style="display: flex; gap: 16px;">
-        <!-- Ralph Notification Banner - Left Half -->
+        <!-- Ralph Notification Banner -->
         <div class="rounded-lg flex items-center" style="flex: 1; padding: 10px 16px; background: #2d2d3a; gap: 10px;">
           <span class="text-purple-300 font-semibold" style="font-size: 11px;">Ralph:</span>
           <p class="text-white/70 italic" style="font-size: 12px; flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">"{quote}"</p>
         </div>
 
-        <!-- Stats Panel - Right Half -->
-        <div class="rounded-lg flex items-center" style="flex: 1; padding: 10px 16px; background: #2d2d3a; gap: 16px; justify-content: center;">
-          <!-- Halving -->
-          <div class="flex items-center" style="gap: 6px;">
-            <span class="text-white/40" style="font-size: 10px;">Halving</span>
-            <span class="font-mono font-semibold {halvingUrgent ? 'text-red-400' : 'text-amber-400'}" style="font-size: 13px;">
-              {formatTime(halvingTime)}
-            </span>
-          </div>
-
-          <div style="width: 1px; height: 16px; background: rgba(255,255,255,0.15);"></div>
-
+        <!-- Stats Panel - Light Neumorphic -->
+        <div class="neu-light-panel" style="display: flex; align-items: center; gap: 16px;">
           <!-- Multiplier -->
-          <div class="flex items-center" style="gap: 6px;">
-            <span class="text-white/40" style="font-size: 10px;">Mult</span>
-            <span class="font-mono font-semibold text-purple-400" style="font-size: 13px;">{halvingMult.toFixed(2)}x</span>
+          <div style="display: flex; align-items: center; gap: 6px;">
+            <span style="font-size: 10px; color: #666;">Mult</span>
+            <span class="font-mono font-bold" style="font-size: 13px; color: #7c3aed;">{halvingMult.toFixed(2)}x</span>
           </div>
 
-          <div style="width: 1px; height: 16px; background: rgba(255,255,255,0.15);"></div>
+          <div style="width: 1px; height: 16px; background: #ccc;"></div>
 
           <!-- Target -->
-          <div class="flex items-center" style="gap: 6px;">
-            <span class="text-white/40" style="font-size: 10px;">Target</span>
-            <span class="font-mono font-semibold text-white/80" style="font-size: 13px;">{formatMoney(GAME_CONSTANTS.WIN_PORTFOLIO)}</span>
+          <div style="display: flex; align-items: center; gap: 6px;">
+            <span style="font-size: 10px; color: #666;">Target</span>
+            <span class="font-mono font-bold" style="font-size: 13px; color: #1e293b;">{formatMoney(GAME_CONSTANTS.WIN_PORTFOLIO)}</span>
           </div>
 
           <!-- Gas indicator (only when active) -->
           {#if gasMult > 1}
-            <div style="width: 1px; height: 16px; background: rgba(255,255,255,0.15);"></div>
-            <div class="flex items-center" style="gap: 4px;">
-              <span style="font-size: 12px;">⛽</span>
-              <span class="text-orange-400 font-semibold" style="font-size: 11px;">{gasMult}x</span>
+            <div style="width: 1px; height: 16px; background: #ccc;"></div>
+            <div class="neu-light-indicator warning">
+              <span>⛽</span>
+              <span class="font-bold">{gasMult}x</span>
             </div>
           {/if}
 
           <!-- Whale indicator (only when active) -->
           {#if game.whaleEndTime && Date.now() < game.whaleEndTime}
-            <div style="width: 1px; height: 16px; background: rgba(255,255,255,0.15);"></div>
-            <div class="flex items-center" style="gap: 4px;">
-              <span style="font-size: 12px;">🐋</span>
-              <span class="text-blue-400 font-semibold" style="font-size: 11px;">Active</span>
+            <div style="width: 1px; height: 16px; background: #ccc;"></div>
+            <div class="neu-light-indicator info">
+              <span>🐋</span>
+              <span class="font-bold">Active</span>
             </div>
           {/if}
         </div>
@@ -184,31 +182,75 @@
 </div>
 
 <style>
-  .header-btn {
+  /* Light Neumorphic Button */
+  .neu-light-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 16px;
+    font-size: 12px;
+    background: #e0e5ec;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 6px 6px 12px #b8bec7, -6px -6px 12px #ffffff;
+    transition: all 0.15s ease;
+    cursor: pointer;
+  }
+
+  .neu-light-btn:hover:not(.disabled) {
+    box-shadow: 4px 4px 8px #b8bec7, -4px -4px 8px #ffffff;
+  }
+
+  .neu-light-btn:active:not(.disabled) {
+    box-shadow: inset 4px 4px 8px #b8bec7, inset -4px -4px 8px #ffffff;
+  }
+
+  .neu-light-btn.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  /* Light Neumorphic Badge */
+  .neu-light-badge {
     display: flex;
     align-items: center;
     gap: 6px;
     padding: 8px 14px;
-    font-size: 12px;
-    background: #3a3a4a;
-    border: none;
+    background: #e0e5ec;
+    border-radius: 10px;
+    box-shadow: 4px 4px 8px #b8bec7, -4px -4px 8px #ffffff;
+  }
+
+  .neu-light-badge.urgent {
+    box-shadow: 4px 4px 8px #b8bec7, -4px -4px 8px #ffffff, inset 0 0 0 2px #fca5a5;
+  }
+
+  /* Light Neumorphic Panel */
+  .neu-light-panel {
+    padding: 10px 20px;
+    background: #e0e5ec;
+    border-radius: 12px;
+    box-shadow: 6px 6px 12px #b8bec7, -6px -6px 12px #ffffff;
+  }
+
+  /* Light Neumorphic Indicator */
+  .neu-light-indicator {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    padding: 4px 10px;
+    font-size: 11px;
     border-radius: 8px;
-    box-shadow: 2px 2px 4px #1e1e28, -1px -1px 3px #4a4a5a;
-    transition: all 0.15s ease;
-    cursor: pointer;
-    color: rgba(255,255,255,0.85);
+    box-shadow: inset 2px 2px 4px #b8bec7, inset -2px -2px 4px #ffffff;
   }
 
-  .header-btn:hover:not(.disabled) {
-    box-shadow: 1px 1px 2px #1e1e28, -1px -1px 2px #4a4a5a;
+  .neu-light-indicator.warning {
+    background: #fef3c7;
+    color: #d97706;
   }
 
-  .header-btn:active:not(.disabled) {
-    box-shadow: inset 2px 2px 4px #1e1e28, inset -1px -1px 3px #4a4a5a;
-  }
-
-  .header-btn.disabled {
-    opacity: 0.4;
-    cursor: not-allowed;
+  .neu-light-indicator.info {
+    background: #dbeafe;
+    color: #2563eb;
   }
 </style>

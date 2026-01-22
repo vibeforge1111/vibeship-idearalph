@@ -2,10 +2,10 @@
   import { toasts, removeToast } from '../stores/gameStore.svelte';
 
   const typeConfig = {
-    success: { bg: '#2d3a2d', border: '#4ade80', icon: '✓', color: '#4ade80' },
-    danger: { bg: '#3a2d2d', border: '#f87171', icon: '⚠', color: '#f87171' },
-    warning: { bg: '#3a3a2d', border: '#fbbf24', icon: '⚡', color: '#fbbf24' },
-    info: { bg: '#2d2d3a', border: '#60a5fa', icon: '●', color: '#60a5fa' },
+    success: { bg: '#d1fae5', accent: '#059669', icon: '✓' },
+    danger: { bg: '#fee2e2', accent: '#dc2626', icon: '⚠' },
+    warning: { bg: '#fef3c7', accent: '#d97706', icon: '⚡' },
+    info: { bg: '#dbeafe', accent: '#2563eb', icon: '●' },
   };
 
   const toastList = $derived(toasts.value);
@@ -15,25 +15,54 @@
   {#each toastList as toast (toast.id)}
     {@const config = typeConfig[toast.type]}
     <div
-      class="animate-slide-in rounded-xl"
-      style="padding: 14px 18px; background: {config.bg}; border-left: 3px solid {config.border}; box-shadow: 4px 4px 12px rgba(0,0,0,0.4), -2px -2px 8px rgba(80,80,100,0.1);"
+      class="animate-slide-in"
+      style="
+        padding: 14px 18px;
+        background: #e0e5ec;
+        border-radius: 12px;
+        border-left: 4px solid {config.accent};
+        box-shadow: 6px 6px 12px #b8bec7, -6px -6px 12px #ffffff;
+      "
       role="alert"
     >
       <div style="display: flex; align-items: flex-start; gap: 12px;">
-        <!-- Icon -->
-        <span style="font-size: 16px; color: {config.color};">{config.icon}</span>
+        <!-- Icon Badge -->
+        <div style="
+          width: 28px;
+          height: 28px;
+          border-radius: 8px;
+          background: {config.bg};
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 14px;
+          color: {config.accent};
+          box-shadow: inset 2px 2px 4px rgba(0,0,0,0.05), inset -2px -2px 4px rgba(255,255,255,0.8);
+        ">
+          {config.icon}
+        </div>
 
         <!-- Content -->
         <div style="flex: 1; min-width: 0;">
-          <p class="font-semibold text-white" style="font-size: 13px;">{toast.title}</p>
-          <p style="font-size: 11px; color: {config.color}; margin-top: 4px; opacity: 0.9;">{toast.message}</p>
+          <p style="font-size: 13px; font-weight: 600; color: #1e293b; margin-bottom: 2px;">{toast.title}</p>
+          <p style="font-size: 11px; color: {config.accent};">{toast.message}</p>
         </div>
 
         <!-- Close button -->
         <button
           onclick={() => removeToast(toast.id)}
-          class="text-white/40 hover:text-white/70 transition-colors"
-          style="padding: 2px; font-size: 12px;"
+          style="
+            padding: 4px 8px;
+            font-size: 11px;
+            color: #94a3b8;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: all 0.15s;
+          "
+          onmouseenter={(e) => e.currentTarget.style.background = '#d1d5db'}
+          onmouseleave={(e) => e.currentTarget.style.background = 'transparent'}
           aria-label="Dismiss"
         >
           ✕
