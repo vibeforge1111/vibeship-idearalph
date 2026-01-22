@@ -65,66 +65,66 @@
           <h1 class="text-lg font-bold text-white">Ralph's Degen Academy</h1>
         </div>
 
-        <!-- Controls -->
-        <div class="flex items-center" style="gap: 10px;">
-          <!-- Audit Button -->
-          <button
-            onclick={() => buyAudit()}
-            disabled={!canAffordAudit}
-            class="header-btn"
-            class:disabled={!canAffordAudit}
-          >
-            <span>🛡️</span>
-            <span class="font-medium">Audit</span>
-            {#if itemsVal.audits > 0}
-              <span style="color: #a78bfa; font-weight: 700;">x{itemsVal.audits}</span>
-            {:else}
-              <span style="color: rgba(255,255,255,0.4);">${auditCost.toFixed(0)}</span>
-            {/if}
-          </button>
-
-          <!-- Insurance Button -->
-          <button
-            onclick={() => buyInsurance()}
-            disabled={!canAffordInsurance}
-            class="header-btn"
-            class:disabled={!canAffordInsurance}
-          >
-            <span>🏥</span>
-            <span class="font-medium">Insurance</span>
-            {#if itemsVal.insurance > 0}
-              <span style="color: #4ade80; font-weight: 700;">x{itemsVal.insurance}</span>
-            {:else}
-              <span style="color: rgba(255,255,255,0.4);">${insuranceCost.toFixed(0)}</span>
-            {/if}
-          </button>
-
-          <!-- Wallet (display only, not clickable) -->
-          <div style="display: flex; align-items: center; gap: 8px; padding: 8px 14px; background: #2d2d3a; border-radius: 8px;">
-            <span style="font-size: 14px;">💰</span>
-            <span class="font-mono font-bold" style="font-size: 15px; color: #fff;">{formatMoney(portfolioVal)}</span>
-          </div>
+        <!-- Wallet (display only, not clickable) -->
+        <div style="display: flex; align-items: center; gap: 8px; padding: 8px 14px; background: #2d2d3a; border-radius: 8px;">
+          <span style="font-size: 14px;">💰</span>
+          <span class="font-mono font-bold" style="font-size: 15px; color: #fff;">{formatMoney(portfolioVal)}</span>
         </div>
       </div>
 
-      <!-- Second Row: Ralph (left) | Stats (right) -->
+      <!-- Second Row: Ralph + Actions (left) | Stats (right) -->
       <div style="display: flex; gap: 16px;">
-        <!-- Ralph Notification/Quote Banner -->
-        {#if notification}
-          {@const colors = notificationColors[notification.type]}
-          <div
-            class="rounded-lg flex items-center transition-all"
-            style="flex: 1; padding: 10px 16px; background: {colors.bg}; border-left: 3px solid {colors.border}; gap: 10px;"
-          >
-            <span class="font-bold" style="font-size: 12px; color: {colors.text};">{notification.title}</span>
-            <p style="font-size: 12px; color: {colors.text}; opacity: 0.9; flex: 1;">{notification.message}</p>
+        <!-- Ralph Panel with Audit/Insurance -->
+        <div class="ralph-panel" style="flex: 1;">
+          <!-- Ralph Message -->
+          {#if notification}
+            {@const colors = notificationColors[notification.type]}
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.1);">
+              <span class="font-bold" style="font-size: 12px; color: {colors.text};">{notification.title}</span>
+              <p style="font-size: 12px; color: {colors.text}; opacity: 0.9; flex: 1;">{notification.message}</p>
+            </div>
+          {:else}
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid rgba(255,255,255,0.1);">
+              <span class="text-purple-300 font-semibold" style="font-size: 11px;">Ralph:</span>
+              <p class="text-white/70 italic" style="font-size: 12px; flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">"{quote}"</p>
+            </div>
+          {/if}
+
+          <!-- Action Buttons -->
+          <div style="display: flex; gap: 10px;">
+            <!-- Audit Button -->
+            <button
+              onclick={() => buyAudit()}
+              disabled={!canAffordAudit}
+              class="action-btn"
+              class:disabled={!canAffordAudit}
+            >
+              <span>🛡️</span>
+              <span class="font-medium">Audit</span>
+              {#if itemsVal.audits > 0}
+                <span style="color: #a78bfa; font-weight: 700;">x{itemsVal.audits}</span>
+              {:else}
+                <span style="color: rgba(255,255,255,0.4);">${auditCost.toFixed(0)}</span>
+              {/if}
+            </button>
+
+            <!-- Insurance Button -->
+            <button
+              onclick={() => buyInsurance()}
+              disabled={!canAffordInsurance}
+              class="action-btn"
+              class:disabled={!canAffordInsurance}
+            >
+              <span>🏥</span>
+              <span class="font-medium">Insurance</span>
+              {#if itemsVal.insurance > 0}
+                <span style="color: #4ade80; font-weight: 700;">x{itemsVal.insurance}</span>
+              {:else}
+                <span style="color: rgba(255,255,255,0.4);">${insuranceCost.toFixed(0)}</span>
+              {/if}
+            </button>
           </div>
-        {:else}
-          <div class="rounded-lg flex items-center" style="flex: 1; padding: 10px 16px; background: #2d2d3a; gap: 10px;">
-            <span class="text-purple-300 font-semibold" style="font-size: 11px;">Ralph:</span>
-            <p class="text-white/70 italic" style="font-size: 12px; flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">"{quote}"</p>
-          </div>
-        {/if}
+        </div>
 
         <!-- Stats Panel -->
         <div class="stats-panel">
@@ -193,43 +193,51 @@
 </div>
 
 <style>
-  /* Header button - matches deposit button style */
-  .header-btn {
+  /* Ralph panel - bulkier container */
+  .ralph-panel {
+    padding: 16px 20px;
+    background: #2d2d3a;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.08);
+  }
+
+  /* Action button - simple, clean */
+  .action-btn {
     display: flex;
     align-items: center;
     gap: 6px;
-    padding: 10px 14px;
+    padding: 10px 16px;
     font-size: 12px;
     background: #3a3a4a;
-    border: none;
-    border-radius: 10px;
-    box-shadow: 3px 3px 6px #1e1e28, -2px -2px 5px #4a4a5a;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
     transition: all 0.15s ease;
     cursor: pointer;
     color: rgba(255,255,255,0.9);
   }
 
-  .header-btn:hover:not(.disabled) {
-    box-shadow: 2px 2px 4px #1e1e28, -1px -1px 3px #4a4a5a;
+  .action-btn:hover:not(.disabled) {
+    background: #454555;
+    border-color: rgba(255,255,255,0.2);
   }
 
-  .header-btn:active:not(.disabled) {
-    box-shadow: inset 3px 3px 6px #1e1e28, inset -2px -2px 5px #4a4a5a;
+  .action-btn:active:not(.disabled) {
+    background: #333343;
   }
 
-  .header-btn.disabled {
+  .action-btn.disabled {
     opacity: 0.4;
     cursor: not-allowed;
   }
 
-  /* Stats panel */
+  /* Stats panel - bulkier */
   .stats-panel {
     display: flex;
     align-items: center;
-    gap: 16px;
-    padding: 10px 20px;
+    gap: 20px;
+    padding: 16px 24px;
     background: #2d2d3a;
-    border-radius: 10px;
+    border-radius: 12px;
     border: 1px solid rgba(255,255,255,0.08);
   }
 
