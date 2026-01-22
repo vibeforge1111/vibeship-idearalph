@@ -95,16 +95,8 @@
       <button
         onclick={() => deposit(pool.id, depositAmount)}
         disabled={!canDeposit}
-        class="flex-1 font-semibold text-white/90"
-        style="
-          padding: 12px 16px;
-          font-size: 13px;
-          background: #3a3a4a;
-          border: none;
-          border-radius: 10px;
-          box-shadow: 3px 3px 6px #1e1e28, -2px -2px 5px #4a4a5a;
-          {canDeposit ? '' : 'opacity: 0.4; cursor: not-allowed;'}
-        "
+        class="neu-btn flex-1 font-semibold text-white/90"
+        class:disabled={!canDeposit}
       >
         Deposit +$1K
       </button>
@@ -113,16 +105,8 @@
       <button
         onclick={() => withdrawAll(pool.id)}
         disabled={!canWithdraw}
-        class="flex-1 font-semibold text-white/70"
-        style="
-          padding: 12px 16px;
-          font-size: 13px;
-          background: #3a3a4a;
-          border: none;
-          border-radius: 10px;
-          box-shadow: 3px 3px 6px #1e1e28, -2px -2px 5px #4a4a5a;
-          {canWithdraw ? '' : 'opacity: 0.4; cursor: not-allowed;'}
-        "
+        class="neu-btn flex-1 font-semibold text-white/70"
+        class:disabled={!canWithdraw}
       >
         Withdraw
       </button>
@@ -135,3 +119,29 @@
     </div>
   {/if}
 </div>
+
+<style>
+  .neu-btn {
+    padding: 12px 16px;
+    font-size: 13px;
+    background: #3a3a4a;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 3px 3px 6px #1e1e28, -2px -2px 5px #4a4a5a;
+    transition: all 0.15s ease;
+    cursor: pointer;
+  }
+
+  .neu-btn:hover:not(.disabled) {
+    box-shadow: 2px 2px 4px #1e1e28, -1px -1px 3px #4a4a5a;
+  }
+
+  .neu-btn:active:not(.disabled) {
+    box-shadow: inset 3px 3px 6px #1e1e28, inset -2px -2px 5px #4a4a5a;
+  }
+
+  .neu-btn.disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+</style>
