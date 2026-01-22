@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { pools, portfolio, totalYieldPerSecond } from '../../stores/gameStore.svelte';
+  import { pools, portfolio } from '../../stores/gameStore.svelte';
   import TopBar from '../TopBar.svelte';
   import BottomBar from '../BottomBar.svelte';
   import PoolCard from '../PoolCard.svelte';
@@ -39,16 +39,10 @@
           <h1 class="text-xl font-bold text-white">Ralph's Degen Academy</h1>
         </div>
 
-        <!-- Total Value -->
-        <div class="flex items-center gap-3">
-          <div class="text-right">
-            <p class="text-white/50 text-xs uppercase tracking-wider">Total Value</p>
-            <p class="font-mono font-bold text-2xl text-white">{formatMoney(portfolioVal)}</p>
-          </div>
-          <div class="flex items-center gap-2 px-3 py-2 bg-emerald-500/20 border border-emerald-500/40 rounded-lg">
-            <div class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></div>
-            <span class="text-emerald-400 font-mono font-bold text-sm">+{formatMoney(totalYieldPerSecond())}/s</span>
-          </div>
+        <!-- Wallet -->
+        <div class="flex items-center gap-2">
+          <span class="text-white/60 text-sm">Wallet</span>
+          <span class="font-mono font-bold text-xl text-white">{formatMoney(portfolioVal)}</span>
         </div>
       </div>
     </header>
