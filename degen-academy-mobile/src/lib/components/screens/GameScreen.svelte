@@ -74,7 +74,7 @@
 
     <!-- Fixed Bottom Section - Centered -->
     <div class="flex-shrink-0 bg-slate-900/95 backdrop-blur border-t border-white/10">
-      <div class="flex justify-center px-8 py-6">
+      <div class="flex justify-center px-8 pt-6 pb-8">
         <div class="w-full max-w-3xl">
           <RalphChat />
           <div class="mt-5">

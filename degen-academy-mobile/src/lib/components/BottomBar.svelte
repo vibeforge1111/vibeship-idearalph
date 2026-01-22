@@ -12,6 +12,10 @@
   const canAffordInsurance = $derived(portfolioVal >= insuranceCost);
   const progress = $derived(Math.min((portfolioVal / GAME_CONSTANTS.WIN_PORTFOLIO) * 100, 100));
 
+  // For segmented progress bar
+  const totalSegments = 20;
+  const filledSegments = $derived(Math.floor((progress / 100) * totalSegments));
+
   function formatMoney(amount: number): string {
     if (amount >= 1_000_000) {
       return `$${(amount / 1_000_000).toFixed(2)}M`;
@@ -22,7 +26,7 @@
   }
 </script>
 
-<div class="space-y-4">
+<div class="space-y-5">
   <!-- Power-ups Row - Compact -->
   <div class="flex items-center justify-center gap-3">
     <span class="text-white/40 text-xs uppercase tracking-wider">Power-ups</span>
@@ -62,17 +66,23 @@
     </button>
   </div>
 
-  <!-- Progress Bar -->
-  <div class="px-4">
-    <div class="flex items-center justify-between mb-2">
-      <span class="text-white/40 text-xs">Progress to {formatMoney(GAME_CONSTANTS.WIN_PORTFOLIO)}</span>
-      <span class="text-purple-400 font-mono font-semibold text-sm">{progress.toFixed(1)}%</span>
+  <!-- Progress Bar - Segmented & Chunky -->
+  <div class="px-6 pb-4">
+    <div class="flex items-center justify-between mb-3">
+      <span class="text-white/50 text-sm">Progress to {formatMoney(GAME_CONSTANTS.WIN_PORTFOLIO)}</span>
+      <span class="text-cyan-400 font-mono font-bold text-sm">{progress.toFixed(1)}%</span>
     </div>
-    <div class="h-3 bg-white/5 rounded-full overflow-hidden border border-white/10">
-      <div
-        class="h-full bg-gradient-to-r from-purple-600 to-purple-400 transition-all duration-300 rounded-full"
-        style="width: {progress}%"
-      ></div>
+
+    <!-- Segmented Progress Bar -->
+    <div class="flex gap-1.5">
+      {#each Array(totalSegments) as _, i}
+        <div
+          class="flex-1 h-5 rounded-md transition-all duration-300
+                 {i < filledSegments
+                   ? 'bg-cyan-400'
+                   : 'bg-white/10'}"
+        ></div>
+      {/each}
     </div>
   </div>
 </div>
