@@ -13,11 +13,34 @@ export default {
         'chalkboard': '#2D3436',
         'paper': '#FFF9E6',
         'paper-dark': '#2D3436',
+        // Sportrail Design System
+        'sport': {
+          'primary': '#1B4332',
+          'secondary': '#2D6A4F',
+          'accent': '#40916C',
+          'gold': '#D4A843',
+          'light': '#F8FAF9',
+          'dark': '#0B1F15',
+          'gray': {
+            50: '#F8FAF9',
+            100: '#EEF2F0',
+            200: '#D5DDD9',
+            300: '#B0BDB6',
+            400: '#8A9B92',
+            500: '#6B7F74',
+            600: '#556A5F',
+            700: '#45554C',
+            800: '#3A4740',
+            900: '#323D37',
+          }
+        },
       },
       fontFamily: {
         'chalk': ['Fredoka One', 'cursive'],
         'handwritten': ['Patrick Hand', 'cursive'],
         'body': ['Inter', 'system-ui', 'sans-serif'],
+        'sport-heading': ['Montserrat', 'system-ui', 'sans-serif'],
+        'sport-body': ['Open Sans', 'system-ui', 'sans-serif'],
       },
       animation: {
         'bounce-slow': 'bounce 2s infinite',
