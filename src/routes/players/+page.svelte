@@ -1,6 +1,11 @@
+<script lang="ts">
+  let { data } = $props();
+  const c = data.content;
+</script>
+
 <svelte:head>
-  <title>Player Programs | Sportrail Football — Development & Trials in Portugal & Spain</title>
-  <meta name="description" content="Elite football player development camps, professional club trials, and international pathways in Portugal and Spain. Ages U14 to senior. Train with top Iberian coaches." />
+  <title>{c.title} | Sportrail Football</title>
+  <meta name="description" content="{c.subtitle}" />
 </svelte:head>
 
 <!-- Hero -->
@@ -13,8 +18,7 @@
         Your Path to<br/><span class="text-sport-red">Professional Football</span>
       </h1>
       <p class="text-lg sm:text-xl text-sport-gray-300 font-sport-body leading-relaxed mb-10 max-w-2xl">
-        Development camps, professional trial placements, and immersive training programs
-        across Portugal and Spain. Train where Europe's best players are made.
+        {c.subtitle}
       </p>
       <div class="flex flex-col sm:flex-row gap-4">
         <a href="/contact" class="px-8 py-4 bg-sport-red hover:bg-red-700 text-white text-center font-sport-heading font-bold rounded-xl transition-colors text-lg">

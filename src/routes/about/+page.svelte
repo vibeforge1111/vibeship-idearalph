@@ -1,6 +1,11 @@
+<script lang="ts">
+  let { data } = $props();
+  const c = data.content;
+</script>
+
 <svelte:head>
-  <title>About Sportrail - Our Story | Sportrail Football</title>
-  <meta name="description" content="Founded in 2016, Sportrail is Portugal's leading football coaching education institution. DGERT & IPDJ certified, 2,500+ coaches trained worldwide." />
+  <title>{c.title} | Sportrail Football</title>
+  <meta name="description" content="{c.hero_text}" />
 </svelte:head>
 
 <!-- Hero -->
@@ -12,9 +17,7 @@
         Building the Future of Football Coaching Since 2016
       </h1>
       <p class="text-lg text-sport-gray-300 font-sport-body leading-relaxed">
-        Sportrail was founded with a clear mission: to provide world-class continuing education
-        for football coaches and professionals. Based in Oeiras, Portugal, we have become the
-        country's most recognized independent coaching education institution.
+        {c.hero_text}
       </p>
     </div>
   </div>
@@ -27,38 +30,14 @@
       <div>
         <h2 class="text-3xl font-sport-heading font-black text-sport-dark mb-6">Our Story</h2>
         <div class="space-y-4 text-sport-gray-600 font-sport-body leading-relaxed">
-          <p>
-            Founded in October 2016, Sportrail emerged from a simple observation: the best coaching
-            education doesn't come from textbooks — it comes from the people living the game at the
-            highest level.
-          </p>
-          <p>
-            Portugal has become the world's greatest exporter of football coaching talent. From Jose
-            Mourinho to Ruben Amorim, from Abel Ferreira to Sergio Conceicao — Portuguese coaches
-            lead clubs on every continent. Sportrail exists to continue this tradition of excellence.
-          </p>
-          <p>
-            We built a network of over 70 expert faculty members — UEFA Pro coaches, sporting
-            directors, sports scientists, scouts, and analysts — who deliver practical, real-world
-            education that you simply cannot find elsewhere.
-          </p>
-          <p>
-            Today, we are recognized as one of the top football coaching education companies in
-            Portugal, having trained over 2,500 national and international coaches. We are certified
-            by DGERT and accredited by IPDJ, ensuring every course counts toward your professional
-            development.
-          </p>
+          <p>{c.story}</p>
         </div>
       </div>
 
       <div class="space-y-6">
         <div class="bg-sport-light rounded-2xl p-8 border border-sport-gray-100">
           <h3 class="text-xl font-sport-heading font-bold text-sport-dark mb-4">Our Mission</h3>
-          <p class="text-sport-gray-600 font-sport-body leading-relaxed">
-            To provide world-class continuing professional education that empowers football coaches
-            and professionals to reach their full potential — through access to elite knowledge,
-            practical methodology, and a global network of peers.
-          </p>
+          <p class="text-sport-gray-600 font-sport-body leading-relaxed">{c.mission}</p>
         </div>
 
         <div class="bg-sport-light rounded-2xl p-8 border border-sport-gray-100">
@@ -88,7 +67,6 @@
 <section class="py-24 bg-sport-light">
   <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
     <h2 class="text-3xl font-sport-heading font-black text-sport-dark mb-12 text-center">Our Journey</h2>
-
     <div class="space-y-8">
       {#each [
         { year: '2016', title: 'Foundation', desc: 'Sportrail is founded in Oeiras, Portugal with a mission to transform football coaching education.' },
@@ -118,28 +96,20 @@
 <section class="py-24 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <h2 class="text-3xl font-sport-heading font-black text-sport-dark mb-12 text-center">Certifications & Accreditations</h2>
-
     <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
       <div class="bg-sport-light rounded-2xl p-8 border border-sport-gray-100 text-center">
         <div class="w-16 h-16 bg-sport-red/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
           <span class="font-sport-heading font-black text-sport-red text-xl">DGERT</span>
         </div>
         <h3 class="font-sport-heading font-bold text-sport-dark text-lg mb-2">DGERT Certified</h3>
-        <p class="text-sport-gray-500 font-sport-body text-sm">
-          Certified by the Directorate General for Employment and Labour Relations (DGERT),
-          ensuring our training programs meet national quality standards for professional education.
-        </p>
+        <p class="text-sport-gray-500 font-sport-body text-sm">Certified by the Directorate General for Employment and Labour Relations (DGERT), ensuring our training programs meet national quality standards for professional education.</p>
       </div>
-
       <div class="bg-sport-light rounded-2xl p-8 border border-sport-gray-100 text-center">
         <div class="w-16 h-16 bg-sport-red/10 rounded-2xl flex items-center justify-center mx-auto mb-4">
           <span class="font-sport-heading font-black text-sport-red text-xl">IPDJ</span>
         </div>
         <h3 class="font-sport-heading font-bold text-sport-dark text-lg mb-2">IPDJ Accredited</h3>
-        <p class="text-sport-gray-500 font-sport-body text-sm">
-          Accredited by the Portuguese Institute for Sport and Youth (IPDJ). Our courses earn
-          credit units (UC) that count toward coaching license renewal.
-        </p>
+        <p class="text-sport-gray-500 font-sport-body text-sm">Accredited by the Portuguese Institute for Sport and Youth (IPDJ). Our courses earn credit units (UC) that count toward coaching license renewal.</p>
       </div>
     </div>
   </div>

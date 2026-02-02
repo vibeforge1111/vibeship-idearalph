@@ -1,6 +1,11 @@
+<script lang="ts">
+  let { data } = $props();
+  const c = data.content;
+</script>
+
 <svelte:head>
-  <title>Contact Us | Sportrail Football</title>
-  <meta name="description" content="Get in touch with Sportrail. Course enrollment, club partnerships, faculty applications, and general inquiries." />
+  <title>{c.title} | Sportrail Football</title>
+  <meta name="description" content="{c.subtitle}" />
 </svelte:head>
 
 <!-- Hero -->
@@ -9,11 +14,10 @@
     <div class="max-w-3xl">
       <span class="text-sport-red text-sm font-sport-heading font-semibold uppercase tracking-wider">Get In Touch</span>
       <h1 class="text-4xl sm:text-5xl font-sport-heading font-black text-white mt-3 mb-6">
-        Contact Us
+        {c.title}
       </h1>
       <p class="text-lg text-sport-gray-300 font-sport-body leading-relaxed">
-        Whether you're looking to enroll in a course, discuss a club partnership,
-        or join our faculty — we'd love to hear from you.
+        {c.subtitle}
       </p>
     </div>
   </div>

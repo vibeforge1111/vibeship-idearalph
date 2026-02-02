@@ -1,6 +1,11 @@
+<script lang="ts">
+  let { data } = $props();
+  const c = data.content;
+</script>
+
 <svelte:head>
-  <title>Sportrail Football | Player Development & Coach Education — In-Person & Online</title>
-  <meta name="description" content="Portugal's premier football institution. Elite player development programs, pro trials, and DGERT/IPDJ certified coach education. In-person and online worldwide." />
+  <title>Sportrail Football | Player Development & Coach Education — {c.badge}</title>
+  <meta name="description" content="{c.subtitle}" />
 </svelte:head>
 
 <!-- Hero -->
@@ -9,16 +14,15 @@
   <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-36">
     <div class="max-w-3xl">
       <div class="flex items-center gap-2 mb-6">
-        <span class="px-3 py-1 bg-sport-red/20 text-sport-red text-xs font-sport-heading font-semibold rounded-full uppercase tracking-wider">In-Person & Online</span>
+        <span class="px-3 py-1 bg-sport-red/20 text-sport-red text-xs font-sport-heading font-semibold rounded-full uppercase tracking-wider">{c.badge}</span>
         <span class="px-3 py-1 bg-sport-gold/20 text-sport-gold text-xs font-sport-heading font-semibold rounded-full uppercase tracking-wider">Since 2016</span>
       </div>
       <h1 class="text-4xl sm:text-5xl lg:text-6xl font-sport-heading font-black text-white leading-tight mb-6">
-        Where Players Grow<br/>
-        <span class="text-sport-red">& Coaches Excel</span>
+        {c.title_line1}<br/>
+        <span class="text-sport-red">{c.title_line2}</span>
       </h1>
       <p class="text-lg sm:text-xl text-sport-gray-300 font-sport-body leading-relaxed mb-10 max-w-2xl">
-        Elite football development programs for players and DGERT/IPDJ certified education for coaches.
-        Learn from world-class experts, in-person or online.
+        {c.subtitle}
       </p>
       <div class="flex flex-col sm:flex-row gap-4">
         <a href="/players" class="px-8 py-4 bg-sport-red hover:bg-red-700 text-white text-center font-sport-heading font-bold rounded-xl transition-colors text-lg">
@@ -102,13 +106,7 @@
 <section class="py-20 bg-sport-light">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="grid grid-cols-2 lg:grid-cols-5 gap-8">
-      {#each [
-        { value: '2,500+', label: 'Coaches Trained' },
-        { value: '70+', label: 'Expert Faculty' },
-        { value: '8+', label: 'Years Operating' },
-        { value: '2', label: 'Countries' },
-        { value: '10+', label: 'Partner Clubs' },
-      ] as stat}
+      {#each c.stats as stat}
         <div class="text-center">
           <div class="text-3xl sm:text-4xl font-sport-heading font-black text-sport-red">{stat.value}</div>
           <div class="text-sm text-sport-gray-500 font-sport-body mt-1">{stat.label}</div>
@@ -118,33 +116,25 @@
   </div>
 </section>
 
-<!-- Portugal & Spain Focus -->
+<!-- Why Sportrail -->
 <section class="py-24 bg-white">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16">
       <span class="text-sport-red text-sm font-sport-heading font-semibold uppercase tracking-wider">Why Sportrail</span>
       <h2 class="text-3xl sm:text-4xl font-sport-heading font-black text-sport-dark mt-3 mb-4">
-        Train In-Person & Online
+        {c.why_sportrail.title}
       </h2>
       <p class="text-sport-gray-500 max-w-2xl mx-auto">
-        Access world-class football education wherever you are. Join in-person programs in Portugal and Spain,
-        or learn online from the best coaches and experts worldwide.
+        {c.why_sportrail.description}
       </p>
     </div>
 
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {#each [
-        { title: 'Portuguese Methodology', desc: 'Learn the tactical periodization and development philosophy that produced Mourinho, Amorim, Conceicao, and Abel Ferreira.', icon: '🇵🇹' },
-        { title: 'Spanish Integration', desc: 'Access to La Liga methodology, Spanish academy systems, and cross-border coaching exchanges between Portugal and Spain.', icon: '🇪🇸' },
-        { title: 'Elite Facilities', desc: 'Train at professional-grade facilities across Lisbon, Porto, the Algarve, and partner locations in Spain.', icon: '🏟️' },
-        { title: 'Club Connections', desc: 'Direct relationships with Liga Portugal and La Liga clubs for trials, placements, and coaching internships.', icon: '🤝' },
-        { title: 'Year-Round Climate', desc: "Train outdoors 12 months a year. The Iberian climate makes it Europe's ideal base for football development.", icon: '☀️' },
-        { title: 'International Gateway', desc: "Portugal and Spain are Europe's gateway — ideal for players and coaches from Africa, South America, and beyond.", icon: '🌍' },
-      ] as item}
+      {#each c.why_sportrail.benefits as item}
         <div class="bg-sport-light rounded-2xl p-6 border border-sport-gray-100 hover:border-sport-red/30 transition-colors">
           <div class="text-3xl mb-3">{item.icon}</div>
           <h3 class="font-sport-heading font-bold text-sport-dark text-lg mb-2">{item.title}</h3>
-          <p class="text-sport-gray-500 text-sm leading-relaxed">{item.desc}</p>
+          <p class="text-sport-gray-500 text-sm leading-relaxed">{item.description}</p>
         </div>
       {/each}
     </div>
