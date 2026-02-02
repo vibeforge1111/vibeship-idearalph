@@ -2,10 +2,10 @@ backend:
   name: github
   repo: SolFrater/sportrailfootball.com
   branch: main
-  base_url: https://sportrailfootball.com
+  base_url: https://www.sportrailfootball.com
   auth_endpoint: /api/auth
 
-site_url: https://sportrailfootball.com
+site_url: https://www.sportrailfootball.com
 logo_url: /sportrail-logo-dark.svg
 
 media_folder: static/uploads
