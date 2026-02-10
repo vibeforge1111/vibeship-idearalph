@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="profile" href="http://gmpg.org/xfn/11" />
+		<meta name='robots' content='noindex, follow' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v26.8 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<title>Página não encontrada - Sportrail</title>
+	<meta property="og:locale" content="pt_PT" />
+	<meta property="og:title" content="Página não encontrada - Sportrail" />
+	<meta property="og:site_name" content="Sportrail" />
+	<script data-jetpack-boost="ignore" type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://sportrail.pt/#website","url":"https://sportrail.pt/","name":"Sportrail","description":"Formação Contínua para Treinadores. Entidade Formadora Certificada pela DGERT e pelo IPDJ.","publisher":{"@id":"https://sportrail.pt/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://sportrail.pt/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"pt-PT"},{"@type":"Organization","@id":"https://sportrail.pt/#organization","name":"Sportrail Unipessoal LDA","alternateName":"Sportrail","url":"https://sportrail.pt/","logo":{"@type":"ImageObject","inLanguage":"pt-PT","@id":"https://sportrail.pt/#/schema/logo/image/","url":"https://sportrail.pt/wp-content/uploads/2023/01/Sportrail®-Logo-Principal-600x600-1.avif","contentUrl":"https://sportrail.pt/wp-content/uploads/2023/01/Sportrail®-Logo-Principal-600x600-1.avif","width":600,"height":600,"caption":"Sportrail Unipessoal LDA"},"image":{"@id":"https://sportrail.pt/#/schema/logo/image/"},"sameAs":["https://www.facebook.com/sportrailpt","https://x.com/sportrailpt","https://instagram.com/sportrail_pt"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+<link rel='dns-prefetch' href='//capi-automation.s3.us-east-2.amazonaws.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='preconnect' href='//i0.wp.com' />
+<link rel="alternate" type="application/rss+xml" title="Sportrail &raquo; Feed" href="https://sportrail.pt/feed/" />
+<link rel='stylesheet' id='all-css-1aea849fd499c744de3e3f296d322863' href='https://sportrail.pt/wp-content/boost-cache/static/e2793277f0.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='all-css-f66d2c0ed2680f98f3c389077d2ff64e' href='https://sportrail.pt/wp-content/boost-cache/static/e7b658a71d.min.css' type='text/css' media='all' />
+<style id='global-styles-inline-css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+<style id='core-block-supports-inline-css'>
+/**
+ * Core styles: block-supports
+ */
+
+/*# sourceURL=core-block-supports-inline-css */
+</style>
+
+<style id='eventchamp-main-inline-css'>
+.gt-user-activity > ul > li svg, .gt-content-detail-box > ul > li > .gt-icon > svg{fill:#ff2a2a;}.gt-map.gt-events-map .gt-map-popup .gt-bottom-links > li > svg, .gt-events-slider .gt-slide-inner .gt-content .gt-information > li svg{stroke:#ff2a2a;}.gt-footer.gt-style-1 .gt-social-links-element.gt-style-6 ul li a:hover, .gt-footer.gt-style-1 .gt-social-links-element.gt-style-6 ul li a:focus, .gt-footer.gt-style-1 a:hover, .gt-footer.gt-style-1 a:focus, .gt-event-style-2 .gt-information > div a:focus, .gt-event-style-2 .gt-information > div a:hover, .gt-footer.gt-style-1 .post-list-style-3 .title a:hover, .gt-footer.gt-style-1 .post-list-style-3 .title a:focus, .gt-mobile-menu .gt-bottom .gt-social-links li a:hover, .gt-mobile-menu .gt-bottom .gt-social-links li a:focus, .gt-modal .gt-register-content .gt-modal-footer a:hover, .gt-modal .gt-register-content .gt-modal-footer a:focus, .gt-modal .gt-login-content .gt-modal-footer a:hover, .gt-modal .gt-login-content .gt-modal-footer a:focus, .gt-countdown.gt-style-3 ul li > .gt-inner, .gt-footer .post-list-style-3 .title a:hover, .gt-footer .post-list-style-3 .title a:focus, .gt-feature-box .gt-content .gt-title, .gt-feature-box .gt-icon, .gt-map.gt-events-map .gt-map-popup .gt-inner a:hover, .gt-map.gt-events-map .gt-map-popup .gt-inner a:focus, .gt-label.gt-style-4, .gt-post-style-1 .gt-bottom .gt-more:hover, .gt-post-style-1 .gt-bottom .gt-more:focus, .gt-post-style-1 .gt-bottom > ul a:hover, .gt-post-style-1 .gt-bottom > ul a:focus, .gt-post-style-2 .gt-bottom .gt-more:hover, .gt-post-style-2 .gt-bottom .gt-more:focus, .gt-post-style-2 .gt-bottom > ul a:hover, .gt-post-style-2 .gt-bottom > ul a:focus, .gt-page-content .gt-post-meta a:hover, .gt-page-content .gt-post-meta a:focus, .gt-pagination ul li > span.current, .gt-pagination ul li > a:hover, .gt-pagination ul li > a:focus, .gt-post-pagination ul li a:hover, .gt-post-pagination ul li a:focus, .gt-page-content .gt-post-meta ul li svg, .gt-event-ticket.gt-style-1 .gt-ticket-inner > .gt-details .gt-subtitle, .gt-event-ticket.gt-style-1 .gt-ticket-inner > .gt-details > .gt-price, .gt-event-ticket.gt-style-1 .gt-ticket-inner > .gt-ticket-features p > i, .gt-event-ticket.gt-style-2 .gt-ticket-inner .gt-title, .gt-event-ticket.gt-style-2 .gt-price, .gt-event-ticket.gt-style-3 .gt-ticket-inner .gt-title, .gt-event-ticket.gt-style-3 .gt-price, .gt-event-ticket.gt-style-4 .gt-price, .gt-event-ticket.gt-style-5 .gt-price, .gt-event-ticket .gt-ticket-inner .gt-ticket-features p > i, .gt-event-ticket.gt-style-6 .gt-ticket-features p > i, .gt-event-ticket.gt-style-6 .gt-ticket-header .gt-price, .gt-event-ticket.gt-style-7 .gt-ticket-features p > i, .gt-event-ticket.gt-style-7 .gt-ticket-header .gt-price, .gt-event-buttons ul li a:hover, .gt-event-buttons ul li a:focus, .gt-event-schedule.gt-style-2 .gt-schedule-tabs > li > a.active, .gt-event-schedule.gt-style-2 .gt-schedule-tabs > li > a.active:visited, .gt-event-schedule.gt-style-2 .gt-schedule-tabs > li > a:hover, .gt-event-schedule.gt-style-2 .gt-schedule-tabs > li > a:focus, .gt-speaker.gt-style-1 .gt-content .gt-name a:hover, .gt-speaker.gt-style-1 .gt-content .gt-name a:focus, .gt-speaker.gt-style-1 .gt-social-links ul li a:focus, .gt-speaker.gt-style-1 .gt-social-links ul li a:hover, .gt-speaker.gt-style-2 .gt-social-links ul li a:focus, .gt-speaker.gt-style-2 .gt-social-links ul li a:hover, .gt-speaker.gt-style-3 .gt-social-links ul li a:focus, .gt-speaker.gt-style-3 .gt-social-links ul li a:hover, .gt-speaker.gt-style-4 .gt-social-links ul li a:focus, .gt-speaker.gt-style-4 .gt-social-links ul li a:hover, .gt-speaker.gt-style-5 .gt-social-links ul li a:focus, .gt-speaker.gt-style-5 .gt-social-links ul li a:hover, .gt-speaker.gt-style-6 .gt-social-links ul li a:focus, .gt-speaker.gt-style-6 .gt-social-links ul li a:hover, .gt-content-detail-box > ul > li > .gt-content > .gt-inner a:hover, .gt-content-detail-box > ul > li > .gt-content > .gt-inner a:focus, .gt-content-detail-box > ul > li > .gt-icon > i, .gt-icon-list.gt-style-1 ul li i, .gt-icon-list.gt-style-2 ul li i, .gt-icon-list.gt-style-1 ul li svg, .gt-icon-list.gt-style-2 ul li svg, .gt-mailchimp-newsletter .title i, .gt-button.gt-style-6 a:hover, .gt-button.gt-style-6 a:focus, .gt-button.gt-style-5 a, .gt-button.gt-style-5 a:visited, .gt-button.gt-style-3 a:hover, .gt-button.gt-style-3 a:focus, .gt-button.gt-style-2 a:hover, .gt-button.gt-style-2 a:focus, .gt-button.gt-style-1 a:hover, .gt-button.gt-style-1 a:focus, .gt-contact-box svg, .gt-counter > .gt-title, .gt-counter > .gt-number, .gt-eventchamp-service-box.gt-style-1 .gt-title, .gt-eventchamp-service-box.gt-style-1 .gt-icon, .gt-categorized-contents .gt-nav > li > a.active, .gt-categorized-contents .gt-nav > li > a.active:visited, .gt-categorized-contents .gt-nav > li > a:hover, .gt-categorized-contents .gt-nav > li > a:focus, .gt-heading .gt-title span, .gt-eventchamp-slider .gt-slider-content .gt-title .gt-secondary, .gt-countdown-slider.gt-style-1 > .gt-slider-content .gt-title .gt-secondary, .gt-countdown-slider.gt-style-3 > .gt-slider-content > .gt-counter .gt-counter-inner > div, .gt-events-slider .gt-slide-inner .gt-content .gt-information > li i, .select2-container--default .select2-results__option--highlighted[aria-selected], .select2-container--default .select2-results__option--highlighted[data-selected], .select2-container--default .select2-results__option[aria-selected=true], .select2-container--default .select2-results__option[data-selected=true], .plyr__progress--played, .plyr__volume--display, .bootstrap-select.gt-select .dropdown-item:focus, .bootstrap-select.gt-select .dropdown-item:hover, .bootstrap-select.gt-select .dropdown-item.active, .bootstrap-select.gt-select .dropdown-item:active, blockquote:before, button:hover, input[type="submit"]:hover, button:active, input[type="submit"]:active, button:active:hover, input[type="submit"]:active:hover, button:active:focus, input[type="submit"]:active:focus, button:active:visited, input[type="submit"]:active:visited, button:focus, input[type="submit"]:focus, a:hover, a:focus, .gt-header.gt-style-1.gt-style-2 .gt-elements .gt-social-links li a:hover, .gt-header.gt-style-1.gt-style-2 .gt-elements .gt-social-links li a:focus, .gt-header.gt-style-1.gt-style-2 .gt-navbar .gt-menu > li a:hover, .gt-header.gt-style-1.gt-style-2 .gt-navbar .gt-menu > li a:focus, .gt-header.gt-style-1.gt-style-2 .gt-navbar .gt-menu > li:hover > a, .gt-header.gt-style-1.gt-style-2 .gt-navbar .gt-menu > li:hover > a:visited, .gt-header.gt-style-1.gt-style-2 .gt-navbar .gt-menu > li>a:hover, .gt-header.gt-style-1.gt-style-2 .gt-navbar .gt-menu > li>a:focus, .gt-header.gt-style-1.gt-style-2 .gt-navbar .gt-menu li .gt-dropdown-menu li a:hover, .gt-header.gt-style-1.gt-style-2 .gt-navbar .gt-menu li .gt-dropdown-menu li a:focus, .gt-header.gt-style-3.gt-style-4 .gt-elements .gt-social-links li a:hover, .gt-header.gt-style-3.gt-style-4 .gt-elements .gt-social-links li a:focus, .gt-header.gt-style-3.gt-style-4 .gt-navbar .gt-menu > li a:hover, .gt-header.gt-style-3.gt-style-4 .gt-navbar .gt-menu > li a:focus, .gt-header.gt-style-3.gt-style-4 .gt-navbar .gt-menu > li:hover > a, .gt-header.gt-style-3.gt-style-4 .gt-navbar .gt-menu > li:hover > a:visited, .gt-header.gt-style-3.gt-style-4 .gt-navbar .gt-menu > li > a:hover, .gt-header.gt-style-3.gt-style-4 .gt-navbar .gt-menu > li > a:focus, .gt-header.gt-style-3.gt-style-4 .gt-navbar .gt-menu li .gt-dropdown-menu li a:hover, .gt-header.gt-style-3.gt-style-4 .gt-navbar .gt-menu li .gt-dropdown-menu li a:focus, .gt-header.gt-style-5.gt-style-6 .gt-elements .gt-social-links li a:hover, .gt-header.gt-style-5.gt-style-6 .gt-elements .gt-social-links li a:focus, .gt-header.gt-style-5.gt-style-6 .gt-navbar .gt-menu > li a:hover, .gt-header.gt-style-5.gt-style-6 .gt-navbar .gt-menu > li a:focus, .gt-header.gt-style-5.gt-style-6 .gt-navbar .gt-menu > li:hover > a, .gt-header.gt-style-5.gt-style-6 .gt-navbar .gt-menu > li:hover > a:visited, .gt-header.gt-style-5.gt-style-6 .gt-navbar .gt-menu > li > a:hover, .gt-header.gt-style-5.gt-style-6 .gt-navbar .gt-menu > li > a:focus, .gt-header.gt-style-5.gt-style-6 .gt-navbar .gt-menu li .gt-dropdown-menu li a:hover, .gt-header.gt-style-5.gt-style-6 .gt-navbar .gt-menu li .gt-dropdown-menu li a:focus, .gt-footer a:hover, .gt-footer a:focus, .gt-page-title-bar .gt-breadcrumb nav > ol > li a:focus, .gt-page-title-bar .gt-breadcrumb nav > ol > li a:hover, .gt-page-title-bar .gt-breadcrumb nav > ol > li.gt-item-current, .gt-page-title-bar .gt-breadcrumb nav > ol > li.current-item > span, .gt-mobile-menu .gt-top .gt-menu .gt-dropdown-menu > .active > a, .gt-mobile-menu .gt-top .gt-menu .gt-dropdown-menu > .active > a:focus, .gt-mobile-menu .gt-top .gt-menu .gt-dropdown-menu > .active > a:hover, .gt-mobile-menu .gt-top .gt-menu > li a:hover, .gt-mobile-menu .gt-top .gt-menu > li a:focus, .gt-mobile-menu .gt-top .gt-menu li:hover > a, .gt-mobile-menu .gt-top .gt-menu li:focus > a:visited, .gt-mobile-menu .gt-top .gt-menu li:hover > i, .gt-mobile-menu .gt-top .gt-menu li:focus > i, .gt-flex-menu li a:focus, .gt-flex-menu li a:hover, .fc-state-default:hover, .fc-state-default:focus, .fc button:hover, .fc button:focus, .gt-post-style-1 .gt-bottom > ul > li svg, .gt-post-style-1 .gt-bottom .gt-more:hover, .gt-post-style-1 .gt-bottom .gt-more:focus, .gt-post-style-1 .gt-image .gt-category ul a, .gt-post-style-1 .gt-image .gt-category ul a:visited, .gt-post-style-1 .gt-image .gt-category ul, .gt-post-style-2 .gt-bottom > ul > li svg, .gt-post-style-2 .gt-bottom .gt-more:hover, .gt-post-style-2 .gt-bottom .gt-more:focus, .gt-post-style-2 .gt-image .gt-category ul a, .gt-post-style-2 .gt-image .gt-category ul a:visited, .gt-post-style-2 .gt-image .gt-category ul, .gt-post-style-3 .gt-information > div svg, .gt-event-style-1 .gt-venue a:focus, .gt-event-style-1 .gt-venue a:hover, .gt-event-style-1 .gt-location ul li a:focus, .gt-event-style-1 .gt-location ul li a:hover, .gt-event-style-1 .gt-location svg, .gt-event-style-1 .gt-organizer ul li a:focus, .gt-event-style-1 .gt-organizer ul li a:hover, .gt-event-style-1 .gt-organizer svg, .gt-event-style-1 .gt-date svg, .gt-event-style-1 .gt-time svg, .gt-event-style-1 .gt-venue svg, .gt-event-style-1 .gt-stock svg, .gt-event-style-1 .gt-event-status, .gt-event-style-2 .gt-information > div svg, .gt-event-style-3 .gt-venue a:focus, .gt-event-style-3 .gt-venue a:hover, .gt-event-style-3 .gt-location ul li a:focus, .gt-event-style-3 .gt-location ul li a:hover, .gt-event-style-3 .gt-organizer ul li a:focus, .gt-event-style-3 .gt-organizer ul li a:hover, .gt-event-style-3 .gt-price svg, .gt-event-style-3 .gt-status svg, .gt-event-style-3 .gt-location svg, .gt-event-style-3 .gt-organizer svg, .gt-event-style-3 .gt-date svg, .gt-event-style-3 .gt-time svg, .gt-event-style-3 .gt-stock svg, .gt-event-style-3 .gt-venue svg, .gt-event-style-4 .gt-venue a:focus, .gt-event-style-4 .gt-venue a:hover, .gt-event-style-4 .gt-location ul li a:focus, .gt-event-style-4 .gt-location ul li a:hover, .gt-event-style-4 .gt-organizer ul li a:focus, .gt-event-style-4 .gt-organizer ul li a:hover, .gt-event-style-4 .gt-price svg, .gt-event-style-4 .gt-status svg, .gt-event-style-4 .gt-location svg, .gt-event-style-4 .gt-organizer svg, .gt-event-style-4 .gt-date svg, .gt-event-style-4 .gt-time svg, .gt-event-style-4 .gt-venue svg, .gt-event-style-4 .gt-stock svg, .gt-white .gt-venue-style-1 .gt-title a:hover, .gt-white .gt-venue-style-1 .gt-title a:focus, .gt-venue-style-1 .gt-title a:hover, .gt-venue-style-1 .gt-title a:focus, .gt-venue-style-1 .gt-image .gt-location, .gt-venue-style-1 .gt-image .gt-location a, .gt-venue-style-1 .gt-image .gt-location a:visited, .gt-venue-style-1 .gt-image .gt-category, .gt-venue-style-1 .gt-image .gt-category a, .gt-venue-style-1 .gt-image .gt-category a:visited, .gt-venue-style-1 .gt-image .status, .gt-white .gt-venue-style-3 .gt-title a:hover, .gt-white .gt-venue-style-3 .gt-title a:focus, .gt-venue-style-3 .gt-title a:hover, .gt-venue-style-3 .gt-title a:focus, .gt-venue-style-3 .gt-image .status, .gt-venue-style-3 .gt-category svg, .gt-content-favorite-add-popup:before, .gt-content-favorite-remove-popup:before, .gt-content-like-add-popup:before, .gt-content-like-remove-popup:before, .edit-link a:focus, .edit-link a:hover{color:#ff2a2a;}.gt-marker-cluster, .irs-bar, .irs-slider, .irs-from, .irs-to, .irs-single, .gt-countdown.gt-style-4 ul li > .gt-inner, .gt-countdown.gt-style-1 ul li > .gt-inner, .gt-feature-box .gt-content .gt-line, .gt-post-style-1 .gt-bottom .gt-more, .gt-post-style-1 .gt-bottom .gt-more:visited, .gt-post-style-2 .gt-bottom .gt-more, .gt-post-style-2 .gt-bottom .gt-more:visited, .gt-pagination ul li > span, .gt-pagination ul li > a, .gt-pagination ul li > a:visited, .gt-post-pagination ul li a, .gt-post-pagination ul li a:visited, .gt-event-section-tabs .gt-event-tabs > li > a:after, .gt-event-section-tabs .gt-event-tabs > li > a:visited:after, .gt-event-schedule.gt-style-1 .gt-schedule-tabs, .gt-event-schedule.gt-style-1 .gt-dropdown .gt-panel-body .gt-schedule-speakers .gt-list ul li a:hover, .gt-event-schedule.gt-style-1 .gt-dropdown .gt-panel-body .gt-schedule-speakers .gt-list ul li a:focus, .gt-event-schedule.gt-style-2 .gt-dropdown .gt-panel-body .gt-schedule-speakers .gt-list ul li a:hover, .gt-event-schedule.gt-style-2 .gt-dropdown .gt-panel-body .gt-schedule-speakers .gt-list ul li a:focus, .gt-event-schedule.gt-style-3 .gt-dropdown .gt-panel-body .gt-schedule-speakers .gt-list ul li a:hover, .gt-event-schedule.gt-style-3 .gt-dropdown .gt-panel-body .gt-schedule-speakers .gt-list ul li a:focus, .gt-event-schedule.gt-style-4 > .gt-item > ul > li .gt-content .gt-schedule-speakers .gt-list ul li a:hover, .gt-event-schedule.gt-style-4 > .gt-item > ul > li .gt-content .gt-schedule-speakers .gt-list ul li a:focus, .gt-event-schedule.gt-style-5 > .gt-item > ul > li .gt-content .gt-schedule-speakers .gt-list ul li a:hover, .gt-event-schedule.gt-style-5 > .gt-item > ul > li .gt-content .gt-schedule-speakers .gt-list ul li a:focus, .gt-event-schedule.gt-style-6 > .gt-item > ul > li .gt-content .gt-schedule-speakers .gt-list ul li a:hover, .gt-event-schedule.gt-style-6 > .gt-item > ul > li .gt-content .gt-schedule-speakers .gt-list ul li a:focus, .gt-event-schedule.gt-style-2 .gt-schedule-tabs > li > a, .gt-event-schedule.gt-style-2 .gt-schedule-tabs > li > a:visited, .gt-event-schedule.gt-style-4 > .gt-item > .gt-heading, .gt-event-schedule.gt-style-5 > .gt-item > .gt-heading, .gt-event-schedule.gt-style-6 > .gt-item > .gt-heading, .gt-organizers.gt-style-1 ul li a:hover, .gt-organizers.gt-style-1 ul li a:focus, .gt-organizers.gt-style-2 ul li a:hover, .gt-organizers.gt-style-2 ul li a:focus, .gt-organizers.gt-style-3 ul li a, .gt-organizers.gt-style-3 ul li a:visited, .gt-tags.gt-style-1 ul li a:hover, .gt-tags.gt-style-1 ul li a:focus, .gt-tags.gt-style-2 ul li a:hover, .gt-tags.gt-style-2 ul li a:focus, .gt-tags.gt-style-3 ul li a, .gt-tags.gt-style-3 ul li a:visited, .gt-categories.gt-style-1 ul li a:hover, .gt-categories.gt-style-1 ul li a:focus, .gt-categories.gt-style-2 ul li a:hover, .gt-categories.gt-style-2 ul li a:focus, .gt-categories.gt-style-3 ul li a, .gt-categories.gt-style-3 ul li a:visited, .gt-social-sharing.gt-style-1 ul li a:hover, .gt-social-sharing.gt-style-1 ul li a:focus, .gt-social-sharing.gt-style-2 ul li a:hover, .gt-social-sharing.gt-style-2 ul li a:focus, .gt-social-sharing.gt-style-3 ul li a:hover, .gt-social-sharing.gt-style-3 ul li a:focus, .gt-social-sharing.gt-style-4 ul li a:hover, .gt-social-sharing.gt-style-4 ul li a:focus, .gt-social-sharing.gt-style-5 ul li a:hover, .gt-social-sharing.gt-style-5 ul li a:focus, .gt-social-sharing.gt-style-6 ul li a, .gt-social-sharing.gt-style-6 ul li a:visited, .gt-social-sharing.gt-style-7 ul li a:hover, .gt-social-sharing.gt-style-7 ul li a:focus, .gt-social-links-element.gt-style-1 ul li a:hover, .gt-social-links-element.gt-style-1 ul li a:focus, .gt-social-links-element.gt-style-2 ul li a:hover, .gt-social-links-element.gt-style-2 ul li a:focus, .gt-social-links-element.gt-style-3 ul li a:hover, .gt-social-links-element.gt-style-3 ul li a:focus, .gt-social-links-element.gt-style-4 ul li a:hover, .gt-social-links-element.gt-style-4 ul li a:focus, .gt-social-links-element.gt-style-5 ul li a:hover, .gt-social-links-element.gt-style-5 ul li a:focus, .gt-social-links-element.gt-style-6 ul li a, .gt-social-links-element.gt-style-6 ul li a:visited, .gt-social-links-element.gt-style-7 ul li a:hover, .gt-social-links-element.gt-style-7 ul li a:focus, .gt-event-buttons ul li a, .gt-event-buttons ul li a:visited, .gt-content-detail-box > ul > li.gt-event-counter, .gt-button.gt-style-3 a, .gt-button.gt-style-3 a:visited, .gt-button.gt-style-2 a, .gt-button.gt-style-2 a:visited, .gt-button.gt-style-1 a, .gt-button.gt-style-1 a:visited, .gt-app-box .gt-item a:hover, .gt-app-box .gt-item a:focus, .gt-blog-carousel .gt-slider-prev:hover, .gt-blog-carousel .gt-slider-prev:focus, .gt-blog-carousel .gt-slider-next:hover, .gt-blog-carousel .gt-slider-next:focus, .gt-blog-carousel .gt-all-button:hover, .gt-blog-carousel .gt-all-button:focus, .gt-dark .gt-slider-prev:hover, .gt-dark .gt-slider-prev:focus, .gt-dark .gt-slider-next:hover, .gt-dark .gt-slider-next:focus, .gt-dark .gt-all-button:hover, .gt-dark .gt-all-button:focus, .gt-events-carousel .gt-slider-prev:hover, .gt-events-carousel .gt-slider-prev:focus, .gt-events-carousel .gt-slider-next:hover, .gt-events-carousel .gt-slider-next:focus, .gt-events-carousel .gt-all-button:hover, .gt-events-carousel .gt-all-button:focus, .gt-testimonials-carousel .gt-slider-pagination .swiper-pagination-bullet:hover, .gt-testimonials-carousel .gt-slider-pagination .swiper-pagination-bullet:focus, .gt-testimonials-carousel .gt-slider-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active, .gt-categorized-contents .gt-all-button:hover, .gt-categorized-contents .gt-all-button:focus, .gt-categorized-contents .gt-nav > li > a, .gt-categorized-contents .gt-nav > li > a:visited, .gt-eventchamp-slider .gt-slider-content .gt-buttons a:hover, .gt-eventchamp-slider .gt-slider-content .gt-buttons a:focus, .gt-countdown-slider.gt-style-3 > .gt-slider-content .gt-buttons a:hover, .gt-countdown-slider.gt-style-3 > .gt-slider-content .gt-buttons a:focus, .gt-countdown-slider.gt-style-2 > .gt-slider-content .gt-buttons a:hover, .gt-countdown-slider.gt-style-2 > .gt-slider-content .gt-buttons a:focus, .gt-countdown-slider.gt-style-1 > .gt-slider-content .gt-buttons a:hover, .gt-countdown-slider.gt-style-1 > .gt-slider-content .gt-buttons a:focus, .gt-events-slider .gt-slide-inner .gt-content .buttons a:hover, .gt-events-slider .gt-slide-inner .gt-content .buttons a:focus, .gt-events-slider .gt-slide-inner .gt-content .gt-category, .gt-eventchamp-service-box.gt-style-1:hover .gt-icon, .gt-mobile-menu .gt-bottom .gt-user-box, .gt-header.gt-style-1.gt-style-2 .gt-elements .gt-user-box, .gt-header.gt-style-3.gt-style-4 .gt-elements .gt-user-box, .gt-header.gt-style-5.gt-style-6 .gt-elements .gt-user-box, .gt-style-4 .sk-fading-circle .sk-circle:before, .gt-style-3 .spinner, .gt-style-2 .spinner > div, .gt-style-1 .double-bounce1, .gt-style-1 .double-bounce2, .gt-event-style-1 .gt-category ul li, .gt-event-style-1 .gt-price, .gt-event-style-3 .gt-category ul li, .gt-event-style-4 .gt-category ul li, .gt-venue-style-1 .gt-image .price, .gt-venue-style-3 .gt-image .price, .gt-venue-style-3 .gt-location, .gt-venue-style-3 .gt-location a, .gt-venue-style-3 .gt-location a:visited, .fc button, .fc-state-default, .fc-event, .fc-event-dot, .ui-datepicker .ui-datepicker-today > a, .ui-datepicker .ui-datepicker-today > a:visited, .ui-datepicker .ui-datepicker-header, .plyr--video .plyr__controls button.tab-focus:focus, .plyr--video .plyr__controls button:hover, .plyr--audio .plyr__controls button.tab-focus:focus, .plyr--audio .plyr__controls button:hover, .plyr__play-large, button, input[type="submit"], .widget_tag_cloud .tagcloud a:hover, .widget_tag_cloud .tagcloud a:focus, .gt-like-box a.gt-liked, .gt-like-box a.gt-liked:visited, .gt-like-box a.gt-favorited, .gt-like-box a.gt-favorited:visited, .gt-like-box a:hover, .gt-like-box a:focus, .fancybox-container .fancybox-progress, .gt-badge{background-color:#ff2a2a;}.widget_archive ul li:before, .widget_categories ul li:before, .widget_pages ul li:before, .widget_meta ul li:before, .widget_recent_comments ul li:before, .widget_recent_entries ul li:before, .widget_nav_menu ul li:before, .fancybox-container .fancybox-thumbs__list a:before, .gt-like-box a.gt-liked, .gt-like-box a.gt-liked:visited, .gt-like-box a.gt-favorited, .gt-like-box a.gt-favorited:visited, .gt-like-box a:hover, .gt-like-box a:focus, .gt-countdown.gt-style-3 ul li > .gt-inner, .gt-footer .gt-app-box .gt-item a:hover, .gt-footer .gt-app-box .gt-item a:focus, .gt-footer.gt-style-1 .gt-app-box .gt-item a:hover, .gt-footer.gt-style-1 .gt-app-box .gt-item a:focus, .gt-post-style-1 .gt-bottom .gt-more, .gt-post-style-1 .gt-bottom .gt-more:visited, .gt-post-style-2 .gt-bottom .gt-more, .gt-post-style-2 .gt-bottom .gt-more:visited, .gt-pagination ul li > span, .gt-pagination ul li > a, .gt-pagination ul li > a:visited, .gt-post-pagination ul li a, .gt-post-pagination ul li a:visited, .gt-event-ticket.gt-style-1.gt-active-on, .gt-event-ticket.gt-style-2.gt-active-on, .gt-event-ticket.gt-style-3.gt-active-on, .gt-event-ticket.gt-style-4, .gt-event-ticket.gt-style-5.gt-active-on, .gt-event-ticket.gt-style-6.gt-active-on, .gt-event-ticket.gt-style-7.gt-active-on, .gt-button.gt-style-3 a, .gt-button.gt-style-3 a:visited, .gt-button.gt-style-2 a, .gt-button.gt-style-2 a:visited, .gt-button.gt-style-1 a:hover, .gt-button.gt-style-1 a:focus, .gt-button.gt-style-1 a, .gt-button.gt-style-1 a:visited, .gt-event-buttons ul li a, .gt-event-buttons ul li a:visited, .gt-event-schedule.gt-style-7 .gt-item > ul > li .gt-content > .gt-inner, .gt-event-schedule.gt-style-2 .gt-schedule-tabs > li > a, .gt-event-schedule.gt-style-2 .gt-schedule-tabs > li > a:visited, .gt-organizers.gt-style-2 ul li a:hover, .gt-organizers.gt-style-2 ul li a:focus, .gt-tags.gt-style-2 ul li a:hover, .gt-tags.gt-style-2 ul li a:focus, .gt-categories.gt-style-2 ul li a:hover, .gt-categories.gt-style-2 ul li a:focus, .gt-social-sharing.gt-style-7 ul li a:hover, .gt-social-sharing.gt-style-7 ul li a:focus, .gt-social-links-element.gt-style-7 ul li a:hover, .gt-social-links-element.gt-style-7 ul li a:focus, .gt-app-box .gt-item a:hover, .gt-app-box .gt-item a:focus, .gt-counter > .gt-number, .gt-testimonials-carousel .gt-slider-pagination .swiper-pagination-bullet:hover, .gt-testimonials-carousel .gt-slider-pagination .swiper-pagination-bullet:focus, .gt-testimonials-carousel .gt-slider-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active, .gt-eventchamp-service-box.gt-style-1 .gt-title, .gt-eventchamp-service-box.gt-style-1 .gt-icon, .gt-blog-carousel .gt-slider-prev:hover, .gt-blog-carousel .gt-slider-prev:focus, .gt-blog-carousel .gt-slider-next:hover, .gt-blog-carousel .gt-slider-next:focus, .gt-blog-carousel .gt-all-button:hover, .gt-blog-carousel .gt-all-button:focus, .gt-dark .gt-slider-prev:hover, .gt-dark .gt-slider-prev:focus, .gt-dark .gt-slider-next:hover, .gt-dark .gt-slider-next:focus, .gt-dark .gt-all-button:hover, .gt-dark .gt-all-button:focus, .gt-venues-carousel.gt-white .gt-slider-prev:hover, .gt-venues-carousel.gt-white .gt-slider-prev:focus, .gt-venues-carousel.gt-white .gt-slider-next:hover, .gt-venues-carousel.gt-white .gt-slider-next:focus, .gt-venues-carousel.gt-white .gt-all-button:hover, .gt-venues-carousel.gt-white .gt-all-button:focus, .gt-events-carousel .gt-slider-prev:hover, .gt-events-carousel .gt-slider-prev:focus, .gt-events-carousel .gt-slider-next:hover, .gt-events-carousel .gt-slider-next:focus, .gt-events-carousel .gt-all-button:hover, .gt-events-carousel .gt-all-button:focus, .gt-categorized-contents .gt-all-button:hover, .gt-categorized-contents .gt-all-button:focus, .gt-categorized-contents .gt-nav > li > a.active, .gt-categorized-contents .gt-nav > li > a.active:visited, .gt-categorized-contents .gt-nav > li > a:hover, .gt-categorized-contents .gt-nav > li > a:focus, .gt-categorized-contents .gt-nav > li > a, .gt-categorized-contents .gt-nav > li > a:visited, .gt-eventchamp-slider .gt-slider-content .gt-buttons a:hover, .gt-eventchamp-slider .gt-slider-content .gt-buttons a:focus, .gt-countdown-slider.gt-style-2 > .gt-slider-content .gt-buttons a:hover, .gt-countdown-slider.gt-style-2 > .gt-slider-content .gt-buttons a:focus, .gt-countdown-slider.gt-style-1 > .gt-slider-content .gt-buttons a:hover, .gt-countdown-slider.gt-style-1 > .gt-slider-content .gt-buttons a:focus, .gt-events-slider .gt-slide-inner .gt-content .buttons a:hover, .gt-events-slider .gt-slide-inner .gt-content .buttons a:focus, .fc button, .fc-state-default, .gt-header.gt-style-1.gt-style-2 .gt-navbar .gt-menu li .gt-dropdown-menu, .gt-header.gt-style-3.gt-style-4 .gt-navbar .gt-menu li .gt-dropdown-menu, .gt-header.gt-style-5.gt-style-6 .gt-navbar .gt-menu li .gt-dropdown-menu, button, input[type="submit"], button:hover, input[type="submit"]:hover, button:active, input[type="submit"]:active, button:active:hover, input[type="submit"]:active:hover, button:active:focus, input[type="submit"]:active:focus, button:active:visited, input[type="submit"]:active:visited, button:focus, input[type="submit"]:focus, button, input[type="submit"]{border-color:#ff2a2a;}.irs-from:after, .irs-to:after, .irs-single:after, .gt-event-style-3 .gt-content, .gt-event-ticket.gt-style-4.gt-active-on:before, .gt-header.gt-style-1.gt-style-2 .gt-navbar .gt-menu li .gt-dropdown-menu, .gt-header.gt-style-3.gt-style-4 .gt-navbar .gt-menu li .gt-dropdown-menu, .gt-header.gt-style-5.gt-style-6 .gt-navbar .gt-menu li .gt-dropdown-menu, .gt-flex-menu{border-top-color:#ff2a2a;}.ui-datepicker:before, .gt-page-title-bar .gt-breadcrumb nav > ol > li.gt-item-current, .gt-page-title-bar .gt-breadcrumb nav > ol > li.current-item > span{border-bottom-color:#ff2a2a;}.gt-header.gt-style-1 .gt-elements .gt-social-links li a:hover, .gt-header.gt-style-1 .gt-elements .gt-social-links li a:focus, .gt-header.gt-style-1 .gt-navbar .gt-menu li .gt-dropdown-menu li a:hover, .gt-header.gt-style-1 .gt-navbar .gt-menu li .gt-dropdown-menu li a:focus, .gt-header.gt-style-1 .gt-elements .gt-social-links li a:hover, .gt-header.gt-style-1 .gt-elements .gt-social-links li a:focus, .gt-header.gt-style-1 .gt-navbar .gt-menu > li a:hover, .gt-header.gt-style-1 .gt-navbar .gt-menu > li a:focus, .gt-header.gt-style-3 .gt-elements .gt-social-links li a:hover, .gt-header.gt-style-3 .gt-elements .gt-social-links li a:focus, .gt-header.gt-style-3 .gt-navbar .gt-menu li .gt-dropdown-menu li a:hover, .gt-header.gt-style-3 .gt-navbar .gt-menu li .gt-dropdown-menu li a:focus, .gt-header.gt-style-3 .gt-elements .gt-social-links li a:hover, .gt-header.gt-style-3 .gt-elements .gt-social-links li a:focus, .gt-header.gt-style-3 .gt-navbar .gt-menu > li a:hover, .gt-header.gt-style-3 .gt-navbar .gt-menu > li a:focus, .gt-header.gt-style-5 .gt-elements .gt-social-links li a:hover, .gt-header.gt-style-5 .gt-elements .gt-social-links li a:focus, .gt-header.gt-style-5 .gt-navbar .gt-menu li .gt-dropdown-menu li a:hover, .gt-header.gt-style-5 .gt-navbar .gt-menu li .gt-dropdown-menu li a:focus, .gt-header.gt-style-5 .gt-elements .gt-social-links li a:hover, .gt-header.gt-style-5 .gt-elements .gt-social-links li a:focus, .gt-header.gt-style-5 .gt-navbar .gt-menu > li a:hover, .gt-header.gt-style-5 .gt-navbar .gt-menu > li a:focus, .gt-header.gt-style-1 .gt-navbar .gt-menu > li:hover > a:visited, .gt-header.gt-style-3 .gt-navbar .gt-menu > li:hover > a:visited, .gt-header.gt-style-5 .gt-navbar .gt-menu > li:hover > a:visited, .gt-sticky-header .gt-elements .gt-social-links li a:hover, .gt-sticky-header .gt-elements .gt-social-links li a:focus, .gt-sticky-header .gt-navbar .gt-menu li .gt-dropdown-menu li a:hover, .gt-sticky-header .gt-navbar .gt-menu li .gt-dropdown-menu li a:focus, .gt-sticky-header .gt-elements .gt-social-links li a:hover, .gt-sticky-header .gt-elements .gt-social-links li a:focus, .gt-sticky-header .gt-navbar .gt-menu > li a:hover, .gt-sticky-header .gt-navbar .gt-menu > li a:focus, .gt-sticky-header .gt-navbar .gt-menu > li:hover > a, .gt-sticky-header .gt-navbar .gt-menu > li:hover > a:visited .gt-sticky-header .gt-navbar .gt-menu > li:focus > a, .gt-sticky-header .gt-navbar .gt-menu > li:focus > a:visited{color:#000000;}.gt-header.gt-style-1 .gt-elements .gt-user-box, .gt-header.gt-style-3 .gt-elements .gt-user-box, .gt-header.gt-style-5 .gt-elements .gt-user-box, .gt-sticky-header .gt-elements .gt-user-box, .gt-countdown-slider.gt-style-1 > .gt-counter:before{background:#000000;}.gt-header.gt-style-1 .gt-navbar .gt-menu li .gt-dropdown-menu, .gt-header.gt-style-3 .gt-navbar .gt-menu li .gt-dropdown-menu, .gt-header.gt-style-5 .gt-navbar .gt-menu li .gt-dropdown-menu, .gt-sticky-header .gt-navbar .gt-menu li .gt-dropdown-menu{border-top-color:#000000;}a, a:visited{color:#1e73be;}a:hover, a:focus{color:#000000;}input[type="email"], input[type="number"], input[type="password"], input[type="tel"], input[type="url"], input[type="text"], input[type="time"], input[type="week"], input[type="search"], input[type="month"], input[type="datetime"], input[type="date"], textarea, textarea.form-control, select, .woocommerce form .form-row .select2-container .select2-choice, .upload-input, .select2-dropdown, .select2-search--dropdown .select2-search__field, .select2-container--default .select2-search--dropdown .select2-search__field, .select2-container--default .select2-selection--single, #add_payment_method table.cart td.actions .coupon .input-text, .woocommerce-cart table.cart td.actions .coupon .input-text, .woocommerce-checkout table.cart td.actions .coupon .input-text, .form-control, .bootstrap-select.gt-select > button{border-color:#ff0505;}input[type="email"], input[type="number"], input[type="password"], input[type="tel"], input[type="url"], input[type="text"], input[type="time"], input[type="week"], input[type="search"], input[type="month"], input[type="datetime"], input[type="date"], textarea, textarea.form-control, select, .woocommerce form .form-row .select2-container .select2-choice, .upload-input, .select2-dropdown, .select2-search--dropdown .select2-search__field, .select2-container--default .select2-search--dropdown .select2-search__field, .select2-container--default .select2-selection--single, #add_payment_method table.cart td.actions .coupon .input-text, .woocommerce-cart table.cart td.actions .coupon .input-text, .woocommerce-checkout table.cart td.actions .coupon .input-text, .form-control, .bootstrap-select.gt-select > button{background-color:#ffffff;}input[type="email"], input[type="number"], input[type="password"], input[type="tel"], input[type="url"], input[type="text"], input[type="time"], input[type="week"], input[type="search"], input[type="month"], input[type="datetime"], input[type="date"], textarea, textarea.form-control, select, .woocommerce form .form-row .select2-container .select2-choice, .upload-input, .select2-dropdown, .select2-search--dropdown .select2-search__field, .select2-container--default .select2-search--dropdown .select2-search__field, .select2-container--default .select2-selection--single, #add_payment_method table.cart td.actions .coupon .input-text, .woocommerce-cart table.cart td.actions .coupon .input-text, .woocommerce-checkout table.cart td.actions .coupon .input-text, .form-control, .bootstrap-select.gt-select > button{color:#000000;}input::-webkit-input-placeholder{color:#000000;}input::-moz-placeholder{color:#000000;}input:-ms-input-placeholder{color:#000000;}input:-moz-placeholder{color:#000000;}textarea::-webkit-input-placeholder{color:#000000;}textarea::-moz-placeholder{color:#000000;}textarea:-ms-input-placeholder{color:#000000;}textarea:-moz-placeholder{color:#000000;}select::-webkit-input-placeholder{color:#000000;}select::-moz-placeholder{color:#000000;}select:-ms-input-placeholder{color:#000000;}select:-moz-placeholder{color:#000000;}.gt-widget-title{color:#000000;}.gt-widget-title{border-bottom-color:#dd3333;}.gt-header.gt-style-1{background-color: #000000;}.gt-footer.gt-style-1{background-position: center bottom;}.gt-footer.gt-style-1{background-image: url(https://sportrail.pt/wp-content/uploads/2023/01/Top1.png);}.gt-page-title-bar .gt-background{background-position: center bottom;}.gt-page-title-bar .gt-background{background-image: url(https://sportrail.pt/wp-content/uploads/2023/01/Footer1.png);}.gt-page-title-bar .gt-background{opacity:0.58;}.gt-event-schedule.gt-style-1 .gt-dropdown .gt-panel-body .gt-schedule-speakers .gt-list ul li a:hover, .gt-event-schedule.gt-style-1 .gt-dropdown .gt-panel-body .gt-schedule-speakers .gt-list ul li a:focus, .gt-event-schedule.gt-style-2 .gt-dropdown .gt-panel-body .gt-schedule-speakers .gt-list ul li a:hover, .gt-event-schedule.gt-style-2 .gt-dropdown .gt-panel-body .gt-schedule-speakers .gt-list ul li a:focus, .gt-event-schedule.gt-style-3 .gt-dropdown .gt-panel-body .gt-schedule-speakers .gt-list ul li a:hover, .gt-event-schedule.gt-style-3 .gt-dropdown .gt-panel-body .gt-schedule-speakers .gt-list ul li a:focus, .gt-event-schedule.gt-style-4 > .gt-item > ul > li .gt-content .gt-schedule-speakers .gt-list ul a:hover, .gt-event-schedule.gt-style-4 > .gt-item > ul > li .gt-content .gt-schedule-speakers .gt-list ul li a:focus, .gt-event-schedule.gt-style-5 > .gt-item > ul > li .gt-content .gt-schedule-speakers .gt-list ul a:hover, .gt-event-schedule.gt-style-5 > .gt-item > ul > li .gt-content .gt-schedule-speakers .gt-list ul li a:focus, .gt-event-schedule.gt-style-6 > .gt-item > ul > li .gt-content .gt-schedule-speakers .gt-list ul a:hover, .gt-event-schedule.gt-style-6 > .gt-item > ul > li .gt-content .gt-schedule-speakers .gt-list ul li a:focus, .gt-organizers.gt-style-1 ul li a:hover, .gt-organizers.gt-style-1 ul li a:focus, .gt-organizers.gt-style-2 ul li a:hover, .gt-organizers.gt-style-2 ul li a:focus, .gt-tags.gt-style-1 ul li a:hover, .gt-tags.gt-style-1 ul li a:focus, .gt-tags.gt-style-2 ul li a:hover, .gt-tags.gt-style-2 ul li a:focus, .gt-categories.gt-style-1 ul li a:hover, .gt-categories.gt-style-1 ul li a:focus, .gt-categories.gt-style-2 ul li a:hover, .gt-categories.gt-style-2 ul li a:focus, .gt-dark .gt-all-button:hover, .gt-dark .gt-all-button:focus, .widget_tag_cloud .tagcloud a:hover, .widget_tag_cloud .tagcloud a:focus, .gt-like-box a:hover, .gt-like-box a:focus { color: #FFFFFF; } .fc-state-default:hover, .fc-state-default:focus, .fc button:hover, .fc button:focus, .gt-post-style-1 .gt-bottom .gt-more:hover, .gt-post-style-1 .gt-bottom .gt-more:focus, .gt-post-style-2 .gt-bottom .gt-more:hover, .gt-post-style-2 .gt-bottom .gt-more:focus, .gt-pagination ul li > span.current, .gt-pagination ul li > a:hover, .gt-pagination ul li > a:focus, .gt-post-pagination ul li a:hover, .gt-post-pagination ul li a:focus, .gt-event-buttons ul li a:hover, .gt-event-buttons ul li a:focus, .gt-event-schedule.gt-style-2 .gt-schedule-tabs > li > a.active, .gt-event-schedule.gt-style-2 .gt-schedule-tabs > li > a.active:visited, .gt-event-schedule.gt-style-2 .gt-schedule-tabs > li > a:hover, .gt-event-schedule.gt-style-2 .gt-schedule-tabs > li > a:focus, .gt-detail-widget > ul > li.button-content a:hover, .gt-detail-widget > ul > li.button-content a:focus, .gt-categorized-contents .gt-nav > li > a.active, .gt-categorized-contents .gt-nav > li > a.active:visited, .gt-categorized-contents .gt-nav > li > a:hover, .gt-categorized-contents .gt-nav > li > a:focus, .gt-button.gt-style-3 a:hover, .gt-button.gt-style-3 a:focus, .gt-button.gt-style-2 a:hover, .gt-button.gt-style-2 a:focus, .gt-button.gt-style-1 a:hover, .gt-button.gt-style-1 a:focus { background: transparent; }:root{--gt-color-woo-primary: #ff2a2a;}:root{--gt-color-woo-rating: #ff2a2a;}:root{--gt-color-woo-onsale: #ff2a2a;}:root{--gt-color-woo-price: #ff2a2a;}:root{--gt-color-woo-form-button-active: #ff2a2a;}.gt-section, .gt-event-section-tabs, .gt-page-content {background: transparent !important;}.gt-section, .gt-event-section-tabs, .gt-page-content {padding: 0;}.gt-content-header.gt-image, .gt-event-section-tabs .gt-event-tabs, .gt-section .gt-section-title {margin-top:0;margin-left:0;margin-right:0;}.gt-event-schedule.gt-style-1 .gt-schedule-tabs {margin-left:0;margin-right:0;}@media (min-width: 1200px) {.gt-page-title-bar {margin-top: 0; padding-top: 200px;}}@media only screen and (max-width: 767px) {
+.responsive #top .col2-set .col-1, .responsive #top .col2-set .col-2, .responsive .cart-collaterals .shipping_calculator {
+    width: 100% !important;
+}
+}
+
+@media only screen and (max-width: 430px) { 
+#top.woocommerce-checkout label {
+    font-size: 0.80em !important;
+}
+#top.woocommerce-checkout #wc-stripe-cc-form .form-row {
+	padding-right: 0 !important;
+	padding-left:  0 !important;
+}
+#top.woocommerce-checkout #wc-stripe-cc-form label[for=stripe-cvc-element] {
+	    white-space: nowrap !important;
+}
+}
+/*# sourceURL=eventchamp-main-inline-css */
+</style>
+<style id='eventchamp-custom-inline-css'>
+.event-list-style-1 .details .category .post-categories li {
+							display: none;
+						}
+
+						.event-list-style-1 .details .category .post-categories li:first-child {
+							display: block;
+						}
+
+						.event-list-style-3 .details .category .post-categories li {
+							display: none;
+						}
+
+						.event-list-style-3 .details .category .post-categories li:first-child {
+							display: block;
+						}
+
+						.event-list-style-4 .details .category .post-categories li {
+							display: none;
+						}
+
+						.event-list-style-4 .details .category .post-categories li:first-child {
+							display: block;
+						}
+body,.ui-widget-content, input[type="email"], input[type="number"], input[type="password"], input[type="tel"], input[type="url"], input[type="text"], input[type="time"], input[type="week"], input[type="search"], input[type="month"], input[type="datetime"], input[type="date"], textarea, textarea.form-control, select, button, input[type="submit"], .gt-header .gt-navbar .gt-menu{font-family: "Poppins";}
+/*# sourceURL=eventchamp-custom-inline-css */
+</style>
+<link rel='stylesheet' id='only-screen-and-max-width-768px-css-db64ac0a2d2576e8aa9b9062f9b8f92c' href='https://sportrail.pt/wp-content/boost-cache/static/4ffd5072e1.min.css' type='text/css' media='only screen and (max-width: 768px)' />
+<style id='wp-img-auto-sizes-contain-inline-css'>
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id='classic-theme-styles-inline-css'>
+/**
+ * These rules are needed for backwards compatibility.
+ * They should match the button element rules in the base theme.json file.
+ */
+.wp-block-button__link {
+	color: #ffffff;
+	background-color: #32373c;
+	border-radius: 9999px; /* 100% causes an oval, but any explicit but really high value retains the pill shape. */
+
+	/* This needs a low specificity so it won't override the rules from the button element if defined in theme.json. */
+	box-shadow: none;
+	text-decoration: none;
+
+	/* The extra 2px are added to size solids the same as the outline versions.*/
+	padding: calc(0.667em + 2px) calc(1.333em + 2px);
+
+	font-size: 1.125em;
+}
+
+.wp-block-file__button {
+	background: #32373c;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+/*# sourceURL=/wp-includes/css/classic-themes.css */
+</style>
+<style id='dominant-color-styles-inline-css'>
+img[data-dominant-color]:not(.has-transparency) { background-color: var(--dominant-color); }
+/*# sourceURL=dominant-color-styles-inline-css */
+</style>
+<style id='plvt-view-transitions-inline-css'>
+@view-transition { navigation: auto; }
+@media (prefers-reduced-motion: no-preference) {::view-transition-group(*) { animation-duration: 0.4s; }}
+/*# sourceURL=plvt-view-transitions-inline-css */
+</style>
+<style id='woocommerce-inline-inline-css'>
+.woocommerce form .form-row .required { visibility: visible; }
+/*# sourceURL=woocommerce-inline-inline-css */
+</style>
+<link rel='stylesheet' id='eventchamp-fonts-css' href='//fonts.googleapis.com/css?family=Poppins%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%26subset%3Dlatin%2Clatin-ext%2Ccyrillic%2Ccyrillic-ext%2Cgreek%2Cgreek-ext&#038;ver=6.9' media='all' />
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Google tag (gtag.js) snippet added by Site Kit -->
+<!-- Google Analytics snippet added by Site Kit -->
+
+
+<meta name="generator" content="auto-sizes 1.7.0">
+<meta name="generator" content="dominant-color-images 1.2.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href='https://fonts.googleapis.com/css2?display=swap&family=Poppins' rel='stylesheet'><meta name="generator" content="Site Kit by Google 1.171.0" /><meta name="generator" content="performance-lab 4.0.1; plugins: auto-sizes, dominant-color-images, embed-optimizer, image-prioritizer, nocache-bfcache, speculation-rules, view-transitions, web-worker-offloading, webp-uploads">
+<meta name="generator" content="view-transitions 1.1.2">
+<meta name="generator" content="web-worker-offloading 0.2.0">
+<meta name="generator" content="webp-uploads 2.6.1">
+<meta name="ti-site-data" content="eyJyIjoiMTowITc6MCEzMDowIiwibyI6Imh0dHBzOlwvXC9zcG9ydHJhaWwucHRcL3dwLWFkbWluXC9hZG1pbi1hamF4LnBocD9hY3Rpb249dGlfb25saW5lX3VzZXJzX2dvb2dsZSZhbXA7cD0lMkZ3cC1jb250ZW50JTJGdXBsb2FkcyUyRjIwMjMlMkYwMSUyRlNwb3J0cmFpbCUyNWMyJTI1YWUtTG9nby1QcmluY2lwYWwtNjAweDYwMC0xLmF2aWYmYW1wO193cG5vbmNlPTlhNDMwMmNkNmUifQ==" /><!-- Analytics by WP Statistics - https://wp-statistics.com -->
+<meta name="generator" content="speculation-rules 1.6.0">
+	<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+	
+<!-- Google AdSense meta tags added by Site Kit -->
+<meta name="google-adsense-platform-account" content="ca-host-pub-2644536267352236">
+<meta name="google-adsense-platform-domain" content="sitekit.withgoogle.com">
+<!-- End Google AdSense meta tags added by Site Kit -->
+<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><meta data-od-replaced-content="optimization-detective 1.0.0-beta4" name="generator" content="optimization-detective 1.0.0-beta4; url_metric_groups={0:empty, 480:empty, 600:empty, 782:populated}">
+			
+			<!-- WooCommerce Facebook Integration Begin -->
+			
+			<!-- WooCommerce Facebook Integration End -->
+			<meta name="generator" content="embed-optimizer 1.0.0-beta3">
+<meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress."/>
+<meta name="generator" content="image-prioritizer 1.0.0-beta3">
+<link rel="icon" href="https://i0.wp.com/sportrail.pt/wp-content/uploads/2023/01/Perfil.webp?fit=32%2C32&#038;quality=80&#038;ssl=1" sizes="32x32" />
+<link rel="icon" href="https://i0.wp.com/sportrail.pt/wp-content/uploads/2023/01/Perfil.webp?fit=192%2C192&#038;quality=80&#038;ssl=1" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://i0.wp.com/sportrail.pt/wp-content/uploads/2023/01/Perfil.webp?fit=180%2C180&#038;quality=80&#038;ssl=1" />
+<meta name="msapplication-TileImage" content="https://i0.wp.com/sportrail.pt/wp-content/uploads/2023/01/Perfil.webp?fit=225%2C225&#038;quality=80&#038;ssl=1" />
+	<style id="egf-frontend-styles" type="text/css">
+		p {font-family: 'Poppins', sans-serif;font-style: normal;font-weight: 400;} h1 {} h2 {} h3 {} h4 {} h5 {} h6 {} 	</style>
+	<noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript>	<link rel='stylesheet' id='all-css-5f49883b990fcd4e2b4cfa1248f1b48c' href='https://sportrail.pt/wp-content/boost-cache/static/664dd496b9.min.css' type='text/css' media='all' />
+<link data-od-added-tag rel="preload" fetchpriority="high" as="image" href="https://sportrail.pt/wp-content/uploads/2023/01/Top1.png" media="screen and (782px &lt; width)">
+</head>
+	<body class="error404 wp-embed-responsive wp-theme-eventchamp wp-child-theme-eventchamp-child theme-eventchamp woocommerce-no-js eventchamp-theme wpb-js-composer js-comp-ver-8.7.2 vc_responsive">
+
+		
+		
+		<div class="gt-site-wrapper off">
+			<header class="gt-mobile-header"><div class="container gt-container"><div class="gt-logo"><a href="https://sportrail.pt/"><img alt="Sportrail" src="" srcset="" height="50px"Array /></a></div><div class="gt-menu-icon"><svg version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 344.339 344.339" xml:space="preserve"> <g> <g> <g> <rect y="46.06" width="344.339" height="29.52"/> </g> <g> <rect y="156.506" width="344.339" height="29.52"/> </g> <g> <rect y="268.748" width="344.339" height="29.531"/> </g> </g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> </svg></div></div></header><div class="gt-mobile-background"></div><div class="gt-mobile-menu scrollbar-outer"><div class="gt-top"><div class="gt-inner"><div class="gt-logo"><a href="https://sportrail.pt/"><img alt="Sportrail" src="" srcset=""ArrayArray /></a></div><div class="gt-menu-icon"><svg version="1.1" id="Layer_1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 371.23 371.23" xml:space="preserve"> <polygon points="371.23,21.213 350.018,0 185.615,164.402 21.213,0 0,21.213 164.402,185.615 0,350.018 21.213,371.23 185.615,206.828 350.018,371.23 371.23,350.018 206.828,185.615 "/> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> </svg></div></div><nav class="gt-navbar"><div class="menu-navigation-container"><ul id="menu-navigation" class="gt-menu"><li id="menu-item-8897" class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-8897"><a href="https://sportrail.pt/" class="nav-link">Página Inicial</a></li>
+<li id="menu-item-9801" class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-9801" data-dropdown="dropdown"><a href="https://sportrail.pt/sobre-nos/" class="nav-link" >Sobre Nós<svg class="gt-caret" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+<ul role="menu" class=" gt-dropdown-menu">
+	<li id="menu-item-8953" class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-8953" data-dropdown="dropdown"><a href="https://sportrail.pt/formadores/" class="nav-link" >Formadores<svg class="gt-caret" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+	<ul role="menu" class=" gt-dropdown-menu">
+		<li id="menu-item-9827" class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-9827"><a href="https://sportrail.pt/recrutamento/" class="nav-link">Recrutamento</a></li>
+	</ul>
+</li>
+	<li id="menu-item-9873" class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-9873"><a href="https://sportrail.pt/formacoes-anteriores/" class="nav-link">Formações Anteriores</a></li>
+	<li id="menu-item-9828" class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-9828"><a href="https://sportrail.pt/politica-de-privacidade/" class="nav-link">Política de Privacidade</a></li>
+</ul>
+</li>
+<li id="menu-item-8723" class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-8723" data-dropdown="dropdown"><a href="https://sportrail.pt/shop/" class="nav-link" >Cursos e Formações<svg class="gt-caret" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+<ul role="menu" class=" gt-dropdown-menu">
+	<li id="menu-item-9769" class="nav-item menu-item menu-item-type-custom menu-item-object-custom menu-item-9769"><a href="https://academy.sportrail.pt" class="nav-link">Plataforma E-learning</a></li>
+	<li id="menu-item-9817" class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-9817"><a href="https://sportrail.pt/regulamento-de-formacao/" class="nav-link">Regulamento de Formação</a></li>
+</ul>
+</li>
+<li id="menu-item-9788" class="nav-item menu-item menu-item-type-custom menu-item-object-custom menu-item-9788"><a href="https://livroreclamacoes.pt" class="nav-link">Livro de Reclamações</a></li>
+</ul></div></nav></div><div class="gt-bottom"><ul class="gt-social-links"><li><a href="https://facebook.com/sportrailpt" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li><li><a href="https://instagram.com/sportrail_pt" target="_blank"><i class="fa-brands fa-instagram"></i></a></li></ul></div></div>
+			<header class="gt-header gt-style-5 gt-style-6"><div class="container gt-container"><div class="gt-logo gt-logo-alternative"><a href="https://sportrail.pt/"><img alt="Sportrail" src="" srcset="" height="50px" width="250px" /></a></div><div class="gt-logo gt-text-logo"><a href="https://sportrail.pt/"><span>Sportrail</span></a></div><div class="gt-content"><nav class="gt-navbar"><div class="menu-navigation-container"><ul id="menu-navigation-1" class="gt-menu"><li class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-8897"><a href="https://sportrail.pt/" class="nav-link">Página Inicial</a></li>
+<li class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-9801" data-dropdown="dropdown"><a href="https://sportrail.pt/sobre-nos/" class="nav-link" >Sobre Nós<svg class="gt-caret" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+<ul role="menu" class=" gt-dropdown-menu">
+	<li class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-8953" data-dropdown="dropdown"><a href="https://sportrail.pt/formadores/" class="nav-link" >Formadores<svg class="gt-caret" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+	<ul role="menu" class=" gt-dropdown-menu">
+		<li class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-9827"><a href="https://sportrail.pt/recrutamento/" class="nav-link">Recrutamento</a></li>
+	</ul>
+</li>
+	<li class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-9873"><a href="https://sportrail.pt/formacoes-anteriores/" class="nav-link">Formações Anteriores</a></li>
+	<li class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-9828"><a href="https://sportrail.pt/politica-de-privacidade/" class="nav-link">Política de Privacidade</a></li>
+</ul>
+</li>
+<li class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-8723" data-dropdown="dropdown"><a href="https://sportrail.pt/shop/" class="nav-link" >Cursos e Formações<svg class="gt-caret" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+<ul role="menu" class=" gt-dropdown-menu">
+	<li class="nav-item menu-item menu-item-type-custom menu-item-object-custom menu-item-9769"><a href="https://academy.sportrail.pt" class="nav-link">Plataforma E-learning</a></li>
+	<li class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-9817"><a href="https://sportrail.pt/regulamento-de-formacao/" class="nav-link">Regulamento de Formação</a></li>
+</ul>
+</li>
+<li class="nav-item menu-item menu-item-type-custom menu-item-object-custom menu-item-9788"><a href="https://livroreclamacoes.pt" class="nav-link">Livro de Reclamações</a></li>
+</ul></div></nav><div class="gt-elements"><ul class="gt-social-links"><li><a href="https://facebook.com/sportrailpt" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li><li><a href="https://instagram.com/sportrail_pt" target="_blank"><i class="fa-brands fa-instagram"></i></a></li></ul></div></div></div></header>
+			<header class="gt-sticky-header"><div class="container gt-container"><div class="gt-logo gt-text-logo"><a href="https://sportrail.pt/"><span>Sportrail</span></a></div><div class="gt-content"><nav class="gt-navbar"><div class="menu-navigation-container"><ul id="menu-navigation-2" class="gt-menu"><li class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-8897"><a href="https://sportrail.pt/" class="nav-link">Página Inicial</a></li>
+<li class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-9801" data-dropdown="dropdown"><a href="https://sportrail.pt/sobre-nos/" class="nav-link" >Sobre Nós<svg class="gt-caret" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+<ul role="menu" class=" gt-dropdown-menu">
+	<li class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-8953" data-dropdown="dropdown"><a href="https://sportrail.pt/formadores/" class="nav-link" >Formadores<svg class="gt-caret" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+	<ul role="menu" class=" gt-dropdown-menu">
+		<li class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-9827"><a href="https://sportrail.pt/recrutamento/" class="nav-link">Recrutamento</a></li>
+	</ul>
+</li>
+	<li class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-9873"><a href="https://sportrail.pt/formacoes-anteriores/" class="nav-link">Formações Anteriores</a></li>
+	<li class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-9828"><a href="https://sportrail.pt/politica-de-privacidade/" class="nav-link">Política de Privacidade</a></li>
+</ul>
+</li>
+<li class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children dropdown menu-item-8723" data-dropdown="dropdown"><a href="https://sportrail.pt/shop/" class="nav-link" >Cursos e Formações<svg class="gt-caret" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a>
+<ul role="menu" class=" gt-dropdown-menu">
+	<li class="nav-item menu-item menu-item-type-custom menu-item-object-custom menu-item-9769"><a href="https://academy.sportrail.pt" class="nav-link">Plataforma E-learning</a></li>
+	<li class="nav-item menu-item menu-item-type-post_type menu-item-object-page menu-item-9817"><a href="https://sportrail.pt/regulamento-de-formacao/" class="nav-link">Regulamento de Formação</a></li>
+</ul>
+</li>
+<li class="nav-item menu-item menu-item-type-custom menu-item-object-custom menu-item-9788"><a href="https://livroreclamacoes.pt" class="nav-link">Livro de Reclamações</a></li>
+</ul></div></nav><div class="gt-elements"><ul class="gt-social-links"><li><a href="https://facebook.com/sportrailpt" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li><li><a href="https://instagram.com/sportrail_pt" target="_blank"><i class="fa-brands fa-instagram"></i></a></li></ul></div></div></div></header>
+	<div class="gt-site-inner">
+		<div class="gt-404-page">
+
+			<div class="container">
+				<div class="gt-heading gt-dark gt-size1 gt-align-center"><div class="gt-title">404 <span>Page</span></div><div class="gt-separate"><i class="fas fa-exclamation-triangle" aria-hidden="true"></i></div><div class="gt-text">The page you are looking for does not exist; it may have been moved or removed altogether.</div></div>
+			</div>
+		</div>
+
+	</div>	
+			<footer class="gt-footer gt-style-1"><div class="container"><div class="gt-footer-content"><div class="vc_row wpb_row vc_row-fluid gt-background-position-initial gt-background-attachment-initial gt-overflow-hidden gt-text-default"><div class="wpb_column vc_column_container vc_col-sm-4 vc_col-lg-4 vc_col-md-4 vc_col-xs-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="gt-heading gt-white gt-size2 gt-align-left"><div class="gt-title">Contacte-nos</div></div><div class="vc_empty_space"   style="height: 25px"><span class="vc_empty_space_inner"></span></div><div class="gt-contact-box"><div class="gt-item gt-address"><svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Rua São Salvador da Baía, ED. AERLIS, 2780-019 Oeiras</div><div class="gt-item gt-email"><svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg><a href="mailto:geral@sportrail.pt">geral@sportrail.pt</a></div><div class="gt-item gt-phone"><svg xmlns="https://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg><a href="tel:++351924355598">+351 924355598</a></div></div><div class="vc_empty_space"   style="height: 25px"><span class="vc_empty_space_inner"></span></div><div class="gt-social-links-element gt-style-6"><ul class="gt-social-links"><li><a href="https://facebook.com/sportrailpt" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li><li><a href="https://instagram.com/sportrail_pt" target="_blank"><i class="fa-brands fa-instagram"></i></a></li></ul></div></div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="gt-heading gt-white gt-size2 gt-align-left"><div class="gt-title">CERTIFICAÇÃO</div></div>
+	<div  class="wpb_single_image wpb_content_element vc_align_center wpb_content_element">
+		
+		<figure class="wpb_wrapper vc_figure">
+			<div class="vc_single_image-wrapper   vc_box_border_grey"><img width="300" height="204" src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http://www.w3.org/2000/svg%27%20viewBox%3D%270%200%203%202%27%3E%3C/svg%3E" class="vc_single_image-img attachment-medium has-transparency gt-lazy-load" alt="" title="logotipo-dgert-branco-300x204-1" decoding="async" loading="lazy" data-has-transparency="true" data-dominant-color="ffffff" style="--dominant-color: #ffffff;" data-src="https://i0.wp.com/sportrail.pt/wp-content/uploads/2025/06/logotipo-dgert-branco-300x204-1.webp?fit=300%2C204&amp;quality=80&amp;ssl=1" /></div>
+		</figure>
+	</div>
+</div></div></div><div class="wpb_column vc_column_container vc_col-sm-4"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="gt-heading gt-white gt-size2 gt-align-left"><div class="gt-title">LIGAÇÕES ÚTEIS</div></div><div id="483" class="vc_wp_custommenu wpb_content_element"><div class="widget widget_nav_menu"><div class="menu-footer-container"><ul id="menu-footer" class="menu"><li id="menu-item-8899" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-8899"><a rel="privacy-policy" href="https://sportrail.pt/politica-de-privacidade/">Política de Privacidade</a></li>
+<li id="menu-item-9818" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9818"><a href="https://sportrail.pt/regulamento-de-formacao/">Regulamento de Formação</a></li>
+<li id="menu-item-8965" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8965"><a href="https://sportrail.pt/carrinho/">Carrinho</a></li>
+<li id="menu-item-9775" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-9775"><a href="https://academy.sportrail.pt">Plataforma E-learning</a></li>
+</ul></div></div></div><div class="vc_empty_space"   style="height: 32px"><span class="vc_empty_space_inner"></span></div></div></div></div></div></div></div><div class="gt-copyright"><div class="container"><p>Sportrail 2025. Todos os direitos reservados.</p>
+</div></div></footer>			<div class="gt-cookie-bar gt-style-3" data-expires="15"><div class="gt-cookie-text"><p>O nosso site utiliza cookies.</p>
+</div><div class="gt-cookie-button"><a href="#">Aceito</a></div></div>		</div>
+	
+			<!-- Facebook Pixel Code -->
+			<noscript>
+				<img
+					height="1"
+					width="1"
+					style="display:none"
+					alt="fbpx"
+					src="https://www.facebook.com/tr?id=287536785065739&ev=PageView&noscript=1"
+				/>
+			</noscript>
+			<!-- End Facebook Pixel Code -->
+				
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- WooCommerce JavaScript -->
+
+
+	<script data-jetpack-boost="ignore" type="application/json" id="optimization-detective-detect-args">
+[
+    "https://sportrail.pt/wp-content/plugins/optimization-detective/detect.js?ver=1.0.0-beta4",
+    {
+        "minViewportAspectRatio": 0.4,
+        "maxViewportAspectRatio": 2.5,
+        "isDebug": false,
+        "extensionModuleUrls": [
+            "https://sportrail.pt/wp-content/plugins/image-prioritizer/detect.js?ver=1.0.0-beta3"
+        ],
+        "restApiEndpoint": "https://sportrail.pt/wp-json/optimization-detective/v1/url-metrics:store",
+        "currentETag": "72277765c0019e99f8fec6f2dfc7fd54",
+        "currentUrl": "https://sportrail.pt/wp-content/uploads/2023/01/Sportrail%c2%ae-Logo-Principal-600x600-1.avif",
+        "urlMetricSlug": "f608448810478f889dfb63ff723b5b3b",
+        "cachePurgePostId": 10117,
+        "urlMetricHMAC": "102ec72b6350f56d4fc916cee8f7fdd5",
+        "urlMetricGroupStatuses": [
+            {
+                "minimumViewportWidth": 0,
+                "maximumViewportWidth": 480,
+                "complete": false
+            },
+            {
+                "minimumViewportWidth": 480,
+                "maximumViewportWidth": 600,
+                "complete": false
+            },
+            {
+                "minimumViewportWidth": 600,
+                "maximumViewportWidth": 782,
+                "complete": false
+            },
+            {
+                "minimumViewportWidth": 782,
+                "maximumViewportWidth": null,
+                "complete": false
+            }
+        ],
+        "storageLockTTL": 60,
+        "freshnessTTL": 604800,
+        "webVitalsLibrarySrc": "https://sportrail.pt/wp-content/plugins/optimization-detective/build/web-vitals.js?ver=5.1.0",
+        "gzdecodeAvailable": true,
+        "maxUrlMetricSize": 1048576
+    }
+]
+</script>
+
+<script type="text/javascript" id="WCPAY_ASSETS-js-extra">
+/* <![CDATA[ */
+var wcpayAssets = {"url":"https://sportrail.pt/wp-content/plugins/woocommerce-payments/dist/"};
+//# sourceURL=WCPAY_ASSETS-js-extra
+/* ]]> */
+</script><script type="text/javascript" id="web-worker-offloading-js-before">
+/* <![CDATA[ */
+window.partytown = {...(window.partytown || {}), ...{"lib":"\/wp-content\/plugins\/web-worker-offloading\/build\/","globalFns":["gtag","wp_has_consent","gtag"],"forward":["dataLayer.push","gtag","dataLayer.push","gtag"],"mainWindowAccessors":["_googlesitekitConsentCategoryMap","_googlesitekitConsents","wp_consent_type","wp_fallback_consent_type","wp_has_consent","waitfor_consent_hook"]}};
+//# sourceURL=web-worker-offloading-js-before
+/* ]]> */
+</script><script type="text/javascript" id="web-worker-offloading-js-after">
+/* <![CDATA[ */
+/* Partytown 0.10.2-dev1727590485751 - MIT builder.io */
+const defaultPartytownForwardPropertySettings = {
+    preserveBehavior: false
+};
+
+const resolvePartytownForwardProperty = propertyOrPropertyWithSettings => {
+    if ("string" == typeof propertyOrPropertyWithSettings) {
+        return [ propertyOrPropertyWithSettings, defaultPartytownForwardPropertySettings ];
+    }
+    const [property, settings = defaultPartytownForwardPropertySettings] = propertyOrPropertyWithSettings;
+    return [ property, {
+        ...defaultPartytownForwardPropertySettings,
+        ...settings
+    } ];
+};
+
+const arrayMethods = Object.freeze((obj => {
+    const properties = new Set;
+    let currentObj = obj;
+    do {
+        Object.getOwnPropertyNames(currentObj).forEach((item => {
+            "function" == typeof currentObj[item] && properties.add(item);
+        }));
+    } while ((currentObj = Object.getPrototypeOf(currentObj)) !== Object.prototype);
+    return Array.from(properties);
+})([]));
+
+!function(win, doc, nav, top, useAtomics, config, libPath, timeout, scripts, sandbox, mainForwardFn = win, isReady) {
+    function ready() {
+        if (!isReady) {
+            isReady = 1;
+            libPath = (config.lib || "/~partytown/") + (false !== config.debug ? "debug/" : "");
+            if ("/" == libPath[0]) {
+                scripts = doc.querySelectorAll('script[type="text/partytown"]');
+                if (top != win) {
+                    top.dispatchEvent(new CustomEvent("pt1", {
+                        detail: win
+                    }));
+                } else {
+                    timeout = setTimeout(fallback, 999999999);
+                    doc.addEventListener("pt0", clearFallback);
+                    useAtomics ? loadSandbox(1) : nav.serviceWorker ? nav.serviceWorker.register(libPath + (config.swPath || "partytown-sw.js"), {
+                        scope: libPath
+                    }).then((function(swRegistration) {
+                        if (swRegistration.active) {
+                            loadSandbox();
+                        } else if (swRegistration.installing) {
+                            swRegistration.installing.addEventListener("statechange", (function(ev) {
+                                "activated" == ev.target.state && loadSandbox();
+                            }));
+                        } else {
+                            console.warn(swRegistration);
+                        }
+                    }), console.error) : fallback();
+                }
+            } else {
+                console.warn('Partytown config.lib url must start with "/"');
+            }
+        }
+    }
+    function loadSandbox(isAtomics) {
+        sandbox = doc.createElement(isAtomics ? "script" : "iframe");
+        win._pttab = Date.now();
+        if (!isAtomics) {
+            sandbox.style.display = "block";
+            sandbox.style.width = "0";
+            sandbox.style.height = "0";
+            sandbox.style.border = "0";
+            sandbox.style.visibility = "hidden";
+            sandbox.setAttribute("aria-hidden", !0);
+        }
+        sandbox.src = libPath + "partytown-" + (isAtomics ? "atomics.js?v=0.10.2-dev1727590485751" : "sandbox-sw.html?" + win._pttab);
+        doc.querySelector(config.sandboxParent || "body").appendChild(sandbox);
+    }
+    function fallback(i, script) {
+        console.warn("Partytown script fallback");
+        clearFallback();
+        top == win && (config.forward || []).map((function(forwardProps) {
+            const [property] = resolvePartytownForwardProperty(forwardProps);
+            delete win[property.split(".")[0]];
+        }));
+        for (i = 0; i < scripts.length; i++) {
+            script = doc.createElement("script");
+            script.innerHTML = scripts[i].innerHTML;
+            script.nonce = config.nonce;
+            doc.head.appendChild(script);
+        }
+        sandbox && sandbox.parentNode.removeChild(sandbox);
+    }
+    function clearFallback() {
+        clearTimeout(timeout);
+    }
+    config = win.partytown || {};
+    top == win && (config.forward || []).map((function(forwardProps) {
+        const [property, {preserveBehavior: preserveBehavior}] = resolvePartytownForwardProperty(forwardProps);
+        mainForwardFn = win;
+        property.split(".").map((function(_, i, forwardPropsArr) {
+            mainForwardFn = mainForwardFn[forwardPropsArr[i]] = i + 1 < forwardPropsArr.length ? mainForwardFn[forwardPropsArr[i]] || (propertyName => arrayMethods.includes(propertyName) ? [] : {})(forwardPropsArr[i + 1]) : (() => {
+                let originalFunction = null;
+                if (preserveBehavior) {
+                    const {methodOrProperty: methodOrProperty, thisObject: thisObject} = ((window, properties) => {
+                        let thisObject = window;
+                        for (let i = 0; i < properties.length - 1; i += 1) {
+                            thisObject = thisObject[properties[i]];
+                        }
+                        return {
+                            thisObject: thisObject,
+                            methodOrProperty: properties.length > 0 ? thisObject[properties[properties.length - 1]] : void 0
+                        };
+                    })(win, forwardPropsArr);
+                    "function" == typeof methodOrProperty && (originalFunction = (...args) => methodOrProperty.apply(thisObject, ...args));
+                }
+                return function() {
+                    let returnValue;
+                    originalFunction && (returnValue = originalFunction(arguments));
+                    (win._ptf = win._ptf || []).push(forwardPropsArr, arguments);
+                    return returnValue;
+                };
+            })();
+        }));
+    }));
+    if ("complete" == doc.readyState) {
+        ready();
+    } else {
+        win.addEventListener("DOMContentLoaded", ready);
+        win.addEventListener("load", ready);
+    }
+}(window, document, navigator, top, window.crossOriginIsolated);
+//# sourceURL=web-worker-offloading-js-after
+/* ]]> */
+</script><script type="text/partytown" id="woocommerce-google-analytics-integration-gtag-js-after">
+/* <![CDATA[ */
+/* Google Analytics for WooCommerce (gtag.js) */
+					window.dataLayer = window.dataLayer || [];
+					function gtag(){dataLayer.push(arguments);}
+					// Set up default consent state.
+					for ( const mode of [{"analytics_storage":"denied","ad_storage":"denied","ad_user_data":"denied","ad_personalization":"denied","region":["AT","BE","BG","HR","CY","CZ","DK","EE","FI","FR","DE","GR","HU","IS","IE","IT","LV","LI","LT","LU","MT","NL","NO","PL","PT","RO","SK","SI","ES","SE","GB","CH"]}] || [] ) {
+						gtag( "consent", "default", { "wait_for_update": 500, ...mode } );
+					}
+					gtag("js", new Date());
+					gtag("set", "developer_id.dOGY3NW", true);
+					gtag("config", "G-BBH0RTPCWR", {"track_404":true,"allow_google_signals":true,"logged_in":false,"linker":{"domains":["comunicacaonofutebol.pt"],"allow_incoming":false},"custom_map":{"dimension1":"logged_in"}});
+//# sourceURL=woocommerce-google-analytics-integration-gtag-js-after
+/* ]]> */
+</script><script type="text/javascript" id="plvt-view-transitions-js-after">
+/* <![CDATA[ */
+/**
+ * @typedef {import("./types.ts").ViewTransitionsConfig} ViewTransitionsConfig
+ * @typedef {import("./types.ts").InitViewTransitionsFunction} InitViewTransitionsFunction
+ * @typedef {import("./types.ts").PageSwapListenerFunction} PageSwapListenerFunction
+ * @typedef {import("./types.ts").PageRevealListenerFunction} PageRevealListenerFunction
+ */
+
+/**
+ * Initializes view transitions for the current URL.
+ *
+ * @type {InitViewTransitionsFunction}
+ * @param {ViewTransitionsConfig} config - The view transitions configuration.
+ */
+window.plvtInitViewTransitions = ( config ) => {
+	if ( ! window.navigation || ! ( 'CSSViewTransitionRule' in window ) ) {
+		window.console.warn(
+			'View transitions not loaded as the browser is lacking support.'
+		);
+		return;
+	}
+
+	/**
+	 * Gets all view transition entries relevant for a view transition.
+	 *
+	 * @param {string}       transitionType View transition type. Only 'default' is supported so far, but more to be added.
+	 * @param {Element}      bodyElement    The body element.
+	 * @param {Element|null} articleElement The post element relevant for the view transition, if any.
+	 * @return {Array[]} View transition entries with each one containing the element and its view transition name.
+	 */
+	const getViewTransitionEntries = (
+		transitionType,
+		bodyElement,
+		articleElement
+	) => {
+		const animations = config.animations || {};
+
+		const globalEntries = animations[ transitionType ]
+			.useGlobalTransitionNames
+			? Object.entries( config.globalTransitionNames || {} ).map(
+					( [ selector, name ] ) => {
+						const element = bodyElement.querySelector( selector );
+						return [ element, name ];
+					}
+			  )
+			: [];
+
+		const postEntries =
+			animations[ transitionType ].usePostTransitionNames &&
+			articleElement
+				? Object.entries( config.postTransitionNames || {} ).map(
+						( [ selector, name ] ) => {
+							const element =
+								articleElement.querySelector( selector );
+							return [ element, name ];
+						}
+				  )
+				: [];
+
+		return [ ...globalEntries, ...postEntries ];
+	};
+
+	/**
+	 * Temporarily sets view transition names for the given entries until the view transition has been completed.
+	 *
+	 * @param {Array[]}       entries   View transition entries as received from `getViewTransitionEntries()`.
+	 * @param {Promise<void>} vtPromise Promise that resolves after the view transition has been completed.
+	 * @return {Promise<void>} Promise that resolves after the view transition names were reset.
+	 */
+	const setTemporaryViewTransitionNames = async ( entries, vtPromise ) => {
+		for ( const [ element, name ] of entries ) {
+			if ( ! element ) {
+				continue;
+			}
+			element.style.viewTransitionName = name;
+		}
+
+		await vtPromise;
+
+		for ( const [ element ] of entries ) {
+			if ( ! element ) {
+				continue;
+			}
+			element.style.viewTransitionName = '';
+		}
+	};
+
+	/**
+	 * Appends a selector to another selector.
+	 *
+	 * This supports selectors which technically include multiple selectors (separated by comma).
+	 *
+	 * @param {string} selectors Main selector.
+	 * @param {string} append    Selector to append to the main selector.
+	 * @return {string} Combined selector.
+	 */
+	const appendSelectors = ( selectors, append ) => {
+		return selectors
+			.split( ',' )
+			.map( ( subselector ) => subselector.trim() + ' ' + append )
+			.join( ',' );
+	};
+
+	/**
+	 * Gets a post element (the first on the page, in case there are multiple).
+	 *
+	 * @return {Element|null} Post element, or null if none is found.
+	 */
+	const getArticle = () => {
+		if ( ! config.postSelector ) {
+			return null;
+		}
+		return document.querySelector( config.postSelector );
+	};
+
+	/**
+	 * Gets the post element for a specific post URL.
+	 *
+	 * @param {string} url Post URL (permalink) to find post element.
+	 * @return {Element|null} Post element, or null if none is found.
+	 */
+	const getArticleForUrl = ( url ) => {
+		if ( ! config.postSelector ) {
+			return null;
+		}
+		const postLinkSelector = appendSelectors(
+			config.postSelector,
+			'a[href="' + url + '"]'
+		);
+		const articleLink = document.querySelector( postLinkSelector );
+		if ( ! articleLink ) {
+			return null;
+		}
+		return articleLink.closest( config.postSelector );
+	};
+
+	/**
+	 * Customizes view transition behavior on the URL that is being navigated from.
+	 *
+	 * @type {PageSwapListenerFunction}
+	 * @param {PageSwapEvent} event - Event fired as the previous URL is about to unload.
+	 */
+	window.addEventListener(
+		'pageswap',
+		( /** @type {PageSwapEvent} */ event ) => {
+			if ( event.viewTransition ) {
+				const transitionType = 'default'; // Only 'default' is supported so far, but more to be added.
+				event.viewTransition.types.add( transitionType );
+
+				let viewTransitionEntries;
+				if ( document.body.classList.contains( 'single' ) ) {
+					viewTransitionEntries = getViewTransitionEntries(
+						transitionType,
+						document.body,
+						getArticle()
+					);
+				} else if (
+					document.body.classList.contains( 'home' ) ||
+					document.body.classList.contains( 'blog' ) ||
+					document.body.classList.contains( 'archive' )
+				) {
+					viewTransitionEntries = getViewTransitionEntries(
+						transitionType,
+						document.body,
+						getArticleForUrl( event.activation.entry.url )
+					);
+				}
+				if ( viewTransitionEntries ) {
+					setTemporaryViewTransitionNames(
+						viewTransitionEntries,
+						event.viewTransition.finished
+					);
+				}
+			}
+		}
+	);
+
+	/**
+	 * Customizes view transition behavior on the URL that is being navigated to.
+	 *
+	 * @type {PageRevealListenerFunction}
+	 * @param {PageRevealEvent} event - Event fired as the new URL being navigated to is loaded.
+	 */
+	window.addEventListener(
+		'pagereveal',
+		( /** @type {PageRevealEvent} */ event ) => {
+			if ( event.viewTransition ) {
+				const transitionType = 'default'; // Only 'default' is supported so far, but more to be added.
+				event.viewTransition.types.add( transitionType );
+
+				let viewTransitionEntries;
+				if ( document.body.classList.contains( 'single' ) ) {
+					viewTransitionEntries = getViewTransitionEntries(
+						transitionType,
+						document.body,
+						getArticle()
+					);
+				} else if (
+					document.body.classList.contains( 'home' ) ||
+					document.body.classList.contains( 'archive' )
+				) {
+					viewTransitionEntries = getViewTransitionEntries(
+						transitionType,
+						document.body,
+						window.navigation.activation.from
+							? getArticleForUrl(
+									window.navigation.activation.from.url
+							  )
+							: null
+					);
+				}
+				if ( viewTransitionEntries ) {
+					setTemporaryViewTransitionNames(
+						viewTransitionEntries,
+						event.viewTransition.ready
+					);
+				}
+			}
+		}
+	);
+};
+
+plvtInitViewTransitions( {"postSelector":".wp-block-post.post, article.post, body.single main","globalTransitionNames":{"header":"header","main":"main"},"postTransitionNames":{".wp-block-post-title, .entry-title":"post-title",".wp-post-image":"post-thumbnail",".wp-block-post-content, .entry-content":"post-content"},"animations":{"default":{"useGlobalTransitionNames":true,"usePostTransitionNames":true}}} )
+//# sourceURL=plvt-view-transitions-js-after
+/* ]]> */
+</script><script type="text/javascript" src="https://sportrail.pt/wp-includes/js/jquery/jquery.js?ver=3.7.1" id="jquery-core-js"></script><script type="text/javascript" src="https://sportrail.pt/wp-includes/js/jquery/jquery-migrate.js?ver=3.4.1" id="jquery-migrate-js"></script><script type="text/javascript" src="https://sportrail.pt/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.js?ver=2.7.0-wc.10.4.3" id="wc-jquery-blockui-js" data-wp-strategy="defer"></script><script type="text/javascript" id="wc-add-to-cart-js-extra">
+/* <![CDATA[ */
+var wc_add_to_cart_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/?wc-ajax=%%endpoint%%","i18n_view_cart":"Ver carrinho","cart_url":"https://sportrail.pt/carrinho/","is_cart":"","cart_redirect_after_add":"yes"};
+//# sourceURL=wc-add-to-cart-js-extra
+/* ]]> */
+</script><script type="text/javascript" id="woocommerce-js-extra">
+/* <![CDATA[ */
+var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/?wc-ajax=%%endpoint%%","i18n_password_show":"Show password","i18n_password_hide":"Hide password"};
+//# sourceURL=woocommerce-js-extra
+/* ]]> */
+</script><script type='text/javascript' src='https://sportrail.pt/wp-content/boost-cache/static/ed3b04c5e1.min.js'></script><script type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id=GT-WK256X34" id="google_gtagjs-js" async></script><script type="text/partytown" id="google_gtagjs-js-after">
+/* <![CDATA[ */
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag("set","linker",{"domains":["sportrail.pt"]});
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "GT-WK256X34");
+ window._googlesitekit = window._googlesitekit || {}; window._googlesitekit.throttledEvents = []; window._googlesitekit.gtagEvent = (name, data) => { var key = JSON.stringify( { name, data } ); if ( !! window._googlesitekit.throttledEvents[ key ] ) { return; } window._googlesitekit.throttledEvents[ key ] = true; setTimeout( () => { delete window._googlesitekit.throttledEvents[ key ]; }, 5 ); gtag( "event", name, { ...data, event_source: "site-kit" } ); }; 
+//# sourceURL=google_gtagjs-js-after
+/* ]]> */
+</script><script></script><script  type="text/javascript">
+				!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+					n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+					n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+					t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+					document,'script','https://connect.facebook.net/en_US/fbevents.js');
+			</script><script  type="text/javascript">
+
+				fbq('init', '287536785065739', {}, {
+    "agent": "woocommerce_2-10.4.3-3.5.15"
+});
+
+				document.addEventListener( 'DOMContentLoaded', function() {
+					// Insert placeholder for events injected when a product is added to the cart through AJAX.
+					document.body.insertAdjacentHTML( 'beforeend', '<div class=\"wc-facebook-pixel-event-placeholder\"></div>' );
+				}, false );
+
+			</script><script type="speculationrules">
+{"prerender":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/eventchamp-child/*","/wp-content/themes/eventchamp/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prerender, .no-prerender a"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"eager"}]}
+</script><script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/23e7e03c6c8511f4dfe446dcf/8d28e88af04e68dfa16eba735.js");</script><script type="text/html" id="wpb-modifications"> window.wpbCustomElement = 1; </script><script type='text/javascript'>
+		(function () {
+			var c = document.body.className;
+			c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+			document.body.className = c;
+		})();
+	</script><script type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id=G-BBH0RTPCWR" id="google-tag-manager-js" data-wp-strategy="async"></script><script type="text/javascript" src="https://sportrail.pt/wp-includes/js/dist/hooks.js?ver=220ff17f5667d013d468" id="wp-hooks-js"></script><script type="text/javascript" src="https://sportrail.pt/wp-includes/js/dist/i18n.js?ver=6b3ae5bd3b8d9598492d" id="wp-i18n-js"></script><script type="text/javascript" id="wp-i18n-js-after">
+/* <![CDATA[ */
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+/* ]]> */
+</script><script type='text/javascript' src='https://sportrail.pt/wp-content/boost-cache/static/1ecefa3a34.min.js'></script><script type="text/javascript" id="contact-form-7-js-translations">
+/* <![CDATA[ */
+( function( domain, translations ) {
+	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+	localeData[""].domain = domain;
+	wp.i18n.setLocaleData( localeData, domain );
+} )( "contact-form-7", {"translation-revision-date":"2024-08-13 18:06:19+0000","generator":"GlotPress\/4.0.1","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=2; plural=n != 1;","lang":"pt"},"This contact form is placed in the wrong place.":["Este formul\u00e1rio de contacto est\u00e1 colocado no s\u00edtio errado."],"Error:":["Erro:"]}},"comment":{"reference":"includes\/js\/index.js"}} );
+//# sourceURL=contact-form-7-js-translations
+/* ]]> */
+</script><script type="text/javascript" id="contact-form-7-js-before">
+/* <![CDATA[ */
+var wpcf7 = {
+    "api": {
+        "root": "https:\/\/sportrail.pt\/wp-json\/",
+        "namespace": "contact-form-7\/v1"
+    },
+    "cached": 1
+};
+//# sourceURL=contact-form-7-js-before
+/* ]]> */
+</script><script type="text/javascript" src="https://sportrail.pt/wp-content/plugins/contact-form-7/includes/js/index.js?ver=6.1.4" id="contact-form-7-js"></script><script type="text/javascript" id="alg-wc-ean-variations-js-extra">
+/* <![CDATA[ */
+var alg_wc_ean_variations_obj = {"variations_form":".variations_form","variations_form_closest":".summary"};
+//# sourceURL=alg-wc-ean-variations-js-extra
+/* ]]> */
+</script><script type='text/javascript' src='https://sportrail.pt/wp-content/plugins/ean-for-woocommerce/includes/js/alg-wc-ean-variations.min.js?m=1763566163'></script><script type="text/javascript" id="woosl-frontend-js-extra">
+/* <![CDATA[ */
+var woosl_vars = {"wc_ajax_url":"/?wc-ajax=%%endpoint%%","cookie_path":"/","user_key":"woosl_products_w","cart_url":"https://sportrail.pt/carrinho/","position_cart":"after_cart_table","nonce":"04010cb6e3"};
+//# sourceURL=woosl-frontend-js-extra
+/* ]]> */
+</script><script type="text/javascript" src="https://sportrail.pt/wp-content/plugins/wc-save-for-later/assets/js/frontend.js?ver=3.3.9" id="woosl-frontend-js"></script><script type="text/javascript" id="mailchimp-woocommerce-js-extra">
+/* <![CDATA[ */
+var mailchimp_public_data = {"site_url":"https://sportrail.pt","ajax_url":"https://sportrail.pt/wp-admin/admin-ajax.php","disable_carts":"","subscribers_only":"","language":"pt","allowed_to_set_cookies":"1"};
+//# sourceURL=mailchimp-woocommerce-js-extra
+/* ]]> */
+</script><script type='text/javascript' src='https://sportrail.pt/wp-content/boost-cache/static/ff74658849.min.js'></script><script type="text/javascript" src="https://sportrail.pt/wp-includes/js/jquery/ui/core.js?ver=1.13.3" id="jquery-ui-core-js"></script><script type="text/javascript" src="https://sportrail.pt/wp-includes/js/jquery/ui/datepicker.js?ver=1.13.3" id="jquery-ui-datepicker-js"></script><script type="text/javascript" id="jquery-ui-datepicker-js-after">
+/* <![CDATA[ */
+jQuery(function(jQuery){jQuery.datepicker.setDefaults({"closeText":"Fechar","currentText":"Hoje","monthNames":["Janeiro","Fevereiro","Mar\u00e7o","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"],"monthNamesShort":["Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez"],"nextText":"Seguinte","prevText":"Anterior","dayNames":["Domingo","Segunda-feira","Ter\u00e7a-feira","Quarta-feira","Quinta-feira","Sexta-feira","S\u00e1bado"],"dayNamesShort":["Dom","Seg","Ter","Qua","Qui","Sex","S\u00e1b"],"dayNamesMin":["D","S","T","Q","Q","S","S"],"dateFormat":"dd/mm/yy","firstDay":1,"isRTL":false});});
+//# sourceURL=jquery-ui-datepicker-js-after
+/* ]]> */
+</script><script type="text/javascript" src="https://sportrail.pt/wp-includes/js/dist/vendor/moment.js?ver=2.30.1" id="moment-js"></script><script type="text/javascript" id="moment-js-after">
+/* <![CDATA[ */
+moment.updateLocale( 'pt_PT', {"months":["Janeiro","Fevereiro","Mar\u00e7o","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"],"monthsShort":["Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez"],"weekdays":["Domingo","Segunda-feira","Ter\u00e7a-feira","Quarta-feira","Quinta-feira","Sexta-feira","S\u00e1bado"],"weekdaysShort":["Dom","Seg","Ter","Qua","Qui","Sex","S\u00e1b"],"week":{"dow":1},"longDateFormat":{"LT":"G:i","LTS":null,"L":null,"LL":"d/m/Y","LLL":"j F, Y G:i","LLLL":null}} );
+//# sourceURL=moment-js-after
+/* ]]> */
+</script><script type='text/javascript' src='https://sportrail.pt/wp-content/boost-cache/static/adb498d644.min.js'></script><script type="text/javascript" src="https://sportrail.pt/wp-content/themes/eventchamp/include/assets/js/eventchamp.min.js?ver=6.9" id="eventchamp-js"></script><script type="text/javascript" id="eventchamp-js-after">
+/* <![CDATA[ */
+jQuery(document).ready(function($){
+			jQuery('.eventsearchdate-datepicker').datepicker({
+					dateFormat: 'MM dd, yy',
+					showOtherMonths: true,
+					showButtonPanel: true,
+					firstDay: 1,
+					duration: 'normal',
+					closeText: 'Apply',
+					prevText: 'Prev',
+					nextText: 'Next',
+					monthNames: [ 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December' ],
+					monthNamesMin: [ 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec' ],
+					dayNames: [ 'Saturday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday' ],
+					dayNamesMin: [ 'Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa' ],
+					dayNamesShort : [ 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat' ],
+				});
+		});
+jQuery(document).ready(function($){
+					$('.gt-categorized-contents .gt-nav').flexMenu({
+						linkText:'More',
+						linkTitle:'View More',
+						linkTextAll:'Menu',
+						linkTitleAll:'Open/Close Menu',
+						popupClass: 'gt-flex-menu',
+					});
+				});
+jQuery(document).ready(function($){
+					$('.gt-schedule-tabs').flexMenu({
+						linkText:'More',
+						linkTitle:'View More',
+						linkTextAll:'Menu',
+						linkTitleAll:'Open/Close Menu',
+						popupClass: 'gt-flex-menu',
+					});
+				});
+//# sourceURL=eventchamp-js-after
+/* ]]> */
+</script><script type="text/javascript" id="eventchamp-like-system-js-extra">
+/* <![CDATA[ */
+var ajax_var = {"url":"https://sportrail.pt/wp-admin/admin-ajax.php","nonce":"36d6cfb328"};
+//# sourceURL=eventchamp-like-system-js-extra
+/* ]]> */
+</script><script type="text/javascript" id="eventchamp-favorite-system-js-extra">
+/* <![CDATA[ */
+var ajax_var = {"url":"https://sportrail.pt/wp-admin/admin-ajax.php","nonce":"36d6cfb328"};
+//# sourceURL=eventchamp-favorite-system-js-extra
+/* ]]> */
+</script><script type='text/javascript' src='https://sportrail.pt/wp-content/boost-cache/static/aec3f11d31.min.js'></script><script type="text/javascript" src="https://sportrail.pt/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.js?ver=10.4.3" id="sourcebuster-js-js"></script><script type="text/javascript" id="wc-order-attribution-js-extra">
+/* <![CDATA[ */
+var wc_order_attribution = {"params":{"lifetime":1.0e-5,"session":30,"base64":false,"ajaxurl":"https://sportrail.pt/wp-admin/admin-ajax.php","prefix":"wc_order_attribution_","allowTracking":true},"fields":{"source_type":"current.typ","referrer":"current_add.rf","utm_campaign":"current.cmp","utm_source":"current.src","utm_medium":"current.mdm","utm_content":"current.cnt","utm_id":"current.id","utm_term":"current.trm","utm_source_platform":"current.plt","utm_creative_format":"current.fmt","utm_marketing_tactic":"current.tct","session_entry":"current_add.ep","session_start_time":"current_add.fd","session_pages":"session.pgs","session_count":"udata.vst","user_agent":"udata.uag"}};
+//# sourceURL=wc-order-attribution-js-extra
+/* ]]> */
+</script><script type='text/javascript' src='https://sportrail.pt/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.js?m=1766499412'></script><script type="text/javascript" src="https://capi-automation.s3.us-east-2.amazonaws.com/public/client_js/capiParamBuilder/clientParamBuilder.bundle.js" id="facebook-capi-param-builder-js"></script><script type="text/javascript" id="facebook-capi-param-builder-js-after">
+/* <![CDATA[ */
+if (typeof clientParamBuilder !== "undefined") {
+					clientParamBuilder.processAndCollectAllParams(window.location.href);
+				}
+//# sourceURL=facebook-capi-param-builder-js-after
+/* ]]> */
+</script><script type="text/javascript" id="wp-statistics-tracker-js-extra">
+/* <![CDATA[ */
+var WP_Statistics_Tracker_Object = {"requestUrl":"https://sportrail.pt/wp-json/wp-statistics/v2","ajaxUrl":"https://sportrail.pt/wp-admin/admin-ajax.php","hitParams":{"wp_statistics_hit":1,"source_type":"404","source_id":0,"search_query":"","signature":"d74712004098c39a8bbcb0947080a2fb","endpoint":"hit"},"option":{"dntEnabled":false,"bypassAdBlockers":false,"consentIntegration":{"name":null,"status":[]},"isPreview":false,"userOnline":false,"trackAnonymously":false,"isWpConsentApiActive":false,"consentLevel":"disabled"},"isLegacyEventLoaded":"","customEventAjaxUrl":"https://sportrail.pt/wp-admin/admin-ajax.php?action=wp_statistics_custom_event&nonce=c1798835b3","onlineParams":{"wp_statistics_hit":1,"source_type":"404","source_id":0,"search_query":"","signature":"d74712004098c39a8bbcb0947080a2fb","action":"wp_statistics_online_check"},"jsCheckTime":"60000"};
+//# sourceURL=wp-statistics-tracker-js-extra
+/* ]]> */
+</script><script type='text/javascript' src='https://sportrail.pt/wp-content/boost-cache/static/58cc776d81.min.js'></script><script type="text/javascript" id="googlesitekit-events-provider-woocommerce-js-before">
+/* <![CDATA[ */
+window._googlesitekit.wcdata = window._googlesitekit.wcdata || {};
+window._googlesitekit.wcdata.products = [];
+window._googlesitekit.wcdata.add_to_cart = null;
+window._googlesitekit.wcdata.currency = "EUR";
+window._googlesitekit.wcdata.eventsToTrack = [];
+//# sourceURL=googlesitekit-events-provider-woocommerce-js-before
+/* ]]> */
+</script><script type="text/javascript" src="https://sportrail.pt/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-events-provider-woocommerce-9717a4b16d0ac7e06633.js" id="googlesitekit-events-provider-woocommerce-js" defer></script><script type='text/javascript' src='https://sportrail.pt/wp-content/boost-cache/static/20827062c1.min.js'></script><script type="text/javascript" id="woocommerce-google-analytics-integration-data-js-after">
+/* <![CDATA[ */
+window.ga4w = { data: {"cart":{"items":[],"coupons":[],"totals":{"currency_code":"EUR","total_price":0,"currency_minor_unit":2}}}, settings: {"tracker_function_name":"gtag","events":["purchase","add_to_cart","remove_from_cart","view_item_list","select_content","view_item","begin_checkout"],"identifier":"product_sku","currency":{"decimalSeparator":",","thousandSeparator":" ","precision":2}} }; document.dispatchEvent(new Event("ga4w:ready"));
+//# sourceURL=woocommerce-google-analytics-integration-data-js-after
+/* ]]> */
+</script><script></script><script type="text/javascript">
+jQuery(function($) { 
+/* WooCommerce Facebook Integration Event Tracking */
+fbq('set', 'agent', 'woocommerce_2-10.4.3-3.5.15', '287536785065739');
+fbq('track', 'PageView', {
+    "source": "woocommerce_2",
+    "version": "10.4.3",
+    "pluginVersion": "3.5.15",
+    "user_data": {}
+}, {
+    "eventID": "61aecd98-6a9f-4f8d-b82d-3c5b568bb5b4"
+});
+ });
+</script><script type="module">
+/* <![CDATA[ */
+/**
+ * Loads the detect module after the page has loaded.
+ *
+ * This prevents a high-priority script module network request from competing with other critical resources.
+ *
+ * @since 1.0.0
+ */
+async function load() {
+	// Wait until the resources on the page have fully loaded.
+	await new Promise( ( resolve ) => {
+		if ( document.readyState === 'complete' ) {
+			resolve();
+		} else {
+			window.addEventListener( 'load', resolve, { once: true } );
+		}
+	} );
+
+	// Wait yet further until idle.
+	if ( typeof requestIdleCallback === 'function' ) {
+		await new Promise( ( resolve ) => {
+			requestIdleCallback( resolve );
+		} );
+	}
+
+	const data = JSON.parse(
+		document.getElementById( 'optimization-detective-detect-args' )
+			.textContent
+	);
+
+	const detectSrc = /** @type {string} */ data[ 0 ];
+	const detectArgs =
+		/** @type {import("./detect.js").DetectFunctionArgs} */ data[ 1 ];
+	const detect = /** @type {import("./detect.js").DetectFunction} */ (
+		( await import( detectSrc ) ).default
+	);
+	await detect( detectArgs );
+}
+
+load();
+
+//# sourceURL=https://sportrail.pt/wp-content/plugins/optimization-detective/detect-loader.js?ver=1.0.0-beta4
+/* ]]> */
+</script></body>
+</html>

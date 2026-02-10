@@ -1,0 +1,154 @@
+backend:
+  name: github
+  repo: SolFrater/sportrailfootball.com
+  branch: main
+  base_url: https://www.sportrailfootball.com
+  auth_endpoint: /api/auth
+
+site_url: https://www.sportrailfootball.com
+logo_url: /sportrail-logo-dark.svg
+
+media_folder: static/uploads
+public_folder: /uploads
+
+collections:
+  # ── Homepage ──
+  - name: pages
+    label: Pages
+    files:
+      - name: homepage
+        label: Homepage
+        file: content/pages/homepage.json
+        fields:
+          - { name: badge, label: Badge Text, widget: string, default: "In-Person & Online" }
+          - { name: title_line1, label: Title Line 1, widget: string, default: "Where Players Grow" }
+          - { name: title_line2, label: Title Line 2, widget: string, default: "& Coaches Excel" }
+          - { name: subtitle, label: Subtitle, widget: text }
+          - name: stats
+            label: Stats Bar
+            widget: list
+            fields:
+              - { name: value, label: Value, widget: string }
+              - { name: label, label: Label, widget: string }
+          - name: why_sportrail
+            label: Why Sportrail Section
+            widget: object
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: description, label: Description, widget: text }
+              - name: benefits
+                label: Benefits
+                widget: list
+                fields:
+                  - { name: icon, label: Icon Emoji, widget: string }
+                  - { name: title, label: Title, widget: string }
+                  - { name: description, label: Description, widget: text }
+
+      - name: about
+        label: About Page
+        file: content/pages/about.json
+        fields:
+          - { name: title, label: Page Title, widget: string }
+          - { name: hero_text, label: Hero Text, widget: text }
+          - { name: mission, label: Mission Statement, widget: text }
+          - { name: story, label: Our Story, widget: markdown }
+
+      - name: contact
+        label: Contact Page
+        file: content/pages/contact.json
+        fields:
+          - { name: title, label: Page Title, widget: string }
+          - { name: subtitle, label: Subtitle, widget: text }
+          - { name: email, label: Email, widget: string }
+          - { name: phone, label: Phone, widget: string }
+          - { name: address, label: Address, widget: text }
+
+      - name: courses
+        label: Coach Education
+        file: content/pages/courses.json
+        fields:
+          - { name: title, label: Page Title, widget: string }
+          - { name: subtitle, label: Hero Subtitle, widget: text }
+          - name: flagship_programs
+            label: Flagship Programs
+            widget: list
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: edition, label: Edition, widget: string }
+              - { name: description, label: Description, widget: text }
+              - { name: format, label: Format, widget: string }
+              - { name: topics, label: Topics (comma separated), widget: string }
+          - name: tailored_courses
+            label: Tailored Courses
+            widget: list
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: icon, label: Icon Emoji, widget: string }
+              - { name: description, label: Description, widget: text }
+
+      - name: players
+        label: Player Programs
+        file: content/pages/players.json
+        fields:
+          - { name: title, label: Page Title, widget: string }
+          - { name: subtitle, label: Hero Subtitle, widget: text }
+          - name: programs
+            label: Programs
+            widget: list
+            fields:
+              - { name: title, label: Title, widget: string }
+              - { name: description, label: Description, widget: text }
+              - { name: features, label: Features (comma separated), widget: string }
+
+      - name: experts
+        label: Our Experts
+        file: content/pages/experts.json
+        fields:
+          - { name: title, label: Page Title, widget: string }
+          - { name: heading, label: Heading, widget: string }
+          - { name: description, label: Description, widget: text }
+          - { name: cta_title, label: CTA Title, widget: string }
+          - { name: cta_text, label: CTA Text, widget: text }
+          - { name: cta_button, label: CTA Button Text, widget: string }
+          - name: categories
+            label: Expert Categories
+            widget: list
+            fields:
+              - { name: name, label: Category Name, widget: string }
+              - name: experts
+                label: Experts
+                widget: list
+                fields:
+                  - { name: name, label: Name, widget: string }
+                  - { name: role, label: Role / Title, widget: string }
+                  - { name: flag, label: Country Flag Emoji, widget: string, hint: "e.g. 🇵🇹 🇪🇸 🇬🇧" }
+
+  # ── Blog Posts ──
+  - name: blog
+    label: Blog / Insights
+    folder: content/blog
+    create: true
+    slug: "{{year}}-{{month}}-{{slug}}"
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: date, label: Date, widget: datetime }
+      - { name: category, label: Category, widget: select, options: ["Coaching", "Player Development", "Sports Science", "Analysis", "Events", "Industry"] }
+      - { name: excerpt, label: Excerpt, widget: text }
+      - { name: image, label: Featured Image, widget: image, required: false }
+      - { name: body, label: Content, widget: markdown }
+
+  # ── Events ──
+  - name: events
+    label: Events
+    folder: content/events
+    create: true
+    slug: "{{year}}-{{month}}-{{slug}}"
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: date, label: Date, widget: datetime }
+      - { name: end_date, label: End Date, widget: datetime, required: false }
+      - { name: location, label: Location, widget: string }
+      - { name: type, label: Type, widget: select, options: ["Conference", "Workshop", "Masterclass", "Camp", "Trial"] }
+      - { name: audience, label: Audience, widget: select, options: ["Coaches", "Players", "Both"], default: "Both" }
+      - { name: description, label: Description, widget: text }
+      - { name: link, label: Registration Link, widget: string, required: false }

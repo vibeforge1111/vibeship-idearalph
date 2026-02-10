@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-node';
+import adapter from '@sveltejs/adapter-vercel';
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 /** @type {import('@sveltejs/kit').Config} */
@@ -8,7 +8,7 @@ const config = {
   preprocess: vitePreprocess(),
 
   kit: {
-    // adapter-node for Railway deployment
+    // adapter-vercel for Vercel deployment
     adapter: adapter(),
     alias: {
       $lib: 'src/lib',

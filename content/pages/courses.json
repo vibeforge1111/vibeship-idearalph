@@ -1,0 +1,28 @@
+{
+  "title": "Coach Education — In-Person & Online",
+  "subtitle": "Learn from the best coaches and experts from all over the world, with state-of-the-art knowledge and practical experience in world's top clubs.",
+  "flagship_programs": [
+    {
+      "title": "Sports Director Course in Football",
+      "edition": "4th Edition",
+      "description": "Comprehensive program covering football club management, recruitment strategy, academy structure, and sporting direction. Designed for coaches transitioning to leadership roles or professionals seeking to enter football management.",
+      "format": "Online + In-person sessions",
+      "topics": "Club Management & Governance, Recruitment & Transfer Strategy, Academy Development Models, Financial Planning in Football, Communication & Media Relations, Legal Framework in Sport"
+    },
+    {
+      "title": "Scouting Course in Youth Football",
+      "edition": "2nd Edition",
+      "description": "Professional scouting education covering talent identification, player assessment frameworks, report writing, and building scouting networks. Learn from scouts working at top European clubs.",
+      "format": "Online + In-person sessions",
+      "topics": "Talent Identification Models, Player Assessment Criteria, Scouting Report Writing, Video Analysis for Scouting, Building Scouting Networks, Youth Development Pathways"
+    }
+  ],
+  "tailored_courses": [
+    { "title": "Match Analysis", "icon": "📊", "description": "Professional match analysis techniques. Video breakdown, tactical pattern recognition, and data-driven insights." },
+    { "title": "Elite Training Methods", "icon": "🏋️", "description": "Advanced training methodologies from top-level coaching staffs. Session design, periodization, and player development." },
+    { "title": "Football Training", "icon": "⚽", "description": "Comprehensive football training course. Game models, training principles, and practical exercise design." },
+    { "title": "Goalkeeper Training", "icon": "🧤", "description": "Specialized goalkeeper coaching. Technical development, decision making, distribution, and modern GK role." },
+    { "title": "Training & Match Practical Issues", "icon": "📋", "description": "Real-world coaching challenges. Match-day preparation, half-time adjustments, and in-game management." },
+    { "title": "Strength & Conditioning", "icon": "💪", "description": "Football-specific S&C. Physical preparation, injury prevention, load management, and performance optimization." }
+  ]
+}

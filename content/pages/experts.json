@@ -1,0 +1,100 @@
+{
+  "title": "Our Experts",
+  "heading": "70+ World-Class Experts",
+  "description": "Our faculty is our greatest asset. UEFA Pro coaches, sporting directors from top clubs, leading sports scientists, and international scouting professionals — all sharing real-world knowledge you won't find in any textbook.",
+  "cta_title": "Want to Join Our Team of Experts?",
+  "cta_text": "We're always looking for exceptional professionals to share their knowledge.",
+  "cta_button": "Apply as Expert",
+  "categories": [
+    {
+      "name": "Coaches & Managers",
+      "experts": [
+        { "name": "Luis Castro", "role": "UEFA Pro Coach", "flag": "🇵🇹" },
+        { "name": "Renato Paiva", "role": "Football Coach", "flag": "🇵🇹" },
+        { "name": "Joao Tralhao", "role": "Football Coach", "flag": "🇵🇹" },
+        { "name": "Oscar Cano", "role": "Football Coach", "flag": "🇪🇸" },
+        { "name": "Andoni Bombin", "role": "UEFA Pro / Director of Methodology", "flag": "🇪🇸" },
+        { "name": "Mariana Cabral", "role": "Football Coach", "flag": "🇵🇹" },
+        { "name": "Goncalo Nunes", "role": "Football Coach", "flag": "🇵🇹" },
+        { "name": "Joao Nuno Fonseca", "role": "Football Coach", "flag": "🇵🇹" },
+        { "name": "Gil Sousa", "role": "Football Coach", "flag": "🇵🇹" },
+        { "name": "Joel Rocha", "role": "Futsal Coach", "flag": "🇵🇹" },
+        { "name": "Blessing Lumueno", "role": "Football Coach", "flag": "🇨🇩" },
+        { "name": "Ruben Pinheiro", "role": "Football Coach", "flag": "🇵🇹" },
+        { "name": "Carlos Pinto", "role": "U19 Coach, SC Torreense", "flag": "🇵🇹" }
+      ]
+    },
+    {
+      "name": "Sporting Directors & Management",
+      "experts": [
+        { "name": "Jose Boto", "role": "Sporting Director", "flag": "🇵🇹" },
+        { "name": "David Caiado", "role": "Sporting Director", "flag": "🇵🇹" },
+        { "name": "Diogo Boa Alma", "role": "Sporting Director", "flag": "🇵🇹" },
+        { "name": "Jose Couceiro", "role": "Sports Consultant", "flag": "🇵🇹" },
+        { "name": "Rui Abreu", "role": "President SAD", "flag": "🇵🇹" },
+        { "name": "Rui Lanca", "role": "Sporting Director", "flag": "🇵🇹" },
+        { "name": "Eduardo Covelo Mateo", "role": "Youth Football Director", "flag": "🇪🇸" },
+        { "name": "Daniel Parnell", "role": "CEO, Association of Sporting Directors", "flag": "🇬🇧" },
+        { "name": "Jason Stephens", "role": "Football Business Specialist", "flag": "🇬🇧" },
+        { "name": "Jose Collado", "role": "International Projects Director", "flag": "🇪🇸" },
+        { "name": "Duarte Damas", "role": "Business Development Manager", "flag": "🇵🇹" }
+      ]
+    },
+    {
+      "name": "Sports Science & Performance",
+      "experts": [
+        { "name": "Adam Centofanti", "role": "S&C Coach", "flag": "🇬🇧" },
+        { "name": "Alex Calder", "role": "Head of Performance", "flag": "🇬🇧" },
+        { "name": "Andrea Riboli", "role": "Sports Scientist / Head of Sports Science", "flag": "🇮🇹" },
+        { "name": "Carlos Balsalobre", "role": "Sports Scientist", "flag": "🇪🇸" },
+        { "name": "Hugo Correia", "role": "S&C Coach", "flag": "🇵🇹" },
+        { "name": "Ismael Fernandez", "role": "Sports Scientist", "flag": "🇪🇸" },
+        { "name": "Joao Francisco Almeida", "role": "Head of Performance", "flag": "🇵🇹" },
+        { "name": "John Grace", "role": "Head of Performance", "flag": "🇬🇧" },
+        { "name": "Kyle Davey", "role": "Neck Injury Expert", "flag": "🇬🇧" },
+        { "name": "Martin Buchheitt", "role": "S&C Coach", "flag": "🇫🇷" },
+        { "name": "Miguel Alonso", "role": "Physical Preparation Coach", "flag": "🇪🇸" },
+        { "name": "Pablo Diaz", "role": "Physical Preparation Coach", "flag": "🇪🇸" },
+        { "name": "Nuno Mateus", "role": "Professor & Researcher", "flag": "🇵🇹" },
+        { "name": "Rick Cost", "role": "High Performance Director", "flag": "🇳🇱" },
+        { "name": "Derek Hansen", "role": "Performance Specialist", "flag": "🇨🇦" }
+      ]
+    },
+    {
+      "name": "Analysis, Scouting & Specialist",
+      "experts": [
+        { "name": "Andres Bretones", "role": "Tactical Analyst", "flag": "🇪🇸" },
+        { "name": "Anselmo Ruiz de Alarcon", "role": "Data Analyst", "flag": "🇪🇸" },
+        { "name": "Eduardo Rosalino", "role": "Analyst", "flag": "🇵🇹" },
+        { "name": "Ramon Alturo", "role": "Analyst", "flag": "🇪🇸" },
+        { "name": "Jose Laranjeira", "role": "Senior Scout", "flag": "🇵🇹" },
+        { "name": "Pedro Ferreira", "role": "Head of Recruitment", "flag": "🇵🇹" },
+        { "name": "Diogo Teixeira", "role": "Technical Coordinator U14/U15, Sporting CP", "flag": "🇵🇹" },
+        { "name": "Carlos Silva", "role": "Sports Advisor", "flag": "🇵🇹" },
+        { "name": "Hugo Vicente", "role": "Director of Methodology, Viking FC", "flag": "🇵🇹" },
+        { "name": "Bram van de Vinne", "role": "Football Specialist", "flag": "🇳🇱" }
+      ]
+    },
+    {
+      "name": "Goalkeeper Coaches",
+      "experts": [
+        { "name": "Eduardo Cachulo", "role": "Goalkeeper Coach", "flag": "🇵🇹" },
+        { "name": "Jaime Pombo", "role": "Goalkeeper Coach", "flag": "🇵🇹" },
+        { "name": "Javier Barbero", "role": "Goalkeeper Coach", "flag": "🇪🇸" },
+        { "name": "Ricardo Pereira", "role": "Goalkeeper Coach", "flag": "🇵🇹" }
+      ]
+    },
+    {
+      "name": "Communication & Media",
+      "experts": [
+        { "name": "Carlos Daniel", "role": "Journalist", "flag": "🇵🇹" },
+        { "name": "Catalina Ramirez", "role": "Director of Communication, Casa Pia AC", "flag": "🇨🇴" },
+        { "name": "Diogo Kotscho", "role": "Director of Communication", "flag": "🇧🇷" },
+        { "name": "Pedro Sa", "role": "Director of Communication, FC Famalicao", "flag": "🇵🇹" },
+        { "name": "Rodrigo Paiva", "role": "Director of Communication, Flamengo", "flag": "🇧🇷" },
+        { "name": "Ruben Martins", "role": "Social Media Manager", "flag": "🇵🇹" },
+        { "name": "Jose Miguel Nora", "role": "Sports Lawyer", "flag": "🇵🇹" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "badge": "In-Person & Online",
+  "title_line1": "Where Players Grow",
+  "title_line2": "& Coaches Excel",
+  "subtitle": "Elite football development programs for players and DGERT/IPDJ certified education for coaches. Learn from world-class experts, in-person or online.",
+  "stats": [
+    { "value": "2,500+", "label": "Coaches Trained" },
+    { "value": "70+", "label": "Expert Faculty" },
+    { "value": "8+", "label": "Years Operating" },
+    { "value": "2", "label": "Countries" },
+    { "value": "10+", "label": "Partner Clubs" }
+  ],
+  "why_sportrail": {
+    "title": "Train In-Person & Online",
+    "description": "Access world-class football education wherever you are. Join in-person programs in Portugal and Spain, or learn online from the best coaches and experts worldwide.",
+    "benefits": [
+      { "icon": "🇵🇹", "title": "Portuguese Methodology", "description": "Learn the tactical periodization and development philosophy that produced Mourinho, Amorim, Conceicao, and Abel Ferreira." },
+      { "icon": "🇪🇸", "title": "Spanish Integration", "description": "Access to La Liga methodology, Spanish academy systems, and cross-border coaching exchanges between Portugal and Spain." },
+      { "icon": "🏟️", "title": "Elite Facilities", "description": "Train at professional-grade facilities across Lisbon, Porto, the Algarve, and partner locations in Spain." },
+      { "icon": "🤝", "title": "Club Connections", "description": "Direct relationships with Liga Portugal and La Liga clubs for trials, placements, and coaching internships." },
+      { "icon": "☀️", "title": "Year-Round Climate", "description": "Train outdoors 12 months a year. The Iberian climate makes it Europe's ideal base for football development." },
+      { "icon": "🌍", "title": "International Gateway", "description": "Portugal and Spain are Europe's gateway — ideal for players and coaches from Africa, South America, and beyond." }
+    ]
+  }
+}

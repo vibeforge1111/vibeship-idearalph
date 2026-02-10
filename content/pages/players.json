@@ -1,0 +1,26 @@
+{
+  "title": "Player Development Programs",
+  "subtitle": "Elite football development pathways for aspiring professionals aged 14-21. Train in Portugal and Spain with top-level coaching staff.",
+  "programs": [
+    {
+      "title": "Elite Development Camps",
+      "description": "Intensive training camps in Portugal and Spain. Professional coaching methodology, tactical development, physical conditioning, and competitive match play.",
+      "features": "Professional coaching staff, Video analysis sessions, Physical testing & monitoring, Competitive matches, Cultural immersion"
+    },
+    {
+      "title": "Professional Club Trials",
+      "description": "Arranged trial periods with Liga Portugal and La Liga partner clubs. Professional assessment, showcasing opportunities, and direct club exposure.",
+      "features": "Liga Portugal club trials, La Liga partner access, Professional assessment reports, Agent introductions, Follow-up support"
+    },
+    {
+      "title": "International Player Pathway",
+      "description": "Complete relocation and integration program for international players looking to develop in the Portuguese or Spanish football ecosystem.",
+      "features": "Visa & documentation support, Club placement assistance, Language classes, Accommodation arrangement, Academic support"
+    },
+    {
+      "title": "Summer & Easter Intensives",
+      "description": "Short-term intensive programs during school holidays. Perfect for international players seeking high-level development experiences.",
+      "features": "1-4 week programs, All-inclusive packages, Airport transfers, Professional facilities, Certificate of completion"
+    }
+  ]
+}

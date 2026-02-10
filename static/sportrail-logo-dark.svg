@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 80" fill="#2d2d2d">
+  <!-- Circle with chevrons -->
+  <circle cx="40" cy="40" r="36" fill="#2d2d2d"/>
+  <g transform="translate(22, 22)" fill="none" stroke="white" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="4,18 14,8 24,18"/>
+    <polyline points="4,26 14,16 24,26"/>
+    <polyline points="4,34 14,24 24,34"/>
+  </g>
+  <!-- SPORTRAIL text -->
+  <text x="90" y="48" font-family="Poppins, Arial, sans-serif" font-weight="900" font-size="42" fill="#2d2d2d" letter-spacing="1">SPORTRAIL</text>
+  <text x="345" y="38" font-family="Poppins, Arial, sans-serif" font-weight="400" font-size="14" fill="#2d2d2d">®</text>
+  <!-- Subtitle -->
+  <text x="90" y="66" font-family="Poppins, Arial, sans-serif" font-weight="400" font-size="11" fill="#2d2d2d" letter-spacing="4">SPORTS • TRAINING • LANGUAGE</text>
+</svg>
