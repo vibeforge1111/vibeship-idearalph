@@ -1,0 +1,33 @@
+{
+  "players": [
+    {
+      "name": "Marcus Rashford",
+      "last_score": 4,
+      "last_run": "2026-05-19T19:00:10.841697"
+    },
+    {
+      "name": "Kylian Mbappe",
+      "last_score": 1,
+      "last_run": "2026-05-19T19:00:13.418812"
+    },
+    {
+      "name": "Neymar Jr",
+      "last_score": 1,
+      "last_run": "2026-05-19T19:00:15.984001"
+    },
+    {
+      "name": "Mason Greenwood",
+      "last_score": 4,
+      "last_run": "2026-05-19T19:00:18.601776"
+    },
+    {
+      "name": "Vinicius Junior",
+      "last_score": 0,
+      "last_run": "2026-05-19T19:00:20.714235"
+    }
+  ],
+  "settings": {
+    "days": 14
+  },
+  "last_scheduled_run": "2026-05-19T19:00:20.714240"
+}
