@@ -1,44 +1,6 @@
-# Dependencies
-node_modules/
-
-# Build
-.svelte-kit/
-build/
-dist/
-
-# Environment
-.env
-.env.*
-!.env.example
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Logs
-*.log
-npm-debug.log*
-
-# Testing
-coverage/
-
-# Vercel
-.vercel/
-
-# Docs
-docs/
-
-# Degen Academy (migrated to dedicated repo)
-degen-academy/
-degen-academy-desktop/
-degen-academy-mobile/
-
-# Scout
 __pycache__/
 scout_logs/
+*.pyc
+.DS_Store
+.vscode/
+.idea/
