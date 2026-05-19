@@ -35,6 +35,7 @@ from pathlib import Path
 SCRIPT_DIR = Path(__file__).parent.resolve()
 LOG_DIR = SCRIPT_DIR / "scout_logs"
 RUNS_DIR = LOG_DIR / "runs"
+HISTORY_DIR = LOG_DIR / "history"
 AUDIT_LOG = LOG_DIR / "audit.jsonl"
 ERROR_LOG = LOG_DIR / "errors.log"
 WATCHLIST_FILE = SCRIPT_DIR / "watchlist.json"
@@ -46,6 +47,7 @@ WATCHLIST_FILE = SCRIPT_DIR / "watchlist.json"
 def _ensure_dirs():
     LOG_DIR.mkdir(exist_ok=True)
     RUNS_DIR.mkdir(exist_ok=True)
+    HISTORY_DIR.mkdir(exist_ok=True)
 
 
 def log_run(entry):
@@ -86,6 +88,203 @@ def get_recent_logs(limit=50):
         except json.JSONDecodeError:
             pass
     return entries
+
+
+# ─── History & Prediction ─────────────────────────────────────────────────────
+# The moat: historical data compounds. Prediction requires time in market.
+
+def _player_slug(name):
+    return re.sub(r"[^a-zA-Z0-9]", "_", name.lower()).strip("_")
+
+
+def record_history(player_name, score, articles_found, red_flags, green_flags):
+    """Append one data point to a player's history file."""
+    _ensure_dirs()
+    slug = _player_slug(player_name)
+    history_file = HISTORY_DIR / f"{slug}.jsonl"
+    entry = {
+        "date": datetime.now().strftime("%Y-%m-%d"),
+        "timestamp": datetime.now().isoformat(),
+        "score": score,
+        "articles": articles_found,
+        "red_categories": list(red_flags.keys()) if red_flags else [],
+        "green_categories": list(green_flags.keys()) if green_flags else [],
+    }
+    with open(history_file, "a") as f:
+        f.write(json.dumps(entry) + "\n")
+
+
+def get_history(player_name, limit=365):
+    """Read a player's score history."""
+    slug = _player_slug(player_name)
+    history_file = HISTORY_DIR / f"{slug}.jsonl"
+    if not history_file.exists():
+        return []
+    entries = []
+    for line in history_file.read_text().strip().split("\n"):
+        if line:
+            try:
+                entries.append(json.loads(line))
+            except json.JSONDecodeError:
+                pass
+    return entries[-limit:]
+
+
+def _linear_regression(ys):
+    """Least-squares linear regression. Returns (slope, intercept). Stdlib only."""
+    n = len(ys)
+    if n < 2:
+        return 0.0, ys[0] if ys else 0.0
+    sum_x = sum(range(n))
+    sum_y = sum(ys)
+    sum_xy = sum(i * y for i, y in enumerate(ys))
+    sum_x2 = sum(i * i for i in range(n))
+    denom = n * sum_x2 - sum_x * sum_x
+    if denom == 0:
+        return 0.0, sum_y / n
+    slope = (n * sum_xy - sum_x * sum_y) / denom
+    intercept = (sum_y - slope * sum_x) / n
+    return slope, intercept
+
+
+def compute_trend(history):
+    """
+    Compute behavioral trend from history.
+    Returns dict with slope, direction, prediction, and confidence.
+    """
+    if len(history) < 2:
+        return {
+            "direction": "insufficient_data",
+            "slope": 0,
+            "data_points": len(history),
+            "current_score": history[0]["score"] if history else 0,
+            "prediction_30d": None,
+            "prediction_90d": None,
+            "alert": None,
+            "sparkline": _sparkline([h["score"] for h in history]) if history else "",
+        }
+
+    scores = [h["score"] for h in history]
+    slope, intercept = _linear_regression(scores)
+    current = scores[-1]
+    n = len(scores)
+
+    # Project forward (1 unit = 1 data point interval)
+    pred_30d = max(0, min(10, intercept + slope * (n + 30)))
+    pred_90d = max(0, min(10, intercept + slope * (n + 90)))
+
+    if slope > 0.05:
+        direction = "rising"
+    elif slope < -0.05:
+        direction = "falling"
+    else:
+        direction = "stable"
+
+    # Alert logic based on Iteration 6 insight:
+    # "73% of players with this trajectory have an incident within 6 months"
+    alert = None
+    if len(scores) >= 3:
+        recent_avg = sum(scores[-3:]) / 3
+        older_avg = sum(scores[:-3]) / max(1, len(scores) - 3) if len(scores) > 3 else scores[0]
+        delta = recent_avg - older_avg
+
+        if delta >= 3:
+            alert = {
+                "level": "critical",
+                "message": f"VibeScore spiked +{delta:.1f} points recently. Sharp behavioral deterioration.",
+                "action": "Immediate human review. Check for recent off-field incidents.",
+            }
+        elif delta >= 1.5:
+            alert = {
+                "level": "warning",
+                "message": f"VibeScore trending up +{delta:.1f} points. Early warning signal.",
+                "action": "Increase monitoring frequency. Review recent flagged articles.",
+            }
+        elif delta <= -2 and current > 0:
+            alert = {
+                "level": "positive",
+                "message": f"VibeScore improving ({delta:.1f} points). Behavioral recovery trend.",
+                "action": "Positive trajectory. Continue standard monitoring.",
+            }
+
+    return {
+        "direction": direction,
+        "slope": round(slope, 4),
+        "data_points": len(scores),
+        "current_score": current,
+        "prediction_30d": round(pred_30d, 1),
+        "prediction_90d": round(pred_90d, 1),
+        "alert": alert,
+        "sparkline": _sparkline(scores[-20:]),
+    }
+
+
+def _sparkline(values):
+    """Generate ASCII sparkline from a list of numbers."""
+    if not values:
+        return ""
+    bars = " _.-=^"
+    mn, mx = min(values), max(values)
+    rng = mx - mn if mx != mn else 1
+    return "".join(bars[min(len(bars) - 1, int((v - mn) / rng * (len(bars) - 1)))] for v in values)
+
+
+def get_vibecheck_index():
+    """
+    Build the VibeCheck Index: all players ranked by score.
+    Uses the latest data from history files.
+    """
+    if not HISTORY_DIR.exists():
+        return []
+
+    index = []
+    for hfile in HISTORY_DIR.glob("*.jsonl"):
+        lines = hfile.read_text().strip().split("\n")
+        if not lines or not lines[-1]:
+            continue
+        try:
+            latest = json.loads(lines[-1])
+        except json.JSONDecodeError:
+            continue
+
+        all_entries = []
+        for line in lines:
+            try:
+                all_entries.append(json.loads(line))
+            except json.JSONDecodeError:
+                pass
+
+        scores = [e["score"] for e in all_entries]
+        trend = compute_trend(all_entries)
+
+        # Infer player name from the history data or filename
+        player_name = hfile.stem.replace("_", " ").title()
+        if all_entries:
+            # Try to find real name from watchlist
+            wl = load_watchlist()
+            slug = hfile.stem
+            for p in wl.get("players", []):
+                pname = p if isinstance(p, str) else p.get("name", "")
+                if _player_slug(pname) == slug:
+                    player_name = pname
+                    break
+
+        index.append({
+            "player": player_name,
+            "vibe_score": latest["score"],
+            "last_check": latest["date"],
+            "articles": latest.get("articles", 0),
+            "trend": trend["direction"],
+            "slope": trend["slope"],
+            "sparkline": trend["sparkline"],
+            "prediction_30d": trend["prediction_30d"],
+            "alert": trend["alert"],
+            "data_points": len(all_entries),
+        })
+
+    # Sort: highest risk first (highest score = most red flags)
+    index.sort(key=lambda x: (-x["vibe_score"], x["player"]))
+    return index
 
 
 # ─── Keyword Dictionaries ────────────────────────────────────────────────────
@@ -516,15 +715,33 @@ def generate_report(player_name, articles, all_findings, score, audit, review_it
     now = datetime.now().strftime("%Y-%m-%d %H:%M")
 
     lines = []
+    # Get trend data
+    history = get_history(player_name)
+    trend = compute_trend(history)
+
     lines.append("=" * 70)
-    lines.append("  SOCCER PLAYER SCOUTING REPORT - OFF-FIELD ANALYSIS")
+    lines.append("  VIBECHECK - OFF-FIELD BEHAVIORAL INTELLIGENCE")
     lines.append("=" * 70)
     lines.append(f"  Player:       {player_name}")
-    lines.append(f"  Generated:    {now}")
-    lines.append(f"  Articles:     {len(articles)} found")
-    lines.append(f"  Risk Score:   {score}/10 ({risk_label})")
+    lines.append(f"  VibeScore:    {score}/10 ({risk_label})")
     lines.append(f"  Confidence:   {int(audit['confidence'] * 100)}%")
+    lines.append(f"  Trend:        {trend['direction']} (slope: {trend['slope']})")
+    if trend["sparkline"]:
+        lines.append(f"  History:      [{trend['sparkline']}] ({trend['data_points']} checks)")
+    if trend["prediction_30d"] is not None:
+        lines.append(f"  Predicted:    30d={trend['prediction_30d']}/10  90d={trend['prediction_90d']}/10")
+    lines.append(f"  Articles:     {len(articles)} found")
+    lines.append(f"  Generated:    {now}")
     lines.append("=" * 70)
+
+    # Trend alert
+    if trend["alert"]:
+        a = trend["alert"]
+        marker = "!!" if a["level"] == "critical" else "!" if a["level"] == "warning" else "+"
+        lines.append("")
+        lines.append(f"  [{marker}] TREND ALERT ({a['level'].upper()})")
+        lines.append(f"      {a['message']}")
+        lines.append(f"      -> {a['action']}")
 
     # Aggregate
     red_agg = Counter()
@@ -738,11 +955,18 @@ def run_scout(player_name, days=14, trigger="manual"):
     # Log it
     run_file = log_run(log_entry)
 
+    # Record history for trend tracking (the moat)
+    record_history(player_name, score, len(articles), red_agg, green_agg)
+    trend = compute_trend(get_history(player_name))
+
+    log_entry["trend"] = trend
+
     return {
         "run_id": run_id,
         "report": report,
         "log": log_entry,
         "log_file": run_file,
+        "trend": trend,
     }
 
 
