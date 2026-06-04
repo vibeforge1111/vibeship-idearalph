@@ -9,6 +9,8 @@ const args = process.argv.slice(2);
 const command = args[0];
 const withSpawner = args.includes('--with-spawner') || args.includes('-s');
 const help = args.includes('--help') || args.includes('-h');
+const quiet = args.includes('--quiet');
+const logFile = args.includes('--log-file') ? args[args.indexOf('--log-file') + 1] : null;
 
 const isWin = platform() === 'win32';
 const home = homedir();
@@ -24,7 +26,13 @@ const c = {
   red: '\x1b[31m',
 };
 
-function log(msg) { console.log(msg); }
+function log(msg) {
+  if (quiet) return;
+  console.log(msg);
+  if (logFile) {
+    try { writeFileSync(logFile, msg + '\n', { flag: 'a' }); } catch {}
+  }
+}
 function step(n, msg) { log(`\n${c.cyan}[${n}]${c.reset} ${msg}`); }
 function ok(msg) { log(`${c.green}✓${c.reset} ${msg}`); }
 function err(msg) { log(`${c.red}✗${c.reset} ${msg}`); }
@@ -39,6 +47,8 @@ ${c.bold}Usage:${c.reset}
 
 ${c.bold}Options:${c.reset}
   --with-spawner, -s   Also install 462 Spawner skills (recommended)
+  --quiet              Suppress informational output
+  --log-file <path>    Write log output to file
   --help, -h           Show this help
 
 ${c.bold}Examples:${c.reset}
