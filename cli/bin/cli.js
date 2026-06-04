@@ -9,12 +9,15 @@ const args = process.argv.slice(2);
 const command = args[0];
 const withSpawner = args.includes('--with-spawner') || args.includes('-s');
 const help = args.includes('--help') || args.includes('-h');
+const noColor = args.includes('--no-color');
 
 const isWin = platform() === 'win32';
 const home = homedir();
 
 // Colors (work in most terminals)
-const c = {
+const c = noColor ? {
+  reset: '', bold: '', green: '', yellow: '', blue: '', cyan: '', red: '',
+} : {
   reset: '\x1b[0m',
   bold: '\x1b[1m',
   green: '\x1b[32m',
@@ -39,6 +42,7 @@ ${c.bold}Usage:${c.reset}
 
 ${c.bold}Options:${c.reset}
   --with-spawner, -s   Also install 462 Spawner skills (recommended)
+  --no-color           Disable ANSI color in output
   --help, -h           Show this help
 
 ${c.bold}Examples:${c.reset}
