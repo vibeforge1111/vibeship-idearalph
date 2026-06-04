@@ -9,6 +9,7 @@ const args = process.argv.slice(2);
 const command = args[0];
 const withSpawner = args.includes('--with-spawner') || args.includes('-s');
 const help = args.includes('--help') || args.includes('-h');
+const jsonOutput = args.includes('--json');
 
 const isWin = platform() === 'win32';
 const home = homedir();
@@ -29,6 +30,12 @@ function step(n, msg) { log(`\n${c.cyan}[${n}]${c.reset} ${msg}`); }
 function ok(msg) { log(`${c.green}✓${c.reset} ${msg}`); }
 function err(msg) { log(`${c.red}✗${c.reset} ${msg}`); }
 function warn(msg) { log(`${c.yellow}!${c.reset} ${msg}`); }
+
+function emitResult(status, data) {
+  if (jsonOutput) {
+    console.log(JSON.stringify({ status, ...data }));
+  }
+}
 
 function showHelp() {
   log(`
@@ -66,10 +73,12 @@ ${c.bold}${c.blue}╔═══════════════════�
   // Check prerequisites
   if (!run('node --version')) {
     err('Node.js is required. Install from https://nodejs.org');
+    emitResult('error', { message: 'Node.js is required' });
     process.exit(1);
   }
   if (!run('git --version')) {
     err('Git is required.');
+    emitResult('error', { message: 'Git is required' });
     process.exit(1);
   }
 
@@ -178,6 +187,8 @@ ${c.cyan}Installed to:${c.reset} ${mcpDir}
   ${c.cyan}npx idearalph install --with-spawner${c.reset}
 `);
   }
+
+  emitResult('success', { installDir: mcpDir });
 }
 
 // Main
@@ -186,6 +197,7 @@ if (help || !command) {
 } else if (command === 'install') {
   install().catch(e => {
     err(`Installation failed: ${e.message}`);
+    emitResult('error', { message: e.message });
     process.exit(1);
   });
 } else {
